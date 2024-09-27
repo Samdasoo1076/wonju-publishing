@@ -7,39 +7,43 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<meta name="keywords" content="UCOMPANION">
-	<meta name="description" content="UCOMPANION">
-	<title>Pages | UCOMPANION</title>
-
+	<meta name="keywords" content="원주미래진흥원" />
+	<meta name="description" content="원주미래진흥원" />
+	<title>Pages | 원주미래진흥원</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/wonju.css" />
 
-	<!-- Script -->
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
 	<script src="../../assets/js/ui/ui.default.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- UI 스크립트 호출 -->
+	<script></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- SkipNav -->
-		<div class="skipNav">
-			<a href="#content">본문 바로가기</a>
-		</div>
-		<!-- // SkipNav -->
-
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper sub-wrapper">
 		<!-- Header -->
-		<div data-include="_include_header.html"></div>
+		<header class="header"></header>
 		<!-- // Header -->
 
 		<!-- Container -->
 		<main role="main" class="container">
-			<div id="content" class="content"></div>
+			<!-- content -->
+			<div class="content 화면명-page">
+			</div>
+			<!-- // content -->
 		</main>
 		<!-- // Container -->
 
 		<!-- Footer -->
-		<div data-include="_include_footer.html"></div>
+		<footer class="footer"></footer>
 		<!-- // Footer -->
 	</div>
 </body>
