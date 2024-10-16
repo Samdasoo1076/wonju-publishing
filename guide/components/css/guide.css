@@ -5,18 +5,18 @@
 -------------------------------------------------------------------*/
 /* Section */
 .g-section {color:#222;}
-.g-section a { color:#222;}
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
-.g-section xmp {border:1px solid #ddd; border-radius:5px; padding:0 30px;font-weight:300; line-height:1.5;}
+.g-section xmp {max-height:200px; overflow:auto; border:1px solid #ddd; border-radius:5px; font-weight:300; line-height:18px; display: block; font-size: 13px; padding:0 20px; word-break: break-all; white-space:pre-wrap;}
 
 /* 목차 */
 .g-h1 {margin:30px 0; font-size:28px; font-weight:normal;}
 .g-h2 {font-size:22px; font-weight:normal;}
 .g-h2:before {display:block; width:20px; height:1px; margin-bottom:5px; background-color:#222;}
-.g-h3 {margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:normal;}
+.g-h3 {margin-top:30px; margin-bottom:15px; font-size:16px; font-weight:500; color:#d3002e;}
 .g-h3:first-child {margin-top:0;}
+.g-h3:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
 .g-h4 {margin-top:25px; margin-bottom:10px; color:#d3002e;}
 .g-h3 + .g-h4 {margin-top:10px;}
 .g-h4:before {content:''; display:inline-block; position:relative; top:-1px; width:3px; height:13px; margin-right:5px; background-color:#d3002e; vertical-align:middle;}
@@ -26,6 +26,7 @@ ul.g-desc {margin:5px 0; border-radius:5px; padding:5px 10px;}
 ul.g-desc:last-child {margin-bottom:0;}
 ul.g-desc > li {position:relative; padding:0 0 0 10px; font-size:14px; line-height:1.6;}
 ul.g-desc > li:before {content:''; position:absolute; left:0; top:10px; display:block; width:2px; height:2px; background:#555; border-radius:50%;}
+ul.g-desc strong {font-weight: 700;}
 
 /* 표 type1 - 일반컨텐츠 */
 .g-tbl-type1 {overflow:hidden; border:1px solid #333; border-width:1px 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
@@ -49,6 +50,7 @@ ul.g-desc > li:before {content:''; position:absolute; left:0; top:10px; display:
 .g-tbl-type2 table tbody + tbody tr:first-child td {border-top:1px solid #666;}
 
 .g-code {line-height:1.6;}
+.g-section .g-link {color: #2496ee; text-decoration: underline;}
 
 /*-------------------------------------------------------------------
 	Demo Components

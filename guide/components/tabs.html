@@ -3,14 +3,14 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Tabs | Project Guide</title>
+	<title>Tabs | 원주미래진흥원 스타일가이드</title>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge chrome=1" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<meta name="keywords" content="프로젝트가이드, Project Guide" />
-	<meta name="description" content="프로젝트가이드, Project Guide" />
+	<meta name="keywords" content="프로젝트가이드, 원주미래진흥원 스타일가이드" />
+	<meta name="description" content="프로젝트가이드, 원주미래진흥원 스타일가이드" />
 	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="../../assets/css/wonju.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/semotong.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/libs/librurys.min.js"></script>
@@ -31,163 +31,89 @@
 			<main id="content" class="content" role="main">
 				<div class="content-body">
 					<div class="in-sec">
-						<h1 class="g-h1">Tabs, Select Items</h1>
+						<h1 class="g-h1">Tabs</h1>
 					</div>
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">Actions</h2>
+							<h2 class="g-h2">기본 구조</h2>
 						</div>
 						<div class="g-section-body">
-							<div class="grid demo1">
-								<div class="col col-3">
-									<!-- Tab Link -->
-									<h3 class="g-h3">Tab Link</h3>
-									<div class="tab-nav demo1">
-										<ul role="tablist" class="tab-list">
-											<li id="tabItem11" role="tab" aria-controls="tabpanel11"
-												aria-selected="true" class="is-active">
-												<button type="button" class="btn"><span>탭제목1</span></button>
-											</li>
-											<li id="tabItem11" role="tab" aria-controls="tabpanel11"
-												aria-selected="false">
-												<button type="button" class="btn"><span>탭제목2</span></button>
-											</li>
-										</ul>
-									</div>
-									<div class="tab-body">
-										<!-- 탭내용 -->
-										<div id="tabpanel11" role="tabpanel" aria-labelledby="tabItem11"
-											class="tab-cont is-active">
-											<p>탭 패널 고정</p>
-											<p>기능없음</p>
-										</div>
-										<!-- //탭내용 -->
-									</div>
-									<!-- //Tab Link -->
-								</div>
-								<div class="col col-3">
-									<h3 class="g-h3">Tab Panels</h3>
-									<!-- Tab Change -->
-									<div class="tab-nav demo1">
-										<ul role="tablist" class="tab-list">
-											<li id="tabItem21" role="tab" aria-controls="tabpanel21"
-												aria-selected="true" class="js-tab is-active">
-												<button type="button" class="btn"><span>탭제목1</span></button>
-											</li>
-											<li id="tabItem22" role="tab" aria-controls="tabpanel22"
-												aria-selected="false" class="js-tab">
-												<button type="button" class="btn"><span>탭제목2</span></button>
-											</li>
-										</ul>
-									</div>
-									<div class="tab-body">
-										<!-- 탭내용1 -->
-										<div id="tabpanel21" role="tabpanel" aria-labelledby="tabItem21"
-											class="tab-cont is-active">
-											<p>탭 패널 전환 1</p>
-											<p>js-tab 적용</p>
-										</div>
-										<!-- //탭내용1 -->
-										<!-- 탭내용2 -->
-										<div id="tabpanel22" role="tabpanel" aria-labelledby="tabItem22"
-											class="tab-cont">
-											<p>탭 패널 전환 2</p>
-											<p>js-tab 적용</p>
-										</div>
-										<!-- //탭내용2 -->
-									</div>
-									<!-- //Tab Change -->
-								</div>
-								<div class="col col-3">
-									<!-- Tab Ajax -->
-									<h3 class="g-h3">Tab Ajax</h3>
-									<div class="tab-nav demo1">
-										<ul class="tab-list">
-											<li id="tabItem31" role="tab" aria-controls="tabpanel3" aria-selected="true"
-												class="js-select is-active">
-												<button type="button" class="btn"><span>탭제목1</span></button>
-											</li>
-											<li id="tabItem32" role="tab" aria-controls="tabpanel3"
-												aria-selected="false" class="js-select">
-												<button type="button" class="btn"><span>탭제목2</span></button>
-											</li>
-										</ul>
-									</div>
-									<div class="tab-body">
-										<!-- 탭내용2 -->
-										<div id="tabpanel3" role="tabpanel" aria-labelledby="tabItem31"
-											class="tab-cont is-active">
-											<p>탭 패널 고정</p>
-											<p>js-select 적용</p>
-										</div>
-										<!-- //탭내용2 -->
-									</div>
-									<!-- //Tab Ajax -->
-								</div>
-								<div class="col col-3">
-									<!-- Tab Select -->
-									<h3 class="g-h3">Tab Select</h3>
-									<div class="tab-nav demo1">
-										<ul class="tab-list">
-											<li id="tabItem31" role="tab" aria-controls="tabpanel3" aria-selected="true"
-												class="js-select is-active">
-												<button type="button" class="btn"><span>탭제목1</span></button>
-											</li>
-											<li id="tabItem32" role="tab" aria-controls="tabpanel3"
-												aria-selected="false" class="js-select">
-												<button type="button" class="btn"><span>탭제목2</span></button>
-											</li>
-										</ul>
-									</div>
-									<div style="line-height:1.5; margin-top:10px">
-										<p>탭 패널 없음</p>
-										<p>js-select 적용</p>
-									</div>
-								</div>
-							</div>
+							<ul class="g-desc">
+								<li><a href="https://getbootstrap.com/docs/5.3/components/navs-tabs/#javascript-behavior" target="_blank" class="g-link">https://getbootstrap.com/docs/5.3/components/navs-tabs/</a></li>
+								<li>탭 기능 : data-bs-toggle="tab" data-bs-target="#패널아이디"</li>
+							</ul>
+							<xmp>
+<div class="ui-tab tab-유형">
+	<ul class="tab-list" id="myTab" role="tablist">
+		<li class="tab-item" role="presentation">
+			<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact Tab</button>
+		</li>
+		<li class="tab-item" role="presentation">
+			<button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled Tab</button>
+		</li>
+	</ul>
+</div>
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+			Home Tabpanel
+	</div>
+	<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+		Profile Tabpanel
+	</div>
+	<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+		Contact Tabpanel
+	</div>
+	<div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+		Disabled Tabpanel
+	</div>
+</div>
+							</xmp>
 						</div>
 					</section>
 					<!-- // Section -->
-
 					<!-- Section -->
 					<section class="g-section in-sec">
 						<div class="g-section-head">
-							<h2 class="g-h2">Styles</h2>
+							<h2 class="g-h2">Basic</h2>
 						</div>
 						<div class="g-section-body">
-							<h3 class="g-h3">Style1</h3>
-							<!-- Tab -->
-							<div class="tab-nav demo1">
-								<ul role="tablist" class="tab-list">
-									<li id="tabItem41" role="tab" aria-controls="tabpanel41" aria-selected="true"
-										class="js-tab is-active">
-										<button type="button" class="btn"><span>탭제목1</span></button>
+							<div class="ui-tab tab-유형">
+								<ul class="tab-list" id="myTab" role="tablist">
+									<li class="tab-item" role="presentation">
+										<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home Tab</button>
 									</li>
-									<li id="tabItem42" role="tab" aria-controls="tabpanel42" aria-selected="false"
-										class="js-tab">
-										<button type="button" class="btn"><span>탭제목2</span></button>
+									<li class="tab-item" role="presentation">
+										<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile Tab</button>
+									</li>
+									<li class="tab-item" role="presentation">
+										<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact Tab</button>
+									</li>
+									<li class="tab-item" role="presentation">
+										<button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled Tab</button>
 									</li>
 								</ul>
 							</div>
-							<div class="tab-body">
-								<!-- 탭내용1 -->
-								<div id="tabpanel41" role="tabpanel" aria-labelledby="tabItem41"
-									class="tab-cont is-active">
-									<p>탭 패널1</p>
-									<p>js-tab 적용</p>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+									 Home Tabpanel
 								</div>
-								<!-- //탭내용1 -->
-								<!-- 탭내용2 -->
-								<div id="tabpanel42" role="tabpanel" aria-labelledby="tabItem42" class="tab-cont">
-									<p>탭 패널2</p>
-									<p>js-tab 적용</p>
+								<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+									Profile Tabpanel
 								</div>
-								<!-- //탭내용2 -->
+								<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+									Contact Tabpanel
+								</div>
+								<div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+									Disabled Tabpanel
+								</div>
 							</div>
-							<!-- Tab -->
-
-							<h3 class="g-h3">Style2</h3>
 						</div>
 					</section>
 					<!-- // Section -->
