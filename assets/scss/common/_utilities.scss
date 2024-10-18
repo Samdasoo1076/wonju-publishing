@@ -20,6 +20,20 @@
 	clip-path: inset(50%);
 }
 
+.only-pc {
+	display: block;
+	@include media-mobile-xl {
+		display: none !important;
+	}
+}
+
+.only-mobile {
+	display: none;
+	@include media-mobile-xl {
+		display: none !important;
+	}
+}
+
 .is-scroll-hidden {
 	overflow: hidden;
 }

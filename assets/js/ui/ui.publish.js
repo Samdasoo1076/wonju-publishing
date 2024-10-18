@@ -9,7 +9,7 @@ function setPublishInclude(){
 		var path = "../../html/layout/";
 		var filename = "include_header.html";
 		$(this).load(path + filename, function(){
-				console.log("Init Header Functions");
+				setGnb.init();
 		});
 	})
 	$(".footer").each(function(){
