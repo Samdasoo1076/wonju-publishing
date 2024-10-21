@@ -186,12 +186,17 @@ html {
 		top: 80rem;
 		height: calc(100% - 80rem);
 		.modal-dialog {
+			display: block;
 			width: 85%;
 			height: 100%;
 			margin-left: auto;
 			background: #fff;
 			transform: translateX(105%);
-
+			.modal-content {
+				display: block;
+				padding: 20px;
+				box-shadow: none;
+			}
 		}
 		&.show {
 			.modal-dialog {
