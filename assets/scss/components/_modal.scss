@@ -7,6 +7,10 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
+body.modal-open {
+	overflow: hidden;
+	height: 100%;
+}
 .modal {
 	position: fixed;
     top: 0;
@@ -17,7 +21,7 @@
     height: 100%;
     overflow: hidden;
     outline: 0;
-
+	// background: rgba(0, 0, 0, 0.6);
 	.modal-dialog {
 		display: flex;
 		flex-direction: column;
@@ -52,7 +56,18 @@
 	background-color: #000;
 	opacity: 0;
 	&.show {
-		opacity: 0.5;
+		opacity: 0.6;
+	}
+}
+// 1023 이하
+@include media-tablet-xs {
+	.modal {
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.modal-backdrop {
+		&.show {
+			opacity: 0;
+		}
 	}
 }
 .modal-content {
