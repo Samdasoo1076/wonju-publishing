@@ -9,33 +9,40 @@ $(function(){
         // 옵션 설정
         licenseKey: 'Y88M9-3PIK7-00K7J-QJR57-IOOOO',
         // scrollOverflow: true,
-        scrolloverflowmacstyle: false,
+        scrolloverflowmacstyle: true,
         // scrollHorizontally: true,
         // footer를 정상 스크롤 요소로 지정
         // normalScrollElements: '.sec_08',
         'onLeave' : function (index, nextIndex, direction){
             // theme
-            if ( nextIndex.index === 0 || nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 6 || nextIndex.index === 7 ){
-                $('#header').addClass('theme_white').removeClass('theme_dark');
+            if ( nextIndex.index === 0 || nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4 || nextIndex.index === 5 ){
+                $('.gnb-area').addClass('active');
+				$('.gnb-area').removeClass('up').addClass('down');
             } else {
-                $('#header').addClass('theme_dark').removeClass('theme_white');
+                $('.gnb-area').removeClass('active');
+				$('.gnb-area').removeClass('down').addClass('up');
             };
 
-            // fixed
-            if ( nextIndex.index === 0 || nextIndex.index === 1 ) {
-                $('#header').removeClass('fixed');
-            } else {
-                $('#header').addClass('fixed');
-            }
+            // // fixed
+            // if ( nextIndex.index === 0 || nextIndex.index === 1 ) {
+            //     $('.gnb-area').removeClass('down').addClass('up');
+            // } else {
+            //     $('.gnb-area').removeClass('up').addClass('down');
+            // }
 
             // topbtn
             if ( nextIndex.index === 0){
+				$('.gnb-area').removeClass('active');
+				$('.gnb-area').removeClass('down');
                 $('.topBtn').css('display', 'none');
             } else {
                 $('.topBtn').css('display', 'flex');
             }
         }
     });
+
+	
+	
 
     var sec02_swiper = new Swiper(".sec_02 .swiper", {
         slidesPerView: 'auto',
