@@ -15,12 +15,10 @@ $(function(){
         // normalScrollElements: '.sec_08',
         'onLeave' : function (index, nextIndex, direction){
             // theme
-            if ( nextIndex.index === 0 || nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4 || nextIndex.index === 5 ){
+            if ( nextIndex.index === 0 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4 || nextIndex.index === 5 ){
                 $('.gnb-area').addClass('active');
-				$('.gnb-area').removeClass('up').addClass('down');
             } else {
                 $('.gnb-area').removeClass('active');
-				$('.gnb-area').removeClass('down').addClass('up');
             };
 
             // // fixed
