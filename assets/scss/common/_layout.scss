@@ -169,24 +169,6 @@ html {
 											}
 										}
 									}
-									+ .btn-user-wrap {
-										display: block;
-										.btn-user {
-											padding-right: 24rem;
-											color: #000;
-											&::after {
-												content:'';
-												position: absolute;
-												top: 0;
-												right: 0;
-												display: inline-block;
-												width: 24rem;
-												height: 24rem;
-												background: url(/assets/images/common/icn-arrow-down-sm-blk.svg) no-repeat 50% 50%;
-												background-size: contain;
-											}
-										}
-									}
 								}
 							}
 							a {
@@ -228,10 +210,10 @@ html {
 								
 							}
 							.btn-user-wrap {
-								display: none;
-								&.btn-user {
-									display: none;
-									padding-right: 24rem;
+								position: relative;
+								display: block;
+								.btn-user {
+									color: #000;
 									&::after {
 										content:'';
 										position: absolute;
@@ -240,11 +222,29 @@ html {
 										display: inline-block;
 										width: 24rem;
 										height: 24rem;
-										background: url(/assets/images/common/icn-arrow-down-sm-blk.svg) no-repeat 50% 50%;
+										background: url(/assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
+										
 										background-size: contain;
+										transition: .2s all;
 									}
+									&.show {
+										&::after {
+											content: '';
+											display: inline-block;
+											position: absolute;
+											right: 0;
+											top: 0;
+											width: 24rem;
+											height: 24rem;
+											background: url(/assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
+											transform: rotate(180deg);
+											background-size: contain;
+										}
+									}
+									
 								}
 							}
+							
 						}
 					}
 				}
@@ -288,37 +288,58 @@ html {
 										}
 									}
 								}
-								+ .btn-user-wrap {
-									display: block;
-									.btn-user {
+							}
+						}
+						.btn-user-wrap {
+							position: relative;
+							display: block;
+							.btn-user {
+								padding-right: 24rem;
+								font-size: 16rem;
+								color:#fff;
+								.name {
+									font-weight: 700;
+								}
+								&::after {
+									content: '';
+									display: inline-block;
+									position: absolute;
+									right: 0;
+									top: 0;
+									width: 24rem;
+									height: 24rem;
+									background: url(/assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
+									
+									background-size: contain;
+									transition: .2s all;
+								}
+								&.show {
+									&::after {
+										content: '';
+										display: inline-block;
 										position: absolute;
-										top: 32rem;
-										right: 196rem;
-										padding-right: 24rem;
-										font-size: 16rem;
-										color:#fff;
-										.name {
-											font-weight: 700;
-										}
-										&::after {
-											content: '';
-											display: inline-block;
-											position: absolute;
-											right: 0;
-											top: 0;
-											width: 24rem;
-											height: 24rem;
-											background: url(/assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
-											background-size: contain;
-										}
+										right: 0;
+										top: 0;
+										width: 24rem;
+										height: 24rem;
+										background: url(/assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
+										transform: rotate(180deg);
+										background-size: contain;
 									}
-									.user-menu {
+								}
+							}
+							.user-menu {
+								display: none;
+								&.show {
+									display: block;
+									.user-menu-list {
 										display: flex;
 										flex-direction: column;
 										gap: 12rem;
 										position: absolute;
-										top: 66rem;
-										right: 176rem;
+										top: 0;
+										left: -20rem;
+										width: max-content;
 										padding: 6rem 0;
 										border: 1px solid #DFDFDF;
 										border-radius: 4rem;
@@ -335,6 +356,7 @@ html {
 											}
 										}
 									}
+									
 								}
 							}
 						}
@@ -366,7 +388,7 @@ html {
 									background: url(/assets/images/common/icn-util-search-wh.svg) no-repeat 50% 50%;
 									background-size: contain;
 								}
-								&.on {
+								&.show {
 									&::after {
 										content:'';
 										position: absolute;
@@ -382,18 +404,59 @@ html {
 					}
 				}
 			}
+			
 			.header-search {
 				display: none;
-				&.on {
-					.header-search {
-						display: block;
-						position: absolute;
-						top: 88rem;
-						width: 100vw;
-						height: 100%;
-						background: #fff;
-						padding: 40rem;
+				position: absolute;
+				top: 28rem!important;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100vw;
+				height: 132rem;
+				background: #fff;
+				padding: 40rem 0;
+				.search_wrap {
+					width: 484rem;
+					height: 52rem;
+					border-radius: 600rem;
+					border: 1px solid #000;
+					.input {
+						display: flex;
+						align-items: center;
+						height: 52rem;
+						padding: 14rem 24rem 14rem 32rem;
+						input {
+							width: 100%;
+							height: 24rem;
+							border: 0;
+							&::placeholder {
+								font-size: 16rem;
+								line-height: 24rem;
+								color: #BEBEBE;
+							}
+						}
+						.btn_search {
+							position: relative;
+							width: 28rem;
+							height: 28rem;
+							&::after {
+								content: '';
+								position: absolute;
+								left: 0;
+								top: 0;
+								width: 28rem;
+								height: 28rem;
+								background-size: cover;
+								background: url(/assets/images/common/icn-util-search-red.svg);
+							}
+						}
 					}
+					
+				}
+				&.show {
+					display: flex!important;
 				}
 			}
 			&.up {
@@ -532,6 +595,147 @@ html {
 				height: 328rem;
 				background: #fff;
 				box-shadow: 0 3rem 3rem rgba(0,0,0,0.1);
+			}
+		}
+	}
+	/* 전체메뉴 */
+	.area-siteMap {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/assets/images/common/img-allmenu-bg.png) no-repeat;
+		background-size: 100% 100%;
+		z-index: 1010;
+		&.show {
+			display: block;
+		}
+		.modal-content {
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-direction:unset;
+			min-width: auto;
+			max-width: auto;
+			max-height: auto;
+			min-height: auto;
+			width: 100vw;
+			height: 100vh;
+			background-color: transparent;
+			border-radius: 0;
+			pointer-events: auto;
+			box-shadow: none;
+		}
+		.sitemap-logo {
+			position: absolute;
+			top: 30rem;
+			left: 40rem;
+		}
+		.wrap {
+			width: 1356rem;
+			min-height: 312rem;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			.all-gnb-intro {
+				display: flex;
+				flex-direction: column;
+				.category {
+					font-size: 20rem;
+					line-height: 28rem;
+					color: #999999;
+					font-weight: 700;
+				}
+				.welcome {
+					font-size: 36rem;
+					line-height: 48rem;
+					font-weight: 700;
+					color: #000;
+					margin-top: 32rem;
+				}
+				.login-menu {
+					margin-top: 48rem;
+					.login-list {
+						display: flex;
+						align-items: center;
+						li {
+							position: relative;
+							+ li {
+								padding-left: 24rem;
+								&::after {
+									content: '';
+									position: absolute;
+									left: 12rem;
+									top: 50%;
+									transform: translate(-50%, -50%);
+									width: 4rem;
+									height: 4rem;
+									border-radius: 50%;
+									background: #D9D9D9;
+								}
+							}
+						}
+						a {
+							font-size: 16rem;
+							line-height: 24rem;
+							font-weight: 700;
+							color: #000;
+							&.logout {
+								color: #959595;
+							}
+						}
+					}
+				}
+			}
+			.all-gnb-menu {
+				.all-gnb-menu-list {
+					display: flex;
+					gap: 100rem;
+					width: 740rem;
+					.dep1 {
+						font-size: 24rem;
+						line-height: 36rem;
+						font-weight: 700;
+						color: #000;
+					}
+					.dep2-menu-list {
+						padding-top: 28rem;
+						display: flex;
+						flex-direction: column;
+						gap: 16rem;
+						.dep2 {
+							font-size: 18rem;
+							line-height: 28rem;
+							color: #000;
+							transition: .2s all;
+							&:hover {
+								color:$color-primary;
+								font-weight: 700;
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		.menuClose {
+			position: absolute;
+			top: 28rem;
+			right: 40rem;
+			width: 32rem;
+			height: 32rem;
+			&::after {
+				content:'';
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: inline-block;
+				width: 32rem;
+				height: 32rem;
+				background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+				background-size: contain;
 			}
 		}
 	}

@@ -111,14 +111,11 @@
 		 <div class="snb-wrap">
 			<ul class="util pc">
 				<li>
-					<div class="btn-log-wrap on">
-						<a href="#" class="btn-log"><span class="blind">사용자메뉴</span></a>
-					</div>
 					<div class="btn-user-wrap">
-						<a href="#" class="btn-user">
+						<a href="#" class="btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<span class="name">admin74</span>님
 						</a>
-						<div class="user-menu">
+						<div class="user-menu dropdown-menu">
 							<ul class="user-menu-list">
 								<li><a href="#">마이페이지 메뉴1</a></li>
 								<li><a href="#">마이페이지 메뉴2</a></li>
@@ -128,12 +125,29 @@
 					</div>
 				</li>
 				<li>
-					<a href="#" class="btn-search on">
-						<span class="blind">검색</span>
-					</a>
+					<div class="btn-log-wrap on">
+						<a href="#" class="btn-log"><span class="blind">사용자메뉴</span></a>
+					</div>
+					
 				</li>
 				<li>
-					<a href="#" class="btn-gnb">
+					<a href="#" class="btn-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="blind">검색</span>
+					</a>
+					<!-- 검색 -->
+					<div class="header-search dropdown-menu" style="display: none;">
+						<div class="search_wrap">
+							<div class="input">
+								<input id="input_search_header" type="search" name="" placeholder="검색어를 입력하세요">
+								<!-- <span class="delete"><span class="blind">delete</span></span>  -->
+								<button id="btn_search_header" type="button" class="btn_search"><span class="blind">search</span></button>
+							</div>
+						</div>
+					</div>
+					<!-- // 검색 -->
+				</li>
+				<li>
+					<a href="#" class="btn-gnb" data-bs-toggle="modal" data-bs-target="#sitemap">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -141,85 +155,8 @@
 				</li>
 			</ul>
 		</div>
-		<!-- s: 전체메뉴 -->
-		<div class="area-siteMap">
-			<div class="all-gnb-intro">
-				<p class="category">Site Map</p>
-				<h3 class="welcome">
-					원주미래산업진흥원에<br/>
-					오신걸 환영합니다
-				</h3>
-				<div class="login-menu">
-					<ul class="login-list">
-						<li> 
-							<a href="#">로그인</a>
-							<a href="#">회원가입</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="all-gnb-menu">
-				<ul class="all-gnb-menu-list">
-					<li>
-						<a href="#" class="dep1">진흥원 소개</a>
-						<ul class="dep2-menu-list">
-							<li><a href="#" class="dep2">이사장 인사말</a></li>
-							<li><a href="#" class="dep2">원장 인사말</a></li>
-							<li><a href="#" class="dep2">비전 및 미션</a></li>
-							<li><a href="#" class="dep2">연혁</a></li>
-							<li><a href="#" class="dep2">조직도</a></li>
-							<li><a href="#" class="dep2">찾아오시는 길</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="dep1">소통마당</a>
-						<ul class="dep2-menu-list">
-							<li><a href="#" class="dep2">공지사항</a></li>
-							<li><a href="#" class="dep2">공고안내</a></li>
-							<li><a href="#" class="dep2">보도자료</a></li>
-							<li><a href="#" class="dep2">경영공시</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="dep1">주요업무</a>
-						<ul class="dep2-menu-list">
-							<li><a href="#" class="dep2">주요업무</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="dep1">시설안내</a>
-						<ul class="dep2-menu-list">
-							<li><a href="#" class="dep2">시설 예약</a></li>
-							<li><a href="#" class="dep2">예약 현황</a></li>
-							<li><a href="#" class="dep2">시설 임대</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<a href="#" class="menuClose">닫기</a>
-			<iframe class="cover5" src="about:blank" title="빈공간" scrolling="no" frameborder="no"></iframe>
-		</div>
-		<!-- e: 전체메뉴 -->
-		<!-- 검색 -->
-		<div class="header-search">
-			<div class="search_wrap">
-				<div class="input">
-					<input id="input_search_header" type="search" name="" placeholder="검색어를 입력하세요">
-					<span class="delete">X</span> 
-					<button id="btn_search_header" type="button" class="btn_search">search</button>
-				</div>
-			</div>
-			<!-- <div class="ui-inp">
-				<input type="text" id="" name="" value=""  placeholder="검색어를 입력하세요." class="inp" />
-				<div class="on-right">
-					<button type="button" class="ui-btn btn-srch">
-						<span>검색</span>
-						<!-- <i class="icn" aria-label="검색"></i> 
-					</button>
-				</div>
-			</div> -->
-		</div>
-		<!-- // 검색 -->
+		
+		
 	</div>
 	<!-- // Global 영역 -->
 </div>
@@ -367,3 +304,86 @@
 
 </div>
 <!-- Mobile Nav Modal -->
+
+<!-- s: 전체메뉴 -->
+<div class="area-siteMap modal" id="sitemap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<h2 class="sitemap-logo">
+				<a href="#">
+					<img class="up" src="/assets/images/common/img-logo-bk.svg" alt="WFI (재)원주미래산업진흥원 로고">
+					<span class="blind">WFI (재)원주미래산업진흥원</span>
+				</a>
+			</h2>
+			<div class="wrap">
+				<div class="all-gnb-intro">
+					<p class="category">Site Map</p>
+					<h3 class="welcome">
+						원주미래산업진흥원에<br />
+						오신걸 환영합니다
+					</h3>
+					<div class="login-menu">
+						<ul class="login-list">
+							<li>
+								<a href="#">로그인</a>
+							</li>
+							<li>
+								<a href="#">회원가입</a>
+							</li>
+						</ul>
+						<ul class="login-list">
+							<li>
+								<a href="#"><span class="user-name">김원주</span>님</a>
+							</li>
+							<li>
+								<a href="#" class="logout">로그아웃</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="all-gnb-menu">
+					<ul class="all-gnb-menu-list">
+						<li>
+							<a href="#" class="dep1">진흥원 소개</a>
+							<ul class="dep2-menu-list">
+								<li><a href="#" class="dep2">이사장 인사말</a></li>
+								<li><a href="#" class="dep2">원장 인사말</a></li>
+								<li><a href="#" class="dep2">비전 및 미션</a></li>
+								<li><a href="#" class="dep2">연혁</a></li>
+								<li><a href="#" class="dep2">조직도</a></li>
+								<li><a href="#" class="dep2">찾아오시는 길</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dep1">소통마당</a>
+							<ul class="dep2-menu-list">
+								<li><a href="#" class="dep2">공지사항</a></li>
+								<li><a href="#" class="dep2">공고안내</a></li>
+								<li><a href="#" class="dep2">보도자료</a></li>
+								<li><a href="#" class="dep2">경영공시</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dep1">주요업무</a>
+							<ul class="dep2-menu-list">
+								<li><a href="#" class="dep2">주요업무</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dep1">시설안내</a>
+							<ul class="dep2-menu-list">
+								<li><a href="#" class="dep2">시설 예약</a></li>
+								<li><a href="#" class="dep2">예약 현황</a></li>
+								<li><a href="#" class="dep2">시설 임대</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button type="button" class="menuClose btn-close" data-bs-dismiss="modal" aria-label="Close">
+				<span class="blind">닫기</span>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- e: 전체메뉴 -->

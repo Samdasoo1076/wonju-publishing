@@ -374,8 +374,20 @@
 		// 	height: 100%;
 		// }
 		.normalScrollElements {
-			background: url(/assets/images/main/img-main-bg.png) no-repeat;
-			background-size: cover;
+			.fp-overflow {
+				position: relative;
+				.bg {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					img {
+						width: 100%;
+					}
+				}
+			}
 		}
 		.inner {
 			position: relative;
@@ -383,7 +395,7 @@
 			// padding-top: 200rem;
 	
 			&.sec_02 {
-				background: url(/assets/images/main/img-sec_02-bg.jpg) no-repeat;
+				background: url(/assets/images/main/img-sec_02-bg1.jpg) no-repeat;
 				background-size: cover;
 				
 			}
