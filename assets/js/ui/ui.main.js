@@ -39,9 +39,6 @@ $(function(){
         }
     });
 
-	
-	
-
     var sec02_swiper = new Swiper(".sec_02 .swiper", {
         slidesPerView: 'auto',
         slidesPerGroup: 1,
@@ -165,3 +162,7 @@ function tab(btn, id) {
 function secColor($sec, color) {
     $($sec).attr('data-color', color);
 }
+
+// 풀페이지 활성/비활성
+setFullpageEvent('#mobileNavModal'); //모바일 전체메뉴
+setFullpageEvent('#sitemap'); // PC 사이트맵
