@@ -15,6 +15,9 @@ function initUI() {
 
 	// Layout
 	setGnb.init();
+
+	// Content
+	destroySlimSelects();
 }
 
 $(function(){
@@ -161,55 +164,57 @@ var setGnb = {
 	},
 }
 
-// header 스크롤
-let didScroll;
-let lastScrollTop = 0;
-let delta = 5;
+if ($('.gnb-area').length) {
+	// header 스크롤
+	let didScroll;
+	let lastScrollTop = 0;
+	let delta = 5;
 
-$(window).on('scroll', function() {
-    didScroll = true;
-})
+	$(window).on('scroll', function() {
+		didScroll = true;
+	})
 
-setInterval(function () {
-    if (didScroll) {
-        headerScroll();
-        didScroll = false;
-    }
-}, 250);
+	setInterval(function () {
+		if (didScroll) {
+			headerScroll();
+			didScroll = false;
+		}
+	}, 250);
 
-function headerScroll() {
-    let scrollTop = $(this).scrollTop();
+	function headerScroll() {
+		let scrollTop = $(window).scrollTop();
 
-    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+		if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
 
-    if (scrollTop > lastScrollTop && scrollTop > $('.gnb-area').outerHeight()) {
-        // Scroll Down
-        $('.gnb-area').removeClass('down').addClass('up');
-        $('.btn_floating').removeClass('hide').addClass('show');
-        $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
+		if (scrollTop > lastScrollTop && scrollTop > $('.gnb-area').outerHeight()) {
+			// Scroll Down
+			$('.gnb-area').removeClass('down').addClass('up');
+			$('.btn_floating').removeClass('hide').addClass('show');
+			$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
 
-        if(scrollTop > $('.footer').offset().top - $(window).innerHeight()){
-            $('.btn_floating').removeClass('show').addClass('hide');
-            $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-        }
+			if(scrollTop > $('.footer').offset().top - $(window).innerHeight()){
+				$('.btn_floating').removeClass('show').addClass('hide');
+				$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
+			}
 
-    } else {
-        // Scroll Up
-        if (scrollTop + $(window).height() < $(document).height()) {
-            $('.gnb-area').removeClass('up').addClass('down');
+		} else {
+			// Scroll Up
+			if (scrollTop + $(window).height() < $(document).height()) {
+				$('.gnb-area').removeClass('up').addClass('down');
 
-            if(scrollTop < $('.footer').offset().top - $(window).innerHeight()){
-                $('.btn_floating').removeClass('hide').addClass('show');
-                $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-            }
-        }
-        if (scrollTop < $('.gnb-area').outerHeight()) {
-            $('.gnb-area').removeClass('down');
-            $('.btn_floating').removeClass('show').addClass('hide');
-            $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-        }
-    }
-    lastScrollTop = scrollTop;
+				if(scrollTop < $('.footer').offset().top - $(window).innerHeight()){
+					$('.btn_floating').removeClass('hide').addClass('show');
+					$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
+				}
+			}
+			if (scrollTop < $('.gnb-area').outerHeight()) {
+				$('.gnb-area').removeClass('down');
+				$('.btn_floating').removeClass('show').addClass('hide');
+				$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
+			}
+		}
+		lastScrollTop = scrollTop;
+	}
 }
 
 
@@ -222,3 +227,12 @@ function InputClearHandler(id) {
 	$(id).val('').focus();
 }
 
+function destroySlimSelects() {
+	document.querySelectorAll('select').forEach((select) => {
+		new SlimSelect({
+			showSearch: false,
+			focusSearch: false,
+			select: select
+		});
+	});
+}
