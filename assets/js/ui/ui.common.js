@@ -15,6 +15,7 @@ function initUI() {
 
 	// Layout
 	setGnb.init();
+	setHeader.init();
 
 	// Content
 	destroySlimSelects();
@@ -217,6 +218,40 @@ if ($('.gnb-area').length) {
 	}
 }
 
+// 서브레이아웃 헤더
+var setHeader = {
+	init: function(){
+		if ($('.sub-wrapper').length) {
+			if ($('.visual-wrap').length) {
+				this.event();
+			} else {
+				setHeader.set();
+			}
+		}
+	},
+	event: function(){
+		var _this = this;
+		gsap.registerPlugin(ScrollTrigger);
+		ScrollTrigger.create({
+			trigger: '.snb-wrap',
+			start: 'top 0px',
+			end: 'top 72px',
+			markers: false,
+			onEnter: () => {
+				setHeader.set();
+			},
+			onLeaveBack: () => {
+				setHeader.reset();
+			}
+		});
+	},
+	set: function(){
+		$('.gnb-area').addClass('active');
+	},
+	reset: function(){
+		$('.gnb-area').removeClass('active');
+	}
+};
 
 
 /*-------------------------------------------------------------------
@@ -229,6 +264,15 @@ function InputClearHandler(id) {
 
 function destroySlimSelects() {
 	document.querySelectorAll('select').forEach((select) => {
+		// 부모 요소의 클래스 중 'h-'로 시작하는 클래스 검색
+		const parentClass = Array.from(select.parentElement.classList).find(className => className.startsWith('h-'));
+
+		// 'h-'로 시작하는 클래스가 있으면 select 요소에 추가
+		if (parentClass) {
+			// 소스가 분리된 select option에도 크기별로 반응형 대응을 해야 함
+			select.classList.add(parentClass);
+		}
+
 		new SlimSelect({
 			showSearch: false,
 			focusSearch: false,

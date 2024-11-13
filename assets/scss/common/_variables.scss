@@ -7,10 +7,10 @@ $font-primary: 'Pretendard Variable', 'sans-serif';
 $font-secondary: ''; // 미정
 
 // 레이아웃 프레임
-$pc-width-content: 1376rem;
-$pc-sidespacer: 102rem;
+$pc-width-content: 1388rem;
+$pc-sidespacer: 40rem;
 $mobile-width-content: 320rem;
-$mobile-sidespacer: 25rem;
+$mobile-sidespacer: 20rem;
 
 // IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음, 띠의 상하여백 동일한 비율 1.7)
 $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
@@ -62,25 +62,51 @@ $color-item3: coral; // item3 임시값
 // 폰트규칙
 @mixin font-body-10 {
 	font-size: 10px;
-	line-height: 14px;
-}
-
-@mixin font-body-11 {
-	font-size: 11px;
-	line-height: 15px;
+	line-height: 12px;
 }
 
 @mixin font-body-12 {
 	font-size: 12px;
-	line-height: 18px;
-}
-
-@mixin font-body-13 {
-	font-size: 13px;
-	line-height: 19px;
+	line-height: 16px;
 }
 
 @mixin font-body-14 {
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 20px;
+}
+
+@mixin font-body-16 {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+@mixin font-body-16 {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+/* 말줄임 */
+@mixin ellipsis1 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin ellipsis2 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+@mixin ellipsis3 {
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
 }

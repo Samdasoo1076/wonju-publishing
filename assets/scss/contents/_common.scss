@@ -1,12 +1,360 @@
 @charset "utf-8";
 /*-------------------------------------------------------------------
-	분류그룹 : 공통화면
+	분류그룹 : 공통 컨텐츠
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 화면명
+	@@ 게시판
 -------------------------------------------------------------------*/
-/* 그룹명 */
+/* 게시판 목록 */
+.board-list-wrap {
+	.board-toolbar {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 24rem;
+		.board-count {
+			font-weight: 400;
+			font-size: 18rem;
+			line-height: 28rem;
+			em {
+				color: $color-primary;
+			}
+		}
+		.board-srch {
+			display: flex;
+			gap: 8rem;
+			margin-left: auto;
+			.frm-sel {
+				width: 120rem;
+			}
+			.frm-inp {
+				width: 368rem;
+			}
+		}
+	}
+
+	.board-list {
+		table {
+			table-layout: fixed;
+			border-collapse: collapse;
+			border-top: 1px solid #000000;
+			border-bottom: 1px solid #EAEAEA;
+
+			// 공통
+			th, td {
+				padding: 12rem 12rem;
+				height: 88rem;
+				vertical-align: middle;
+				text-align: center;
+			}
+			th {
+				font-weight: 500;
+				font-size: 18rem;
+				line-height: 28rem;
+			}
+			td {
+				border-top: 1px solid #EAEAEA;
+				font-size: 18rem;
+				line-height: 28rem;
+				color: #666666;
+			}
+
+			// 컨텐츠
+			.tbl-no {
+				p.noti {
+					display: inline-flex;
+					padding: 4rem 10rem;
+					background-color: rgba(186, 20, 26, 0.08);
+					border-radius: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: $color-primary;
+				}
+			}
+
+			.tbl-tit {
+				text-align: left;
+				p {
+					display: flex;
+					align-items: center;
+					gap: 8rem;
+					overflow: hidden;
+					width: 100%;
+
+					.link {
+						display: block;
+						width: auto;
+						overflow: hidden;
+						font-weight: 500;
+						color: #000000;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						&:hover,
+						&:active,
+						&:focus-visible {
+							color: $color-primary;
+							text-decoration: underline;
+							text-underline-position: under;
+						}
+					}
+					.file {
+						display: block;
+						flex: none;
+						width: 20rem;
+						height: 20rem;
+						background: url('../images/common/icn-20-clip-gr.svg') no-repeat center center / contain;
+					}
+				}
+			}
+
+			.tbl-writer {
+				p {
+					@include ellipsis1;
+				}
+			}
+		}
+	}
+
+	.board-page {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		margin-top: 48rem;
+
+		button {
+			@include btn-default;
+			flex: none;
+			width: 48rem;
+			height: 48rem;
+			border-radius: 50%;
+			transition: all 0.2s ease;
+			font-weight: 400;
+			font-size: 16rem;
+			line-height: 24rem;
+			color: #000000;
+
+			&:hover,
+			&:active {
+				background-color: #EAEAEA;
+			}
+
+			&.is-current {
+				background-color: $color-primary;
+				font-weight: 700;
+				color: #fff;
+			}
+
+			&.btn-page-first,
+			&.btn-page-prev,
+			&.btn-page-next,
+			&.btn-page-last {
+				mask-repeat: no-repeat;
+				mask-position: center center;
+				mask-size: auto;
+				background-color: #000000;
+				&:disabled {
+					background-color: #BEBEBE;
+				}
+			}
+			&.btn-page-first {
+				mask-image: url('../images/common/icn-24-page-first.svg');
+			}
+
+			&.btn-page-prev {
+				margin-right: 16rem;
+				mask-image: url('../images/common/icn-24-page-prev.svg');
+			}
+
+			&.btn-page-next {
+				margin-left: 16rem;
+				mask-image: url('../images/common/icn-24-page-next.svg');
+			}
+
+			&.btn-page-last {
+				mask-image: url('../images/common/icn-24-page-last.svg');
+			}
+		}
+	}
+
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		.board-toolbar {
+			margin-bottom: 16rem;
+			.board-count {
+				order: 2;
+				margin-top: 16rem;
+				font-size: 14rem;
+				line-height: 20rem;
+			}
+			.board-srch {
+				order: 1;
+				.frm-sel {
+					flex: none;
+					width: 100rem;
+					min-width: 100rem;
+				}
+				.frm-inp {
+					flex: 1 1 auto;
+					width: auto;
+				}
+			}
+		}
+		.board-list {
+			table {
+				display: block;
+				border-bottom: 0;
+
+				// 공통
+				thead {
+					display: none;
+				}
+				tbody {
+					display: block;
+				}
+				tr {
+					display: flex;
+					flex-wrap: wrap;
+					padding: 20rem 8rem;
+					border-bottom: 1px solid #EAEAEA;
+				}
+				th, td {
+					display: block;
+					max-width: 100%;
+					height: auto;
+					overflow: hidden;
+					padding: 0;
+					text-align: left;
+				}
+				td {
+					position: relative;
+					border-top: 0;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #666666;
+				}
+
+				// 컨텐츠
+				.tbl-no {
+					width: 100%;
+					p {
+						&:not(.noti) {
+							display: none;
+						}
+						&.noti {
+							margin-bottom: 8rem;
+							padding: 2rem 6rem;
+							border-radius: 4rem;
+							font-size: 12rem;
+							line-height: 16rem;
+						}
+					}
+				}
+
+				.tbl-tit {
+					width: 100%;
+					margin-bottom: 4rem;
+					text-align: left;
+					p {
+						gap: 4rem;
+						align-items: flex-start;
+
+						.link {
+							font-weight: 500;
+							font-size: 16rem;
+							line-height: 24rem;
+							white-space: normal;
+							word-break: keep-all;
+							word-wrap: break-word;
+							@include ellipsis2;
+						}
+						.file {
+							position: relative;
+							top: 4rem;
+							width: 16rem;
+							height: 16rem;
+							background: url('../images/common/icn-20-clip-gr.svg') no-repeat center center / contain;
+						}
+					}
+				}
+
+				.tbl-writer {
+					max-width: calc(100% - 150rem);
+
+					&,
+					& + td {
+						margin-right: 9rem;
+						padding-right: 11rem; // 점이 위치할 공만만큼 더 주기
+					}
+					&::after,
+					& + td::after {
+						content:'';
+						position: absolute;
+						right: 0;
+						top: 7rem;
+						display: block;
+						width: 2rem;
+						height: 2rem;
+						border-radius: 50%;
+						background-color: #666;
+					}
+					&:last-child {
+						&::after {
+							display: none;
+						}
+					}
+
+					p {
+						@include ellipsis1;
+					}
+				}
+
+				.tbl-views {
+					padding-left: 20rem;
+					&::before {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 16rem;
+						height: 16rem;
+						background: url('../images/common/icn-16-views-gr.svg') no-repeat center center / contain;
+					}
+				}
+			}
+		}
+		.board-page {
+			margin-top: 32rem;
+			button {
+				width: 32rem;
+				height: 32rem;
+				font-size: 14rem;
+				line-height: 20rem;
+				&.btn-page-first {
+					mask-image: url('../images/common/icn-16-page-first.svg');
+				}
+
+				&.btn-page-prev {
+					mask-image: url('../images/common/icn-16-page-prev.svg');
+				}
+
+				&.btn-page-next {
+					mask-image: url('../images/common/icn-16-page-next.svg');
+				}
+
+				&.btn-page-last {
+					mask-image: url('../images/common/icn-16-page-last.svg');
+				}
+			}
+		}
+	}
+}
+
+/* 게시판 상세 */
+
 
 
 /*-------------------------------------------------------------------

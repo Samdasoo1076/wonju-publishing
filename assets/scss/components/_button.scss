@@ -7,7 +7,14 @@
 	@@ 공통
 -------------------------------------------------------------------*/
 /* 기본 */
+.ui-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 @mixin btn-default {
+	position: relative;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;

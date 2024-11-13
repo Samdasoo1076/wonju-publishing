@@ -13,7 +13,6 @@
 	background-color: #fff;
 	transition: all 0.2s ease;
 	font-weight: 400;
-	min-width: 120rem;
 	color: #000000;
 
 	.ss-placeholder,
@@ -179,26 +178,26 @@
 	@include frm-h-48;
 	.sel {
 		padding-right: calc((8rem * 2) + 24rem);
-	}
-	&::after {
-		top: calc(50% - 12rem);
-		right: 8rem;
-		width: 24rem;
-		height: 24rem;
-		background-image: url('../images/common/icn-24-select-arw.svg');
+		&::after {
+			top: calc(50% - 12rem);
+			right: 8rem;
+			width: 24rem;
+			height: 24rem;
+			background-image: url('../images/common/icn-24-select-arw.svg');
+		}
 	}
 }
 @mixin sel-h-40 {
 	@include frm-h-40;
 	.sel {
 		padding-right: calc((8rem * 2) + 20rem);
-	}
-	&::after {
-		top: calc(50% - 10rem);
-		right: 8rem;
-		width: 20rem;
-		height: 20rem;
-		background-image: url('../images/common/icn-22-select-arw.svg');
+		&::after {
+			top: calc(50% - 10rem);
+			right: 8rem;
+			width: 20rem;
+			height: 20rem;
+			background-image: url('../images/common/icn-20-select-arw.svg');
+		}
 	}
 }
 .frm-sel {
@@ -215,18 +214,23 @@
 				border-bottom-right-radius: 0 !important;
 				border-bottom-left-radius: 0 !important;
 			}
+			&::after {
+				transform: rotate(180deg);
+			}
 		}
 		.ss-placeholder {
 			padding: 0;
 			margin: 0;
+			line-height: inherit;
 		}
-	}
-	&::after {
-		content:'';
-		display: block;
-		position: absolute;
-		background: no-repeat center center / contain;
-		pointer-events: none;
+		&::after {
+			content:'';
+			display: block;
+			position: absolute;
+			background: no-repeat center center / contain;
+			pointer-events: none;
+			transition: all 0.2s ease;
+		}
 	}
 	.ss-arrow {
 		display: none;
@@ -248,6 +252,27 @@
 		}
 	}
 }
+
+@mixin option-h-56 {
+	padding: 15rem 19rem;
+	font-weight: 400;
+	font-size: 16rem;
+	line-height: 24rem;
+}
+
+@mixin option-h-48 {
+	padding: 11rem 15rem;
+	font-weight: 400;
+	font-size: 16rem;
+	line-height: 24rem;
+}
+
+@mixin option-h-40 {
+	padding: 9rem 15rem;
+	font-weight: 400;
+	font-size: 14rem;
+	line-height: 20rem;
+}
 .ss-content {
 	border:1px solid #000000;
 	.ss-search {
@@ -255,19 +280,34 @@
 	}
 	.ss-list {
 		.ss-option {
-			padding: 8rem 16rem;
-			font-weight: 400;
-			font-size: 16rem;
-			line-height: 24rem;
 			color: #000;
-			&:not(.ss-disabled):hover {
-				background-color: #FFF4F5;
+			// 호버시에만 강조
+			&:not(.ss-disabled):focus,
+			&:not(.ss-disabled):hover,
+			&:not(.ss-disabled):active {
+				background-color: #FFF4F5 !important;
+				color: $color-primary !important;
+			}
+			// 선택된 상태는 기본값 동일
+			&:not(.ss-disabled).ss-selected {
+				background-color: #fff;
 				color: #000;
 			}
-			&:not(.ss-disabled).ss-selected {
-				background-color: #FFF4F5;
-				color: $color-primary;
-			}
+		}
+	}
+	&.h-56 .ss-list .ss-option {
+		@include option-h-56;
+	}
+	&.h-48 .ss-list .ss-option {
+		@include option-h-48;
+	}
+	@include media-mobile-xl {
+		&.h-56 .ss-list .ss-option {
+			@include option-h-48;
+		}
+
+		&.h-48 .ss-list .ss-option {
+			@include option-h-40;
 		}
 	}
 }
