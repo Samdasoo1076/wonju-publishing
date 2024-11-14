@@ -110,11 +110,25 @@ var setGnb = {
 		this.event();
 	},
 	event : function(){
+		var $gnbarea = $(".gnb-area");
 		var $headerNav = $('.header-pc-sec .header-nav');
 		var $dep1ItemAll = $headerNav.find('.dep1-item');
 		var setTime = null;
 		var _this = this;
+		var $btnSearch = $(".gnb-area .btn-search");
 
+		$gnbarea.on("mouseenter", function() {
+			$(this).addClass("active");
+		  });
+		  
+		$gnbarea.on("mouseleave", function() {
+			// btn-search에 show 클래스가 없을 때만 active 클래스를 제거
+			if (!$btnSearch.hasClass("show")) {
+				$(this).removeClass("active");
+			}
+		});
+
+		
 		// 마우스 기본기능
 		$dep1ItemAll.off('mouseenter.gnb').on('mouseenter.gnb', function(e){
 			var $this = $(this);
@@ -151,7 +165,7 @@ var setGnb = {
 		$dep1ItemActive.addClass('is-active');
 
 		$('.header-nav-bg').stop().slideDown(200);
-		$('.gnb-area').addClass('active');
+
 	},
 	hide : function($dep1ItemAll, $dep1ItemActive){
 		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
@@ -161,7 +175,7 @@ var setGnb = {
 			$dep2Wrap.stop().slideUp(200);
 			$('.header-nav-bg').stop().slideUp(200);
 		}
-		$('.gnb-area').removeClass('active');
+
 	},
 }
 

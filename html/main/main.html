@@ -110,53 +110,7 @@
 							<div class="scroll-down">
 								<span class="txt">SCROLL DOWN</span>
 							</div>
-							<div class="reservation-wrap accordionExample" id="accordionExample">
-								<div class="reservation-top">
-									<p class="tit">시설 예약현황</p>
-									<button type="button" class="calendar-open collapsed" data-bs-toggle="collapse" data-bs-target="#carendar"
-									aria-expanded="true" aria-controls="carendar">
-										<span class="blind">열기</span>
-									</button>
-								</div>
-								<div class="reservation-cont collapse" id="carendar" data-bs-parent="#accordionExample">
-									<div class="reservation-calendar" id="calendar"></div>
-									<div class="reservation-choice">
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio1">
-											<label for="it_radio1">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio2">
-											<label for="it_radio2">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio3">
-											<label for="it_radio3">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-									</div>
-								</div>
-							</div>
+							
 						</section>
 						 <!-- e: 01_visual -->
 						<!-- s: 02_인트로 -->
@@ -335,6 +289,60 @@
 						</div>
 					</div>
 				</section>
+				<div class="reservation-wrap accordionExample" id="accordionExample">
+					<div class="reservation-top">
+						<p class="tit">시설 예약현황</p>
+						<button type="button" class="calendar-open collapsed" data-bs-toggle="collapse" data-bs-target="#carendar"
+						aria-expanded="true" aria-controls="carendar">
+							<span class="blind">열기</span>
+						</button>
+					</div>
+					<div class="reservation-cont collapse" id="carendar" data-bs-parent="#accordionExample">
+						<div class="reservation-calendar" id="calendar"></div>
+						<div class="reservation-choice">
+							<div class="radio_area">
+								<input type="radio" name="it_radio" id="it_radio1">
+								<label for="it_radio1">
+									<p class="title">3-8호</p>
+									<div class="cont">
+										<span class="txt">시설규모 : 57m2</span> 
+										<span class="txt">수용인원 : 8명</span> 
+									</div>
+									<p class="price">이용료 : 30,000원</p>
+								</label>  
+							</div>
+							<div class="radio_area">
+								<input type="radio" name="it_radio" id="it_radio2">
+								<label for="it_radio2">
+									<p class="title">3-8호</p>
+									<div class="cont">
+										<span class="txt">시설규모 : 57m2</span> 
+										<span class="txt">수용인원 : 8명</span> 
+									</div>
+									<p class="price">이용료 : 30,000원</p>
+								</label>  
+							</div>
+							<div class="radio_area">
+								<input type="radio" name="it_radio" id="it_radio3">
+								<label for="it_radio3">
+									<p class="title">3-8호</p>
+									<div class="cont">
+										<span class="txt">시설규모 : 57m2</span> 
+										<span class="txt">수용인원 : 8명</span> 
+									</div>
+									<p class="price">이용료 : 30,000원</p>
+								</label>  
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="topBtn">
+					<a href="#" class="btn_top">
+						<img src="/assets/images/main/icn-48-topbtn.svg" alt="">
+						<!-- <img class="hover" src="/assets/images/main/icn-48-topbtn.svg" alt=""> -->
+						<span class="blind">TOP</span>
+					</a>
+				</div>
 			</div>
 			<!-- // content -->
 		</main>
@@ -485,6 +493,15 @@
 		});
 	});
 
+	$('.topBtn .btn_top').on('click', function (e) {
+		$('html, body').stop().animate({
+			scrollTop: 0
+		}, {
+			duration: 400,
+			easing: 'swing',
+		});
+		e.preventDefault();
+	});
 </script>
 
 </html>
