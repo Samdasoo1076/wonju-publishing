@@ -65,7 +65,7 @@
 											<div class="inner">
 												<h2>
 													새로운 변화, 큰 행복,<br/>
-													더 큰 원주 실현을 위한 Think-Tank
+													더 큰 원주 실현을 위한 <span class="wbr">Think-Tank</span>
 												</h2>
 											</div>
 											<div class="bg">
@@ -78,7 +78,7 @@
 											<div class="inner">
 												<h2>
 													새로운 변화, 큰 행복,<br/>
-													더 큰 원주 실현을 위한 Think-Tank
+													더 큰 원주 실현을 위한 <span class="wbr">Think-Tank</span>
 												</h2>
 											</div>
 											<div class="bg">
@@ -91,7 +91,7 @@
 											<div class="inner">
 												<h2>
 													새로운 변화, 큰 행복,<br/>
-													더 큰 원주 실현을 위한 Think-Tank
+													더 큰 원주 실현을 위한 <span class="wbr">Think-Tank</span>
 												</h2>
 											</div>
 											<div class="bg">
@@ -152,6 +152,9 @@
 											</li>
 										</ul>
 									</div>
+									<a href="#" class="btn-more-view">
+										<span class="txt">더보기</span>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -159,6 +162,7 @@
 						<div class="normalScrollElements section sec_03">
 							<div class="bg">
 								<img src="/assets/images/main/img-main-bg.png">
+								<img class="mo" src="/assets/images/main/img-main-bg-mo.png">
 							</div>
 							<!-- s: 03_소통마당 -->
 							<div class="inner community">
@@ -445,52 +449,57 @@
 	});
 
 	//sec_02 호버 백그라운드 변경
-		document.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('DOMContentLoaded', function () {
 		// sec_02 섹션 가져오기
 		const sec02 = document.querySelector('.sec_02');
+		
+		
 
-		// 기본 배경 이미지 설정
-		const defaultBackgroundImage = "url('/assets/images/main/img-sec_02-bg1.jpg')";
-		sec02.style.backgroundImage = defaultBackgroundImage;
-		sec02.style.backgroundSize = 'cover';
-		sec02.style.backgroundPosition = 'center';
-		sec02.style.transition = '.2s background';
+		// 해상도가 768px 이상일 때만 실행
+		if (window.innerWidth > 767) {
+			// 기본 배경 이미지 설정
+			const defaultBackgroundImage = "url('/assets/images/main/img-sec_02-bg1.jpg')";
+			sec02.style.backgroundImage = defaultBackgroundImage;
+			sec02.style.backgroundSize = 'cover';
+			sec02.style.backgroundPosition = 'center';
+			sec02.style.transition = '.2s background';
+			
+			// 모든 team-card 항목 가져오기
+			const teamCards = document.querySelectorAll('.team-card');
 
-		// 모든 team-card 항목 가져오기
-		const teamCards = document.querySelectorAll('.team-card');
+			// 각 team-card 항목에 이벤트 리스너 추가
+			teamCards.forEach((card, index) => {
+				card.addEventListener('mouseover', () => {
+					// 각 card에 따라 다른 배경 이미지를 적용
+					switch (index) {
+						case 0:
+							sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg1.jpg')"; // 첫 번째 카드 이미지
+							break;
+						case 1:
+							sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg2.jpg')"; // 두 번째 카드 이미지
+							break;
+						case 2:
+							sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg3.jpg')"; // 세 번째 카드 이미지
+							break;
+						default:
+							sec02.style.backgroundImage = defaultBackgroundImage; // 기본 이미지
+					}
+					sec02.style.backgroundSize = 'cover';
+					sec02.style.backgroundPosition = 'center';
 
-		// 각 team-card 항목에 이벤트 리스너 추가
-		teamCards.forEach((card, index) => {
-			card.addEventListener('mouseover', () => {
-				// 각 card에 따라 다른 배경 이미지를 적용
-				switch(index) {
-					case 0:
-						sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg1.jpg')"; // 첫 번째 카드 이미지
-						break;
-					case 1:
-						sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg2.jpg')"; // 두 번째 카드 이미지
-						break;
-					case 2:
-						sec02.style.backgroundImage = "url('/assets/images/main/img-sec_02-bg3.jpg')"; // 세 번째 카드 이미지
-						break;
-					default:
-						sec02.style.backgroundImage = defaultBackgroundImage; // 기본 이미지
-				}
-				sec02.style.backgroundSize = 'cover';
-				sec02.style.backgroundPosition = 'center';
+					// team-card에 active 클래스 추가
+					card.classList.add('active');
+				});
 
-				// team-card에 active 클래스 추가
-				card.classList.add('active');
+				// 마우스가 빠져나가면 디폴트 배경 이미지로 복원 및 active 클래스 제거
+				card.addEventListener('mouseout', () => {
+					sec02.style.backgroundImage = defaultBackgroundImage;
+
+					// team-card의 active 클래스 제거
+					card.classList.remove('active');
+				});
 			});
-
-			// 마우스가 빠져나가면 디폴트 배경 이미지로 복원 및 active 클래스 제거
-			card.addEventListener('mouseout', () => {
-				sec02.style.backgroundImage = defaultBackgroundImage;
-
-				// team-card의 active 클래스 제거
-				card.classList.remove('active');
-			});
-		});
+		}
 	});
 
 	$('.topBtn .btn_top').on('click', function (e) {
