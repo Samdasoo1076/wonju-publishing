@@ -59,5 +59,3 @@ function setFullpageEvent(id) {
 }
 setFullpageEvent('#mobileNavModal'); //모바일 전체메뉴
 setFullpageEvent('#sitemap'); // PC 사이트맵
-
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
