@@ -9,7 +9,11 @@ $font-secondary: ''; // 미정
 // 레이아웃 프레임
 $pc-width-content: 1376rem;
 $pc-sidespacer: 102rem;
+$mobile-width-content: 320rem;
 $mobile-sidespacer: 25rem;
+
+// IOS Safe Area Bottom 대응 (웹에서 상단은 필요 없음, 띠의 상하여백 동일한 비율 1.7)
+$safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
 // 컬러 맥락
 $color-tit: #222; // 제목 임시값

@@ -3,25 +3,13 @@
 	- @ Publish	    : 레이아웃
 	- @ Init	    : 초기실행
 -------------------------------------------------------------------*/
-
-function setPublishInclude(){
-	$(".header").each(function(){
-		var path = "../../html/layout/";
-		var filename = "include_header.html";
-		$(this).load(path + filename, function(){
-				setGnb.init();
-		});
-	})
-	$(".footer").each(function(){
-		var path = "../../html/layout/";
-		var filename = "include_footer.html";
-		$(this).load(path + filename, function(){
-				console.log("Init Footer Functions");
-		});
-	})
-}
-
 $(function(){
-	/* Setting Init */
-	setPublishInclude(); // 인크루드
+	$(".header").load("../../html/layout/include_header.html", function(){
+			console.log('[INFO] 퍼블리싱 header.html 인클루드 완료');
+			initUI();
+	});
+	$(".footer").load("../../html/layout/include_footer.html", function(){
+			console.log('[INFO] 퍼블리싱 footer.html 인클루드 완료');
+			initUI();
+	});
 });
