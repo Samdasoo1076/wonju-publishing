@@ -293,4 +293,7 @@ function destroySlimSelects() {
 			select: select
 		});
 	});
+
+	//게시판 상세 페이저 글없을경우 링크제거
+	document.querySelector(".pager.disabled a").removeAttribute('href');
 }

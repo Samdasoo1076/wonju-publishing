@@ -20,6 +20,9 @@
 			em {
 				color: $color-primary;
 			}
+			strong {
+				font-weight: 700;
+			}
 		}
 		.board-srch {
 			display: flex;
@@ -78,6 +81,7 @@
 				text-align: left;
 				p {
 					display: flex;
+					justify-content: space-between;
 					align-items: center;
 					gap: 8rem;
 					overflow: hidden;
@@ -98,6 +102,9 @@
 							text-decoration: underline;
 							text-underline-position: under;
 						}
+						.value {
+							color: $color-primary;
+						}
 					}
 					.file {
 						display: block;
@@ -112,6 +119,16 @@
 			.tbl-writer {
 				p {
 					@include ellipsis1;
+				}
+			}
+			.no-list {
+				padding: 148rem 0 60rem;
+				background: url(/assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
+				background-size: 80rem;
+				p {
+					font-size: 18rem;
+					line-height: 28rem;
+					color: #000;
 				}
 			}
 		}
@@ -182,6 +199,9 @@
 	// 기능별 반응형 대응
 	@include media-tablet-xs {
 		.board-toolbar {
+			flex-direction: column;
+			align-content: flex-start;
+			align-items: flex-start;
 			margin-bottom: 16rem;
 			.board-count {
 				order: 2;
@@ -190,6 +210,7 @@
 				line-height: 20rem;
 			}
 			.board-srch {
+				width: 100%;
 				order: 1;
 				.frm-sel {
 					flex: none;
@@ -324,6 +345,20 @@
 						background: url('../images/common/icn-16-views-gr.svg') no-repeat center center / contain;
 					}
 				}
+
+				.no-list {
+					padding: 108rem 0 40rem;
+					background: url(/assets/images/common/icn-80-nolist.svg) no-repeat 50% 40rem;
+					background-size: 60rem;
+					vertical-align: middle;
+					text-align: center;
+					width: 100%;
+					p { 
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #000;
+					}
+				}
 			}
 		}
 		.board-page {
@@ -354,7 +389,284 @@
 }
 
 /* 게시판 상세 */
-
+.board-view-wrap {
+	.board-view {
+		.board-view-cont {
+			border-top: 1px solid #000;
+			.file-area {
+				padding: 24rem;
+				border-bottom: 1px solid #EAEAEA;
+				.link-item {
+					a {
+						position: relative;
+						font-size: 18rem;
+						line-height: 28rem;
+						color: #666;
+						padding-left: 26rem;
+						&::before {
+							content: '';
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							display: inline-block;
+							width: 20rem;
+							height: 20rem;
+							background: url(/assets/images/common/icn-16-clip-gr.svg) no-repeat;
+							background-size: 100%;
+						}
+						&:hover {
+							color: $color-primary;
+							text-decoration: underline;
+						}
+						+ .link-item {
+							margin-top: 8rem;
+						}
+					}
+				}
+			}
+			.view-area {
+				padding: 64rem 24rem;
+				border-bottom: 1px solid #EAEAEA;
+				.cont {
+					font-size: 18rem;
+					line-height: 28rem;
+					color: #333;
+				}
+			}
+			.btn-list {
+				width: 160rem;
+				height: 48rem;
+				margin: 32rem auto 60rem;
+				a {
+					display: block;
+					border-radius: 4rem;
+					background: $color-primary;
+					color: #fff;
+					text-align: center;
+					line-height: 48rem;
+					font-size: 14rem;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.board-view-page {
+		.pager {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 88rem;
+			background: #fff;
+			.prev-view {
+				padding: 47rem 32rem;
+				.txt {
+					position: relative;
+					font-size: 16rem;
+					line-height: 24rem;
+					padding-left: 32rem;
+					color: #666;
+					&::after {
+						content:  '';
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 24rem;
+						height: 24rem;
+						background: url(/assets/images/common/icn-24-up-gr.svg) no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+			.next-view {
+				padding: 47rem 32rem;
+				.txt {
+					position: relative;
+					font-size: 16rem;
+					line-height: 24rem;
+					padding-left: 32rem;
+					color: #666;
+					&::after {
+						content:  '';
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 24rem;
+						height: 24rem;
+						background: url(/assets/images/common/icn-24-down-gr.svg) no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+			a {
+				display: block;
+				width: calc(100% - 308rem);
+				font-size: 18rem;
+				line-height: 28rem;
+				color: #000;
+				padding: 0 12rem;
+				&:hover,
+				&:active,
+				&:focus-visible {
+					color: $color-primary;
+					text-decoration: underline;
+					text-underline-position: under;
+				}
+			}
+			.date {
+				font-size: 18rem;
+				color: #959595;
+				padding: 30rem 38rem;
+			}
+			&.disabled {
+				a {
+					color: #959595;
+				}
+			}
+		}
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		.board-view {
+			.board-view-cont {
+				border-top: 1px solid #000;
+				.file-area {
+					padding: 24rem 16rem;
+					border-bottom: 1px solid #EAEAEA;
+					.link-item {
+						a {
+							display: block;
+							position: relative;
+							font-size: 14rem;
+							line-height: 20rem;
+							color: #666;
+							padding-left: 20rem;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							&::before {
+								content: '';
+								position: absolute;
+								left: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								display: inline-block;
+								width: 16rem;
+								height: 16rem;
+								background: url(/assets/images/common/icn-16-clip-gr.svg) no-repeat;
+								background-size: 100%;
+							}
+							
+							&:hover {
+								color: $color-primary;
+								text-decoration: underline;
+							}
+						}
+						+ .link-item {
+							margin-top: 8rem;
+						}
+					}
+				}
+				.view-area {
+					padding: 40rem 16rem;
+					border-bottom: 1px solid #EAEAEA;
+					.cont {
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #333;
+					}
+				}
+				.btn-list {
+					width: 120rem;
+					height: 40rem;
+					margin: 24rem auto 40rem;
+					a {
+						display: block;
+						border-radius: 4rem;
+						background: $color-primary;
+						color: #fff;
+						text-align: center;
+						line-height: 40rem;
+						font-size: 14rem;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+		.board-view-page {
+			.pager {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 64rem;
+				background: #fff;
+				.prev-view {
+					padding: 22rem 20rem;
+					.txt {
+						position: relative;
+						font-size: 14rem;
+						line-height: 20rem;
+						padding-left: 20rem;
+						color: #666;
+						&::after {
+							content:  '';
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 16rem;
+							height: 16rem;
+							background: url(/assets/images/common/icn-24-up-gr.svg) no-repeat;
+							background-size: 100%;
+						}
+					}
+				}
+				.next-view {
+					padding: 22rem 20rem;
+					.txt {
+						position: relative;
+						font-size: 14rem;
+						line-height: 20rem;
+						padding-left: 20rem;
+						color: #666;
+						&::after {
+							content:  '';
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 16rem;
+							height: 16rem;
+							background: url(/assets/images/common/icn-24-down-gr.svg) no-repeat;
+							background-size: 100%;
+						}
+					}
+				}
+				a {
+					display: block;
+					width: calc(100% - 96rem);
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+					padding: 0 8rem;
+					overflow: hidden;
+					white-space: nowrap;
+    				text-overflow: ellipsis;
+				}
+				.date {
+					display: none;
+				}
+				&.disabled {
+					a {
+						color: #959595;
+					}
+				}
+			}
+		}
+	}
+}
 
 
 /*-------------------------------------------------------------------

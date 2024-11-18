@@ -453,10 +453,9 @@
 		// sec_02 섹션 가져오기
 		const sec02 = document.querySelector('.sec_02');
 		
-		
 
 		// 해상도가 768px 이상일 때만 실행
-		if (window.innerWidth > 767) {
+		if ($(window).width() > 767) {
 			// 기본 배경 이미지 설정
 			const defaultBackgroundImage = "url('/assets/images/main/img-sec_02-bg1.jpg')";
 			sec02.style.backgroundImage = defaultBackgroundImage;

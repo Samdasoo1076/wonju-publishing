@@ -2596,7 +2596,43 @@ html {
 			font-size: 18rem;
 			line-height: 28rem;
 			color: #666;
+		}
+	}
 
+	/* 게시판상세 타이틀 */
+	.view-title-wrap {
+		margin-bottom: 40rem;
+		text-align: center;
+		.title {
+			font-weight: 700;
+			font-size: 40rem;
+			line-height: 56rem;
+			color: #000;
+		}
+		.info {
+			margin-top: 16rem;
+			span {
+				position: relative;
+				font-weight: 400;
+				font-size: 18rem;
+				line-height: 28rem;
+				color: #666;
+				+ span {
+					padding-left: 26rem;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 12rem;
+						top: 50%;
+						transform: translateY( -50%);
+						display: inline-block;
+						width: 4rem;
+						height: 4rem;
+						border-radius: 100%;
+						background: #666;
+					}
+				}
+			}
 		}
 	}
 
@@ -2679,7 +2715,7 @@ html {
 		}
 
 		.content-body {
-			padding: 60rem $mobile-sidespacer;
+			padding: 60rem $mobile-sidespacer 80rem;
 			max-width: 100%;
 		}
 		.title-wrap {
@@ -2692,6 +2728,41 @@ html {
 				margin-top: 12rem;
 				font-size: 14rem;
 				line-height: 20rem;
+			}
+		}
+		.view-title-wrap {
+			margin-bottom: 24rem;
+			text-align: center;
+			.title {
+				font-weight: 700;
+				font-size: 24rem;
+				line-height: 36rem;
+				color: #000;
+			}
+			.info {
+				margin-top: 8rem;
+				span {
+					position: relative;
+					font-weight: 400;
+					font-size: 12rem;
+					line-height: 16rem;
+					color: #666;
+					+ span {
+						padding-left: 16rem;
+						&::after {
+							content: '';
+							position: absolute;
+							left: 7rem;
+							top: 50%;
+							transform: translateY( -50%);
+							display: inline-block;
+							width: 4rem;
+							height: 4rem;
+							border-radius: 100%;
+							background: #666;
+						}
+					}
+				}
 			}
 		}
 	}
