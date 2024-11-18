@@ -75,6 +75,16 @@
 					line-height: 24rem;
 					color: $color-primary;
 				}
+				p.accepting {
+					display: inline-flex;
+					padding: 4rem 10rem;
+					background-color: rgba(13, 85, 209, 0.08);
+					border-radius: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #0D55D1;
+				}
 			}
 
 			.tbl-tit {
@@ -123,7 +133,7 @@
 			}
 			.no-list {
 				padding: 148rem 0 60rem;
-				background: url(/assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
+				background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
 				background-size: 80rem;
 				p {
 					font-size: 18rem;
@@ -348,7 +358,7 @@
 
 				.no-list {
 					padding: 108rem 0 40rem;
-					background: url(/assets/images/common/icn-80-nolist.svg) no-repeat 50% 40rem;
+					background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 40rem;
 					background-size: 60rem;
 					vertical-align: middle;
 					text-align: center;
@@ -412,7 +422,7 @@
 							display: inline-block;
 							width: 20rem;
 							height: 20rem;
-							background: url(/assets/images/common/icn-16-clip-gr.svg) no-repeat;
+							background: url(../../assets/images/common/icn-16-clip-gr.svg) no-repeat;
 							background-size: 100%;
 						}
 						&:hover {
@@ -474,7 +484,7 @@
 						transform: translateY(-50%);
 						width: 24rem;
 						height: 24rem;
-						background: url(/assets/images/common/icn-24-up-gr.svg) no-repeat;
+						background: url(../../assets/images/common/icn-24-up-gr.svg) no-repeat;
 						background-size: 100%;
 					}
 				}
@@ -495,7 +505,7 @@
 						transform: translateY(-50%);
 						width: 24rem;
 						height: 24rem;
-						background: url(/assets/images/common/icn-24-down-gr.svg) no-repeat;
+						background: url(../../assets/images/common/icn-24-down-gr.svg) no-repeat;
 						background-size: 100%;
 					}
 				}
@@ -560,7 +570,7 @@
 								display: inline-block;
 								width: 16rem;
 								height: 16rem;
-								background: url(/assets/images/common/icn-16-clip-gr.svg) no-repeat;
+								background: url(../../assets/images/common/icn-16-clip-gr.svg) no-repeat;
 								background-size: 100%;
 							}
 							
@@ -623,7 +633,7 @@
 							transform: translateY(-50%);
 							width: 16rem;
 							height: 16rem;
-							background: url(/assets/images/common/icn-24-up-gr.svg) no-repeat;
+							background: url(../../assets/images/common/icn-24-up-gr.svg) no-repeat;
 							background-size: 100%;
 						}
 					}
@@ -644,7 +654,7 @@
 							transform: translateY(-50%);
 							width: 16rem;
 							height: 16rem;
-							background: url(/assets/images/common/icn-24-down-gr.svg) no-repeat;
+							background: url(../../assets/images/common/icn-24-down-gr.svg) no-repeat;
 							background-size: 100%;
 						}
 					}
