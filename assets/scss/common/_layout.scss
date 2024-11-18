@@ -100,11 +100,7 @@ html {
 			align-items: center;
 			justify-content: space-between;
 			height: 88rem;
-<<<<<<< HEAD
-			
-=======
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 			&.active, &.down {
 				background: #fff;
 				.header-logo {
@@ -173,27 +169,6 @@ html {
 											}
 										}
 									}
-<<<<<<< HEAD
-									+ .btn-user-wrap {
-										display: block;
-										.btn-user {
-											padding-right: 24rem;
-											color: #000;
-											&::after {
-												content:'';
-												position: absolute;
-												top: 0;
-												right: 0;
-												display: inline-block;
-												width: 24rem;
-												height: 24rem;
-												background: url(/assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
-												background-size: contain;
-											}
-										}
-									}
-=======
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 								}
 							}
 							a {
@@ -232,15 +207,6 @@ html {
 										}
 									}
 								}
-<<<<<<< HEAD
-								
-							}
-							.btn-user-wrap {
-								display: none;
-								&.btn-user {
-									display: none;
-									padding-right: 24rem;
-=======
 
 							}
 							.btn-user-wrap {
@@ -248,7 +214,6 @@ html {
 								display: block;
 								.btn-user {
 									color: #000;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 									&::after {
 										content:'';
 										position: absolute;
@@ -258,12 +223,6 @@ html {
 										width: 24rem;
 										height: 24rem;
 										background: url(/assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
-<<<<<<< HEAD
-										background-size: contain;
-									}
-								}
-							}
-=======
 
 										background-size: contain;
 										transition: .2s all;
@@ -286,7 +245,6 @@ html {
 								}
 							}
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 						}
 					}
 				}
@@ -330,33 +288,6 @@ html {
 										}
 									}
 								}
-<<<<<<< HEAD
-								+ .btn-user-wrap {
-									display: block;
-									.btn-user {
-										position: absolute;
-										top: 32rem;
-										right: 196rem;
-										padding-right: 24rem;
-										font-size: 16rem;
-										color:#fff;
-										.name {
-											font-weight: 700;
-										}
-										&::after {
-											content: '';
-											display: inline-block;
-											position: absolute;
-											right: 0;
-											top: 0;
-											width: 24rem;
-											height: 24rem;
-											background: url(/assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
-											background-size: contain;
-										}
-									}
-									.user-menu {
-=======
 							}
 						}
 						.btn-user-wrap {
@@ -402,19 +333,13 @@ html {
 								&.show {
 									display: block;
 									.user-menu-list {
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 										display: flex;
 										flex-direction: column;
 										gap: 12rem;
 										position: absolute;
-<<<<<<< HEAD
-										top: 66rem;
-										right: 176rem;
-=======
 										top: 0;
 										left: -20rem;
 										width: max-content;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 										padding: 6rem 0;
 										border: 1px solid #DFDFDF;
 										border-radius: 4rem;
@@ -431,10 +356,7 @@ html {
 											}
 										}
 									}
-<<<<<<< HEAD
-=======
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 								}
 							}
 						}
@@ -466,22 +388,14 @@ html {
 									background: url(/assets/images/common/icn-util-search-wh.svg) no-repeat 50% 50%;
 									background-size: contain;
 								}
-<<<<<<< HEAD
-								&.on {
-=======
 								&.show {
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 									&::after {
 										content:'';
 										position: absolute;
 										display: inline-block;
 										width: 32rem;
 										height: 32rem;
-<<<<<<< HEAD
-										background: url(/assets/images/common/icn-close-wh.svg) no-repeat 50% 50%;
-=======
 										background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 										background-size: contain;
 									}
 								}
@@ -490,20 +404,6 @@ html {
 					}
 				}
 			}
-<<<<<<< HEAD
-			.header-search {
-				display: none;
-				&.on {
-					.header-search {
-						display: block;
-						position: absolute;
-						top: 88rem;
-						width: 100vw;
-						height: 100%;
-						background: #fff;
-						padding: 40rem;
-					}
-=======
 
 			.header-search {
 				display: none;
@@ -558,17 +458,12 @@ html {
 				}
 				&.show {
 					display: flex!important;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 				}
 			}
 			&.up {
 				top: -88rem;
 			}
-<<<<<<< HEAD
-			
-=======
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 			&.active,
 			&.active.white,
 			&.active.down {
@@ -586,11 +481,7 @@ html {
 					display: inline-block;
 					background: #EAEAEA;
 					width: 100vw;
-<<<<<<< HEAD
-					height: 1px; 
-=======
 					height: 1px;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 				}
 				.header-nav {
 					// Nav Depth1
@@ -931,11 +822,7 @@ html {
 						.dep1-list {
 							.dep1-item {
 								position: relative;
-<<<<<<< HEAD
-								
-=======
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 								.dep1-link {
 									display: flex;
 									justify-content: space-between;
@@ -982,11 +869,7 @@ html {
 											background: url(/assets/images/common/icn-moGnb-li-off.svg) no-repeat 50% 50%;
 											background-size: contain;
 										}
-<<<<<<< HEAD
-										
-=======
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 									}
 								}
 								.dep2-list-wrap {
@@ -2274,15 +2157,12 @@ html {
 						display: block;
 						width: 100%;
 						height: 100%;
-<<<<<<< HEAD
-=======
 						img {
 							object-fit: contain;
 							width: 100%;
 							height: 100%;
 							vertical-align: top;
 						}
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 						img.up {
 							display: none;
 						}
@@ -2292,13 +2172,8 @@ html {
 					display: flex;
 					gap: 12rem;
 					.btn-search {
-<<<<<<< HEAD
-						width: 24rem;
-						height: 24rem;
-=======
 						width: 32rem;
 						height: 32rem;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 						&::after {
 							content:'';
 							position: absolute;
@@ -2322,13 +2197,8 @@ html {
 					}
 				}
 				.btn-gnb {
-<<<<<<< HEAD
-					width: 24rem;
-					height: 24rem;
-=======
 					width: 32rem;
 					height: 32rem;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 					&::after {
 						content:'';
 						position: absolute;
@@ -2417,16 +2287,9 @@ html {
 // Footer
 .footer {
 	@include out-sec;
-<<<<<<< HEAD
-	padding-top: 30rem;
-	padding-bottom: 30rem;
-	background-color: #000;
-	color: #fff;
-=======
 	position: relative;
 	background: #fff;
 	padding: 60rem 0;
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 	z-index: 50;
 	.footer-sec {
 		position: relative;
@@ -2904,4 +2767,3 @@ html {
 		}
 	}
 }
-

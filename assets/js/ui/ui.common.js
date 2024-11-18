@@ -1,10 +1,10 @@
 /*-------------------------------------------------------------------
 	분류순서
-	- @ Components	: 컴포넌트
-	- @ Content		: 컨텐츠
+	- @ Init		: 초기실행
+	- @ Settings	: 기본설정
+	- @ Layout		: 레이아웃
+	- @ Contents	: 컨텐츠전체
 -------------------------------------------------------------------*/
-<<<<<<< HEAD
-=======
 /*-------------------------------------------------------------------
 	@ Init
 -------------------------------------------------------------------*/
@@ -101,7 +101,6 @@ function setScrollStatus(){
         $('body').toggleClass('is-scroll-last', isScrLast);
     });
 }
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 
 /*-------------------------------------------------------------------
 	@ Layout
@@ -135,18 +134,18 @@ var setGnb = {
 			var $this = $(this);
 			// 지나가는 마우스가 아닌 경우 mouseenter 실행.
 			setTime = setTimeout(() => {
-				_this.show($this);
+				_this.show($dep1ItemAll, $this);
 			}, 100);
 		})
 		$headerNav.off('mouseleave.gnb').on('mouseleave.gnb', function(e){
-			_this.hide($(this).find('.dep1-item.is-active'));
+			_this.hide($dep1ItemAll, $(this).find('.dep1-item.is-active'));
 			// 마우스가 지지나가면 mouseenter 실행안되게 setTime 초기화
 			clearTimeout(setTime);
 		})
 
 		// 키보드 접근성
 		$dep1ItemAll.off('focusin.gnb').on('focusin.gnb', function(e){
-			_this.show($(this));
+			_this.show($dep1ItemAll, $(this));
 			// 포커스가 유지되면 focusout 실행안되게 setTime 초기화나
 			clearTimeout(setTime);
 		})
@@ -154,96 +153,28 @@ var setGnb = {
 			var $this = $(this);
 			// focusin 않을시 초기화 되지 않고 focusout 실행.
 			setTime = setTimeout(() => {
-				_this.hide($this);
+				_this.hide($dep1ItemAll, $this);
 			}, 50);
 		})
 	},
-	show : function($dep1ItemActive){
+	show : function($dep1ItemAll, $dep1ItemActive){
 		var $siblings = $dep1ItemActive.siblings('.is-active');
 		$('.dep2-list-wrap').stop().slideDown(200);
-<<<<<<< HEAD
-		$('.header-nav-bg').stop().slideDown(200);
-		$('.gnb-area').addClass('active');
-=======
 		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
 		$dep2Wrap.stop().slideDown(200);
 		$dep1ItemActive.addClass('is-active');
 
 		$('.header-nav-bg').stop().slideDown(200);
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 	},
-	hide : function($dep1ItemActive){
-		$('.dep2-list-wrap').stop().slideUp(200);
+	hide : function($dep1ItemAll, $dep1ItemActive){
+		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
+		$dep1ItemActive.removeClass('is-active');
 		// 더 이상 활성화된 메뉴가 없으면 배경을 닫기
 		if (!$('.dep1-item.is-active').length) {
+			$dep2Wrap.stop().slideUp(200);
 			$('.header-nav-bg').stop().slideUp(200);
 		}
-<<<<<<< HEAD
-		$('.gnb-area').removeClass('active');
-	},
-}
-
-// header 스크롤
-let didScroll;
-let lastScrollTop = 0;
-let delta = 5;
-
-$(window).on('scroll', function() {
-    didScroll = true;
-})
-
-setInterval(function () {
-    if (didScroll) {
-        headerScroll();
-        didScroll = false;
-    }
-}, 250);
-
-function headerScroll() {
-    let scrollTop = $(this).scrollTop();
-
-    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
-
-    if (scrollTop > lastScrollTop && scrollTop > $('.gnb-area').outerHeight()) {
-        // Scroll Down
-        $('.gnb-area').removeClass('down').addClass('up');
-        $('.btn_floating').removeClass('hide').addClass('show');
-        $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-
-        if(scrollTop > $('.footer').offset().top - $(window).innerHeight()){
-            $('.btn_floating').removeClass('show').addClass('hide');
-            $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-        }
-
-    } else {
-        // Scroll Up
-        if (scrollTop + $(window).height() < $(document).height()) {
-            $('.gnb-area').removeClass('up').addClass('down');
-
-            if(scrollTop < $('.footer').offset().top - $(window).innerHeight()){
-                $('.btn_floating').removeClass('hide').addClass('show');
-                $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-            }
-        }
-        if (scrollTop < $('.gnb-area').outerHeight()) {
-            $('.gnb-area').removeClass('down');
-            $('.btn_floating').removeClass('show').addClass('hide');
-            $('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-        }
-    }
-    lastScrollTop = scrollTop;
-}
-
-
-/*-------------------------------------------------------------------
-	@ Common
--------------------------------------------------------------------*/
-// Input Clear
-function setInputClear(id) {
-	$(id).val('').focus();
-}
-=======
 
 	},
 }
@@ -336,26 +267,10 @@ var setHeader = {
 	}
 };
 
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
 
 /*-------------------------------------------------------------------
-	@ Components
+	@ Content
 -------------------------------------------------------------------*/
-<<<<<<< HEAD
-
-
-/*-------------------------------------------------------------------
-	@ Contents
--------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------
-	@ Init
--------------------------------------------------------------------*/
-$(function(){
-	setGnb.init();
-})
-=======
 // Input Clear
 function InputClearHandler(id) {
 	$(id).val('').focus();
@@ -382,4 +297,3 @@ function destroySlimSelects() {
 	//게시판 상세 페이저 글없을경우 링크제거
 	document.querySelector(".pager.disabled a").removeAttribute('href');
 }
->>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
