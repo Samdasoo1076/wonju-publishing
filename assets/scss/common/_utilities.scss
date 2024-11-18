@@ -55,6 +55,12 @@
 	}
 }
 
+/* full width */
+.fluid {
+	max-width: 100%;
+	width: 100%;
+}
+
 /* Margin */
 .mar-0 {
 	margin: 0 !important;
@@ -184,7 +190,6 @@ $colors: (
 	primary: $color-primary,
 	secondary: $color-secondary,
 	point: $color-point,
-	info: $color-info,
 
 	// 상태
 	success: $color-success,

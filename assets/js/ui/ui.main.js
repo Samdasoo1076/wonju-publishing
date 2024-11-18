@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 2024-07-17 성신여대 입학처 운영소스는 불필요하여 신규로 생성함
 $(function(){
     $(window).scroll(function(){
@@ -167,3 +168,67 @@ function tab(btn, id) {
 function secColor($sec, color) {
     $($sec).attr('data-color', color);
 }
+=======
+$(function(){
+    $('#fullpage').fullpage({
+        // 옵션 설정
+		responsiveWidth: 767,
+        licenseKey: '',
+        scrolloverflowmacstyle: true,
+        'onLeave' : function (index, nextIndex, direction){
+			var $gnbarea = $(".gnb-area");
+            // theme
+            if ( nextIndex.index === 2 ){
+                $('.gnb-area').addClass('active');
+				$gnbarea.on("mouseenter", function() {
+					$(this).addClass("active");
+				  });
+				$gnbarea.on("mouseleave", function() {
+					$(this).addClass("active");
+				});
+            } else {
+				// btn-search에 show 클래스가 없을 때만 active 클래스를 제거
+				if (!$(".gnb-area .btn-search").hasClass("show")) {
+					$('.gnb-area').removeClass("active");
+				}
+            };
+
+            // topbtn
+            if ( nextIndex.index === 0){
+                $('.topBtn').css('display', 'none');
+            } else {
+                $('.topBtn').css('display', 'flex');
+
+				
+            }
+
+			// 예약현황 크기
+			if ( nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4) {
+				$('.reservation-wrap').addClass('small');
+				
+			} else {
+				$('.reservation-wrap').removeClass('small');
+			};
+        }
+    });
+});
+
+
+// 풀페이지 활성/비활성
+function setFullpageEvent(id) {
+	$(document).on('show.bs.modal', id, function () {
+		if (typeof fullpage_api !== 'undefined') {
+			fullpage_api.setAllowScrolling(false);
+			console.log(id + " Fullpage: false");
+		}
+	}).on('hidden.bs.modal', id, function () {
+		if (typeof fullpage_api !== 'undefined') {
+			fullpage_api.setAllowScrolling(true);
+			console.log(id + " Fullpage: true");
+		}
+	});
+}
+setFullpageEvent('#mobileNavModal'); //모바일 전체메뉴
+setFullpageEvent('#sitemap'); // PC 사이트맵
+
+>>>>>>> 45cbd4232d9cb40aef0583bee17659676b384835
