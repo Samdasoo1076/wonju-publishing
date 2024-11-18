@@ -91,7 +91,7 @@
 					.swiper-pagination-bullet {
 						width: 48rem;
 						height: 48rem;
-						background: url(/assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
 						background-size: contain;
 						font-size: 18rem;
 						text-align: center;
@@ -105,7 +105,7 @@
 					.swiper-pagination-bullet.swiper-pagination-bullet-active {
 						width: 48rem;
 						height: 48rem;
-						background: url(/assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
 						background-size: contain;
 						color: $color-primary;
 					}
@@ -113,7 +113,7 @@
 				.btn-pause {
 					width: 32rem;
 					height: 32rem;
-					background: url(/assets/images/main/icn-32-pause.svg) no-repeat;
+					background: url(../../assets/images/main/icn-32-pause.svg) no-repeat;
 					background-size: cover;
 					z-index: 1;
 					margin: 0 12rem;
@@ -168,7 +168,7 @@
 			// padding-top: 200rem;
 	
 			&.sec_02 {
-				background: url(/assets/images/main/img-sec_02-bg1.jpg) no-repeat;
+				background: url(../../assets/images/main/img-sec_02-bg1.jpg) no-repeat;
 				background-size: cover;
 				
 			}
@@ -254,7 +254,7 @@
 									display: inline-block;
 									width: 24rem;
 									height: 24rem;
-									background: url(/assets/images/common/icn-24-plus-wh.svg) no-repeat;
+									background: url(../../assets/images/common/icn-24-plus-wh.svg) no-repeat;
 									background-size: contain;
 								}
 							}
@@ -263,7 +263,7 @@
 								.txt {
 									color: $color-primary;
 									&::after {
-										background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+										background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 										background-size: contain;
 									}
 								}
@@ -387,7 +387,7 @@
 									display: inline-block;
 									width: 40rem;
 									height: 40rem;
-									background: url(/assets/images/common/icn-arrow-more-red.svg) no-repeat 50% 50%;
+									background: url(../../assets/images/common/icn-arrow-more-red.svg) no-repeat 50% 50%;
 									background-size: contain;
 								}
 							}
@@ -516,7 +516,7 @@
 								display: inline-block;
 								width: 24rem;
 								height: 24rem;
-								background: url(/assets/images/common/icn-24-plus-bk.svg) no-repeat;
+								background: url(../../assets/images/common/icn-24-plus-bk.svg) no-repeat;
 								background-size: contain;
 							}
 						}
@@ -525,7 +525,7 @@
 							.txt {
 								color: $color-primary;
 								&::after {
-									background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+									background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 									background-size: contain;
 								}
 							}
@@ -558,7 +558,7 @@
 						width: 100%;
 						height: 100%;
 						padding: 44rem 48rem 40rem;
-						background: url(/assets/images/main/img-rentcard-bg.png) no-repeat;
+						background: url(../../assets/images/main/img-rentcard-bg.png) no-repeat;
 						box-shadow: 30rem 30rem 30rem 0 rgba(98, 6, 9, 0.12);
 						transition: background-size .3s ease;
 						overflow: hidden;
@@ -581,13 +581,13 @@
 							margin-top: 40rem;
 							width: 40rem;
 							height: 40rem;
-							background: url(/assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
+							background: url(../../assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
 							background-size: 100%;
 							transition: .2s all;
 						}
 						&:hover {
 							&::after  {
-								background: url(/assets/images/common/icn-arrow-more-wh.svg) no-repeat;
+								background: url(../../assets/images/common/icn-arrow-more-wh.svg) no-repeat;
 							}
 						}
 					}
@@ -643,7 +643,7 @@
 					display: inline-block;
 					width: 32rem;
 					height: 32rem;
-					background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+					background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 					background-size: contain;
 				}
 				&.collapsed {
@@ -656,7 +656,7 @@
 						display: inline-block;
 						width: 32rem;
 						height: 32rem;
-						background: url(/assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
 						background-size: contain;
 					}
 				}
@@ -883,7 +883,7 @@
 						.swiper-pagination-bullet {
 							width: calc(100vw * (48 / 1590));
 							height: calc(100vw * (48 / 1590));
-							background: url(/assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
 							background-size: contain;
 							font-size: calc(100vw * (18 / 1590));
 							text-align: center;
@@ -897,7 +897,7 @@
 						.swiper-pagination-bullet.swiper-pagination-bullet-active {
 							width: calc(100vw * (48 / 1590));
 							height: calc(100vw * (48 / 1590));
-							background: url(/assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
 							background-size: contain;
 							color: $color-primary;
 						}
@@ -905,7 +905,7 @@
 					.btn-pause {
 						width: calc(100vw * (32 / 1590));
 						height: calc(100vw * (32 / 1590));
-						background: url(/assets/images/main/icn-32-pause.svg) no-repeat;
+						background: url(../../assets/images/main/icn-32-pause.svg) no-repeat;
 						background-size: cover;
 						z-index: 1;
 						margin: 0 calc(100vw * (12 / 1590));
@@ -940,7 +940,7 @@
 			height: 100%;
 			.inner {
 				&.sec_02 {
-					background: url(/assets/images/main/img-sec_02-bg1.jpg) no-repeat;
+					background: url(../../assets/images/main/img-sec_02-bg1.jpg) no-repeat;
 					background-size: cover;
 					
 				}
@@ -1007,7 +1007,7 @@
 									.txt {
 										color: $color-primary;
 										&::after {
-											background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+											background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 											background-size: contain;
 										}
 									}
@@ -1201,7 +1201,7 @@
 								.txt {
 									color: $color-primary;
 									&::after {
-										background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+										background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 										background-size: contain;
 									}
 								}
@@ -1234,7 +1234,7 @@
 							width: 100%;
 							height: 100%;
 							padding: calc(100vw * (44 / 1590)) calc(100vw * (48 / 1590)) calc(100vw * (40 / 1590));
-							background: url(/assets/images/main/img-rentcard-bg.png) no-repeat;
+							background: url(../../assets/images/main/img-rentcard-bg.png) no-repeat;
 							box-shadow: calc(100vw * (30 / 1590)) calc(100vw * (30 / 1590)) calc(100vw * (30 / 1590)) 0 rgba(98, 6, 9, 0.12);
 							transition: background-size .3s ease;
 							overflow: hidden;
@@ -1254,12 +1254,12 @@
 								margin-top: calc(100vw * (40 / 1590));
 								width: calc(100vw * (40 / 1590));
 								height: calc(100vw * (40 / 1590));
-								background: url(/assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
+								background: url(../../assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
 								background-size: contain;
 							}
 							&:hover {
 								&::after  {
-									background: url(/assets/images/common/icn-arrow-more-wh.svg) no-repeat;
+									background: url(../../assets/images/common/icn-arrow-more-wh.svg) no-repeat;
 									background-size: contain;
 								}
 							}
@@ -1299,7 +1299,7 @@
 						display: inline-block;
 						width: calc(100vw * (32 / 1590));
 						height: calc(100vw * (32 / 1590));
-						background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 						background-size: contain;
 					}
 					&.collapsed {
@@ -1312,7 +1312,7 @@
 							display: inline-block;
 							width: calc(100vw * (32 / 1590));
 							height: calc(100vw * (32 / 1590));
-							background: url(/assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
 							background-size: contain;
 						}
 					}
@@ -1488,7 +1488,7 @@
 				width: 100%; 
 		
 				&.sec_02 {
-					background: url(/assets/images/main/img-sec_02-bg1.jpg) no-repeat;
+					background: url(../../assets/images/main/img-sec_02-bg1.jpg) no-repeat;
 					background-size: cover;
 					padding-left: calc(100vw * (50 / 1280));
 					padding-right: calc(100vw * (50 / 1280));
@@ -1580,7 +1580,7 @@
 										display: inline-block;
 										width: calc(100vw * (24 / 1280));
 										height: calc(100vw * (24 / 1280));
-										background: url(/assets/images/common/icn-24-plus-wh.svg) no-repeat;
+										background: url(../../assets/images/common/icn-24-plus-wh.svg) no-repeat;
 										background-size: contain;
 									}
 								}
@@ -1589,7 +1589,7 @@
 									.txt {
 										color: $color-primary;
 										&::after {
-											background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+											background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 											background-size: contain;
 										}
 									}
@@ -1713,7 +1713,7 @@
 										display: inline-block;
 										width: calc(100vw * (40 / 1280));
 										height: calc(100vw * (40 / 1280));
-										background: url(/assets/images/common/icn-arrow-more-red.svg) no-repeat 50% 50%;
+										background: url(../../assets/images/common/icn-arrow-more-red.svg) no-repeat 50% 50%;
 										background-size: contain;
 									}
 								}
@@ -1845,7 +1845,7 @@
 									display: inline-block;
 									width: calc(100vw * (24 / 1280));
 									height: calc(100vw * (24 / 1280));
-									background: url(/assets/images/common/icn-24-plus-bk.svg) no-repeat;
+									background: url(../../assets/images/common/icn-24-plus-bk.svg) no-repeat;
 									background-size: contain;
 								}
 							}
@@ -1854,7 +1854,7 @@
 								.txt {
 									color: $color-primary;
 									&::after {
-										background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+										background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 										background-size: contain;
 									}
 								}
@@ -1887,7 +1887,7 @@
 							width: 100%;
 							height: 100%;
 							padding: calc(100vw * (44 / 1280)) calc(100vw * (48 / 1280)) calc(100vw * (40 / 1280));
-							background: url(/assets/images/main/img-rentcard-bg.png) no-repeat;
+							background: url(../../assets/images/main/img-rentcard-bg.png) no-repeat;
 							box-shadow: calc(100vw * (30 / 1280)) calc(100vw * (30 / 1280)) calc(100vw * (30 / 1280)) 0 rgba(98, 6, 9, 0.12);
 							transition: background-size .3s ease;
 							overflow: hidden;
@@ -1910,13 +1910,13 @@
 								margin-top: calc(100vw * (40 / 1280));
 								width: calc(100vw * (40 / 1280));
 								height: calc(100vw * (40 / 1280));
-								background: url(/assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
+								background: url(../../assets/images/common/icn-arrow-more-wh-off.svg) no-repeat;
 								background-size: 100%;
 								transition: .2s all;
 							}
 							&:hover {
 								&::after  {
-									background: url(/assets/images/common/icn-arrow-more-wh.svg) no-repeat;
+									background: url(../../assets/images/common/icn-arrow-more-wh.svg) no-repeat;
 								}
 							}
 						}
@@ -1984,7 +1984,7 @@
 						.swiper-pagination-bullet {
 							width: 32rem;
 							height: 32rem;
-							background: url(/assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-48-mainpager-off.svg) no-repeat 50% 50%;
 							background-size: contain;
 							
 							line-height: 1;
@@ -2005,7 +2005,7 @@
 						.swiper-pagination-bullet.swiper-pagination-bullet-active {
 							width: 32rem;
 							height: 32rem;
-							background: url(/assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-48-mainpager-on.svg) no-repeat 50% 50%;
 							background-size: contain;
 							color: $color-primary;
 						}
@@ -2013,7 +2013,7 @@
 					.btn-pause {
 						width: 32rem;
 						height: 32rem;
-						background: url(/assets/images/main/icn-32-pause.svg) no-repeat;
+						background: url(../../assets/images/main/icn-32-pause.svg) no-repeat;
 						background-size: cover;
 						line-height: 32rem;
 						z-index: 1;
@@ -2070,7 +2070,7 @@
 			}
 			.inner {
 				&.sec_02 {
-					background: url(/assets/images/main/img-main-bg-sec2-mo.png) no-repeat;
+					background: url(../../assets/images/main/img-main-bg-sec2-mo.png) no-repeat;
 					background-size: cover;
 					padding-top: 120rem;
 					padding-left: 20rem;
@@ -2151,7 +2151,7 @@
 									.txt {
 										color: $color-primary;
 										&::after {
-											background: url(/assets/images/common/icn-24-plus-red.svg) no-repeat;
+											background: url(../../assets/images/common/icn-24-plus-red.svg) no-repeat;
 											background-size: contain;
 										}
 									}
@@ -2178,7 +2178,7 @@
 										height: 100%;
 										padding: 20rem;
 										border-radius: 0;
-										background: url(/assets/images/main/img-sec_02-bg1-mo.jpg) no-repeat;
+										background: url(../../assets/images/main/img-sec_02-bg1-mo.jpg) no-repeat;
 										background-size: cover;
 										color: #fff;
 										border: 1px solid transparent;
@@ -2195,7 +2195,7 @@
 									&:nth-child(2) {
 										margin-top: 0;
 										a {
-											background: url(/assets/images/main/img-sec_02-bg2-mo.jpg) no-repeat;
+											background: url(../../assets/images/main/img-sec_02-bg2-mo.jpg) no-repeat;
 											background-size: cover;
 										}
 										
@@ -2203,7 +2203,7 @@
 									&:nth-child(3) {
 										margin-top: 0;
 										a {
-											background: url(/assets/images/main/img-sec_02-bg3-mo.jpg) no-repeat;
+											background: url(../../assets/images/main/img-sec_02-bg3-mo.jpg) no-repeat;
 											background-size: cover;
 										}
 									}
@@ -2236,7 +2236,7 @@
 									top: 50%;
 									transform: translateY(-50%);
 									display: inline-block;
-									background: url(/assets/images/common/icn-24-plus-bk.svg) no-repeat;
+									background: url(../../assets/images/common/icn-24-plus-bk.svg) no-repeat;
 									background-size: contain;
 								}
 							}
@@ -2397,7 +2397,7 @@
 								.txt {
 									color: #000;
 									&::after {
-										background: url(/assets/images/common/icn-24-plus-bk.svg) no-repeat;
+										background: url(../../assets/images/common/icn-24-plus-bk.svg) no-repeat;
 										background-size: contain;
 									}
 								}
@@ -2426,7 +2426,7 @@
 						left: 0;
 						width: 100%;
 						height: calc(100vw * (792 / 767));
-						background: url(/assets/images/main/img-rentcard-bg-top-mo.png) no-repeat;
+						background: url(../../assets/images/main/img-rentcard-bg-top-mo.png) no-repeat;
 						background-size: cover;
 						a {
 							position: relative;
@@ -2436,7 +2436,7 @@
 							width: 100%;
 							height: calc(100vw * (352 / 767));
 							padding: 60rem 24rem 40rem;
-							background: url(/assets/images/main/img-rentcard-bg-mo.png) no-repeat;
+							background: url(../../assets/images/main/img-rentcard-bg-mo.png) no-repeat;
 							background-size: cover;
 							box-shadow: none;
 							transition: background-size .3s ease;
@@ -2507,7 +2507,7 @@
 						display: inline-block;
 						width: 24rem;
 						height: 24rem;
-						background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 						background-size: contain;
 					}
 					&.collapsed {
@@ -2520,7 +2520,7 @@
 							display: inline-block;
 							width: 24rem;
 							height: 24rem;
-							background: url(/assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
 							background-size: contain;
 						}
 					}
@@ -2701,7 +2701,7 @@
 							display: inline-block;
 							width: 24rem;
 							height: 24rem;
-							background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 							background-size: contain;
 						}
 					}
@@ -2731,7 +2731,7 @@
 						display: inline-block;
 						width: 24rem;
 						height: 24rem;
-						background: url(/assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+						background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 						background-size: cover;
 					}
 					&.collapsed {
@@ -2744,7 +2744,7 @@
 							display: inline-block;
 							width: 24rem;
 							height: 24rem;
-							background: url(/assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
 							background-size: cover;
 						}
 					}
