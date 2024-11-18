@@ -75,6 +75,16 @@
 					line-height: 24rem;
 					color: $color-primary;
 				}
+				p.accepting {
+					display: inline-flex;
+					padding: 4rem 10rem;
+					background-color: rgba(13, 85, 209, 0.08);
+					border-radius: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #0D55D1;
+				}
 			}
 
 			.tbl-tit {
