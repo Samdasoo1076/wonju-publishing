@@ -75,6 +75,8 @@
 					line-height: 24rem;
 					color: $color-primary;
 				}
+			}
+			.tbl-case {
 				p.accepting {
 					display: inline-flex;
 					padding: 4rem 10rem;
@@ -85,8 +87,27 @@
 					line-height: 24rem;
 					color: #0D55D1;
 				}
+				p.deadline {
+					display: inline-flex;
+					padding: 4rem 10rem;
+					background-color: #EAEAEA;
+					border-radius: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #666666;
+				}
+				p.expected {
+					display: inline-flex;
+					padding: 4rem 10rem;
+					background-color: rgba(217, 30, 139, 0.08);
+					border-radius: 4rem;
+					font-weight: 700;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #D91E8B;
+				}
 			}
-
 			.tbl-tit {
 				text-align: left;
 				p {
@@ -103,8 +124,7 @@
 						overflow: hidden;
 						font-weight: 500;
 						color: #000000;
-						white-space: nowrap;
-						text-overflow: ellipsis;
+						@include ellipsis1;
 						&:hover,
 						&:active,
 						&:focus-visible {
@@ -131,6 +151,7 @@
 					@include ellipsis1;
 				}
 			}
+			/* 결과없음 */
 			.no-list {
 				padding: 148rem 0 60rem;
 				background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
@@ -139,6 +160,50 @@
 					font-size: 18rem;
 					line-height: 28rem;
 					color: #000;
+				}
+			}
+		}
+		.gallery-board {
+			.gallery-board-list {
+				display: grid;
+				width: 100%;
+				grid-template-columns: repeat(auto-fit, minmax(23%, auto));
+				gap: 60rem 28rem;
+				li {
+					a {
+						.img-wrap {
+							overflow: hidden;
+							width: 100%;
+							height: 220rem;
+							img {
+								object-fit: cover;
+								object-position: center center;
+								width: 100%;
+							}
+						}
+						.cont-wrap {
+							width: 100%;
+							height: 148rem;
+							padding: 28rem;
+							background: #fff;
+							.title {
+								display: block;
+								height: 56rem;
+								font-size: 20rem;
+								line-height: 28rem;
+								font-weight: 700;
+								color: #000;
+								@include ellipsis2;
+							}
+							.date {
+								display: block;
+								font-size: 16rem;
+								line-height: 24rem;
+								color: #666;
+								margin-top: 12rem;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -283,6 +348,39 @@
 						}
 					}
 				}
+				.tbl-case {
+					margin-bottom: 8rem;
+					p.accepting {
+						display: inline-flex;
+						padding: 2rem 6rem;
+						background-color: rgba(13, 85, 209, 0.08);
+						border-radius: 4rem;
+						font-weight: 700;
+						font-size: 10rem;
+						line-height: 16rem;
+						color: #0D55D1;
+					}
+					p.deadline {
+						display: inline-flex;
+						padding: 2rem 6rem;
+						background-color: #EAEAEA;
+						border-radius: 4rem;
+						font-weight: 700;
+						font-size: 10rem;
+						line-height: 16rem;
+						color: #666666;
+					}
+					p.expected {
+						display: inline-flex;
+						padding: 2rem 6rem;
+						background-color: rgba(217, 30, 139, 0.08);
+						border-radius: 4rem;
+						font-weight: 700;
+						font-size: 10rem;
+						line-height: 16rem;
+						color: #D91E8B;
+					}
+				}
 
 				.tbl-tit {
 					width: 100%;
@@ -367,6 +465,47 @@
 						font-size: 14rem;
 						line-height: 20rem;
 						color: #000;
+					}
+				}
+			}
+			.gallery-board {
+				.gallery-board-list {
+					display: grid;
+					width: 100%;
+					grid-template-columns: repeat(1, 1fr);
+					gap: 20rem;
+					li {
+						a {
+							.img-wrap {
+								width: 100%;
+								height: 220rem;
+								img {
+									width: 100%;
+								}
+							}
+							.cont-wrap {
+								width: 100%;
+								height: 120rem;
+								padding: 28rem;
+								background: #fff;
+								.title {
+									display: block;
+									height: 48rem;
+									font-size: 16rem;
+									line-height: 24rem;
+									font-weight: 700;
+									color: #000;
+									@include ellipsis2;
+								}
+								.date {
+									display: block;
+									font-size: 12rem;
+									line-height: 16rem;
+									color: #666;
+									margin-top: 8rem;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -666,9 +805,7 @@
 					line-height: 20rem;
 					color: #000;
 					padding: 0 8rem;
-					overflow: hidden;
-					white-space: nowrap;
-    				text-overflow: ellipsis;
+					@include ellipsis1;
 				}
 				.date {
 					display: none;
