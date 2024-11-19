@@ -123,7 +123,7 @@
 		.scroll-down {
 			position: absolute;
 			bottom: 80rem;
-			left: 40rem;
+			left: -45rem;
 			font-size: 16rem;
 			font-weight: 700;
 			line-height: 24rem;
@@ -468,6 +468,7 @@
 									}
 									.subject {
 										display: -webkit-box;
+										height: 56rem;
 										font-size: 20rem;
 										line-height: 28rem;
 										color:#000;
@@ -477,10 +478,17 @@
 										text-overflow: ellipsis;
 										-webkit-line-clamp: 2;
 										-webkit-box-orient: vertical;
+										&:hover {
+											color: $color-primary;
+											text-decoration: underline;
+										}
 									}
 									.date {
-										 font-size: 20rem;
-										 color: #999;
+										display: block;
+										margin-top: 24rem;
+										font-size: 16rem;
+										line-height: 24rem;
+										color: #999;
 									}
 								}
 							}
@@ -970,28 +978,6 @@
 						z-index: 1;
 						margin: 0 calc(100vw * (12 / 1590));
 					}
-				}
-			}
-			.scroll-down {
-				position: absolute;
-				bottom: calc(100vw * (80 / 1590));
-				left: calc(100vw * (40 / 1590));
-				font-size: calc(100vw * (16 / 1590));
-				font-weight: 700;
-				line-height: calc(100vw * (24 / 1590));
-				color: #fff;
-				transform: rotate(90deg);
-				padding-right: calc(100vw * (80 / 1590));
-				z-index: 1;
-				&::after {
-					content: '';
-					position: absolute;
-					top: 50%;
-					right: 0;
-					transform: translateY(-50%);
-					width: calc(100vw * (68 / 1590));
-					height: 1rem;
-					background: #fff;
 				}
 			}
 		}
