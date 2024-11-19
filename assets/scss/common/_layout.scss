@@ -1915,7 +1915,7 @@ html {
 					position: relative;
 					z-index: 20;
 					display: flex;
-					gap: calc(100vw * (60 / 1280));
+					gap: calc(100vw * (50 / 1280));
 					transition: all .2s;
 					.dep1-item {
 						position: relative;
@@ -2284,6 +2284,17 @@ html {
 	}
 }
 
+/* top버튼 */
+.topBtn {
+	position: absolute;
+	right: 266rem;
+	top: -24rem;
+	width: 48rem;
+	height: 48rem;
+	a { 
+		display: block;
+	}
+}
 // Footer
 .footer {
 	@include out-sec;
@@ -2385,7 +2396,16 @@ html {
 	@include media-tablet-xs {
 		padding-top: 48rem;
 		padding-bottom: 48rem;
-
+		/* top버튼 */
+		.topBtn {
+			right: 16rem;
+			top: -20rem;
+			width: 40rem;
+			height: 40rem;
+			a {
+				display: block;
+			}
+		}
 		.footer-sec .footer-logo {
 			width: 178rem;
 			height: 22rem;

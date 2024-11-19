@@ -820,6 +820,70 @@
 	}
 }
 
+/* 회원가입 */
+.join-wrap {
+	width: 860rem;
+	margin: 0 auto;
+	.join-form {
+		padding: 40rem 60rem 60rem;
+		background: linear-gradient(-45deg, transparent 30rem, #fff 0);
+		.req {
+			text-align: right;
+			font-size: 16rem;
+			line-height: 24rem;
+			margin-bottom: 12rem;
+			&::before {
+				content: '*';
+				color: $color-primary;
+			}
+		}
+		.field-wrap {
+			border-top: 1px solid #000;
+			.field {
+				position: relative;
+				display: flex;
+				gap: 8rem;
+				width: 100%;
+				padding: 16rem;
+				border-bottom: 1px solid #EAEAEA;
+				
+				.labels {
+					display: flex;
+					align-items: center;
+					flex-shrink: 0;
+					width: 160rem;
+					height: 48rem;
+					.txt {
+						position: relative;
+						font-size: 18rem;
+						line-height: 28rem;
+						&.require {
+							&::after {
+								content: '*';
+								color: $color-primary;
+							}
+						}
+					}
+				}
+				.inp-wrap {
+					display: flex;
+					gap: 8rem;
+					flex : 1 0 auto;
+					.frm-inp {
+						flex: 1;
+						&.h-48 {
+							height: 48rem;
+						}
+					}
+				}
+				.info-inp-wrap {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
 	@@ 팝업명

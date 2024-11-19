@@ -154,6 +154,7 @@
 				width: 100%;
 				height: 100%;
 				z-index: -1;
+				background-color: #F6F6F6;
 				img {
 					width: 100%;
 					&.mo {
@@ -164,13 +165,11 @@
 		}
 		.inner {
 			position: relative;
-			
 			// padding-top: 200rem;
 	
 			&.sec_02 {
 				background: url(../../assets/images/main/img-sec_02-bg1.jpg) no-repeat;
 				background-size: cover;
-				
 			}
 			&.community {
 				padding-top: 240rem;
@@ -885,17 +884,7 @@
 			
 		}
 	}	
-	/* top버튼 */
-	.topBtn {
-		position: fixed;
-		right: 0;
-		bottom: 234rem;
-		width: 48rem;
-		height: 48rem;
-		a {
-			display: block;
-		}
-	}
+	
 	
 	//1590 이하
 	@include media-max-width(1590px) {
@@ -2488,17 +2477,6 @@
 						}
 					}
 				}
-			}
-		}
-		/* top버튼 */
-		.topBtn {
-			position: fixed;
-			right: 16rem;
-			bottom: 230rem;
-			width: 40rem;
-			height: 40rem;
-			a {
-				display: block;
 			}
 		}
 
