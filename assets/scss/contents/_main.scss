@@ -874,9 +874,7 @@
 		}
 		&.small {
 			width: 246rem;
-			&:has(.reservation-top.open) {
-				width: 960rem;
-			}
+			
 		}
 	}	
 	/* top버튼 */
@@ -1333,8 +1331,7 @@
 
 		/* 예약현황 */
 		.reservation-wrap {
-			width: calc(100vw * (960 / 1590));
-			
+			width: calc(100vw * (1060 / 1590));
 			.reservation-top {
 				position: relative;
 				height: calc(100vw * (80 / 1590));
@@ -1361,7 +1358,7 @@
 				}
 			}
 			.modal-dialog {
-				width: calc(100vw * (960 / 1590));
+				width: calc(100vw * (1060 / 1590));
 				justify-content: flex-end;
 				align-items: flex-end;
 			}
@@ -1505,9 +1502,7 @@
 			}
 			&.small {
 				width: calc(100vw * (246 / 1590));
-				&:has(.reservation-top.open) {
-					width: calc(100vw * (960 / 1590));
-				}
+				
 			}
 		}	
 	}
@@ -2557,7 +2552,39 @@
 				justify-content: flex-end;
 				align-items: flex-end;
 				.reservation-top {
+					position: relative;
+					height: 72rem;
 					padding: 0 20rem;
+					.tit {
+						display: block;
+						font-size: 20rem;
+						color: #000;;
+						font-weight: 700;
+						line-height: 80rem;
+					}
+					.calendar-open {
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 80rem;
+						text-indent: -9999px;
+						overflow: hidden;
+						background-color: transparent;
+						&::after {
+							content: '';
+							position: absolute;
+							top: 50%;
+							right: 24rem;
+							transform: translateY(-50%);
+							display: inline-block;
+							width: 32rem;
+							height: 32rem;
+							background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+							background-size: contain;
+						}
+					}
 				}
 			}
 			.reservation-cont {
@@ -2722,56 +2749,42 @@
 					}
 				}
 			}
-			&:has(.reservation-top.open) {
-				width: 100%;
-				bottom: 0;
-				right: 0;
-				z-index: 1101;
-				.reservation-cont {
-					height: calc(100vh - 72rem);
-				}
-				.reservation-top {
-					position: relative;
-					height: 72rem;
-					background: $color-primary;
-					border-radius: 0;
-					padding: 22rem 20rem;
-					&.open {
-						background: #fff;
-						.tit {
-							color: #000;
-						}
-					}
-					.tit {
-						font-size: 14rem;
-						line-height: 20rem;
-					}
-					.calendar-open {
-						height: 48rem;
-						&::after {
-							content: '';
-							position: absolute;
-							top: 50%;
-							right: 12rem;
-							transform: translateY(-50%);
-							display: inline-block;
-							width: 24rem;
-							height: 24rem;
-							background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
-							background-size: contain;
-						}
-					}
-				}
-			}
+			// &:has(.reservation-top.open) {
+			// 	.reservation-top {
+			// 		position: relative;
+			// 		height: 72rem;
+			// 		border-radius: 0;
+			// 		padding: 22rem 20rem;
+			// 		&.open {
+			// 			background: #fff;
+			// 			.tit {
+			// 				color: #000;
+			// 			}
+			// 		}
+			// 		.tit {
+			// 			font-size: 14rem;
+			// 			line-height: 20rem;
+			// 		}
+			// 		.calendar-open {
+			// 			height: 48rem;
+			// 			&::after {
+			// 				content: '';
+			// 				position: absolute;
+			// 				top: 50%;
+			// 				right: 12rem;
+			// 				transform: translateY(-50%);
+			// 				display: inline-block;
+			// 				width: 24rem;
+			// 				height: 24rem;
+			// 				background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+			// 				background-size: contain;
+			// 			}
+			// 		}
+			// 	}
+			// }
 			&.small {
 				width: 48rem;
 				height: 48rem;
-				&:has(.reservation-top.open) {
-					width: 100%;
-					height: 100vh;
-					bottom: 0;
-					right: 0;
-				}
 				.reservation-top {
 					padding: 0;
 					.tit {
@@ -2779,19 +2792,6 @@
 					}
 					.calendar-open {
 						&::after {
-						content: '';
-						position: absolute;
-						top: 50%;
-						right: 12rem;
-						transform: translateY(-50%);
-						display: inline-block;
-						width: 24rem;
-						height: 24rem;
-						background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
-						background-size: cover;
-					}
-					&.collapsed {
-						&::after {
 							content: '';
 							position: absolute;
 							top: 50%;
@@ -2800,10 +2800,52 @@
 							display: inline-block;
 							width: 24rem;
 							height: 24rem;
-							background: url(../../assets/images/main/icn-32-calendar-wh.svg) no-repeat 50% 50%;
+							background: url(../../assets/images/common/icn-32-calendar-wh.svg) no-repeat 50% 50%;
 							background-size: cover;
 						}
+					
 					}
+				}
+				.reservation-cont {
+					.modal-dialog {
+						width: 100%;
+						justify-content: flex-end;
+						align-items: flex-end;
+						.reservation-top {
+							position: relative;
+							height: 72rem;
+							padding: 0 20rem;
+							.tit {
+								display: block;
+								font-size: 20rem;
+								color: #000;;
+								font-weight: 700;
+								line-height: 80rem;
+							}
+							.calendar-open {
+								display: block;
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 80rem;
+								text-indent: -9999px;
+								overflow: hidden;
+								background-color: transparent;
+								&::after {
+									content: '';
+									position: absolute;
+									top: 50%;
+									right: 24rem;
+									transform: translateY(-50%);
+									display: inline-block;
+									width: 32rem;
+									height: 32rem;
+									background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
+									background-size: contain;
+								}
+							}
+						}
 					}
 				}
 			}
