@@ -316,3 +316,48 @@
 /*-------------------------------------------------------------------
 	@@ Checkbox
 -------------------------------------------------------------------*/
+.frm-rdo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10rem;
+	span {
+		font-size: 18rem;
+		line-height: 28rem;
+		color: #999;	
+	}
+	
+	input {
+		&::before {
+			content:'';
+			display: block;
+			width: 20rem;
+			height: 20rem;
+			background-color: transparent;
+			border: 1px solid #DDDDDD;
+			border-radius: 50%;
+			box-sizing:border-box;
+			position: relative;
+			cursor: pointer;
+		}
+		&:checked {
+			&::before {
+				content:'';
+				display: block;
+				width: 20rem;
+				height: 20rem;
+				background-color: transparent;
+				border: 5rem solid $color-primary;
+				border-radius: 50%;
+				box-sizing:border-box;
+				position: relative;
+				cursor: pointer;
+			}
+			+ label {
+				span {
+					color: #000;
+				}
+			}
+		}
+	}
+}

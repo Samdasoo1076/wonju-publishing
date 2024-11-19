@@ -875,6 +875,11 @@
 							height: 48rem;
 						}
 					}
+					.frm-rdo {
+						+ .frm-rdo {
+							margin-left: 8rem;
+						}
+					}
 				}
 				.info-inp-wrap {
 					display: flex;
