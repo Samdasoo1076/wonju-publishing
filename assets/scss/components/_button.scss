@@ -236,7 +236,10 @@
 			@include btn-h-48;
 		}
 		&.h-48 {
-			@include btn-h-40;
+			padding: 10rem 11rem;
+			font-weight: 400;
+			font-size: 14rem;
+			line-height: 20rem;
 		}
 		&.h-40 {
 			@include btn-h-32;

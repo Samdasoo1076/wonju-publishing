@@ -153,6 +153,9 @@
 			@include inp-h-40;
 		}
 	}
+	&.full {
+		flex: 1 auto;
+	}
 }
 
 
@@ -314,7 +317,7 @@
 
 
 /*-------------------------------------------------------------------
-	@@ Checkbox
+	@@ Radio
 -------------------------------------------------------------------*/
 .frm-rdo {
 	position: relative;
@@ -325,6 +328,9 @@
 		font-size: 18rem;
 		line-height: 28rem;
 		color: #999;	
+		&.bold {
+			font-weight: 700;
+		}
 	}
 	
 	input {
@@ -357,6 +363,68 @@
 				span {
 					color: #000;
 				}
+			}
+		}
+	}
+}
+/*-------------------------------------------------------------------
+	@@ Checkbox
+-------------------------------------------------------------------*/
+.frm-chk {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10rem;
+	span {
+		font-size: 18rem;
+		line-height: 28rem;
+		color: #999;	
+		&.bold {
+			font-weight: 700;
+		}
+	}
+	
+	input {
+		&::before {
+			content:'';
+			display: block;
+			width: 24rem;
+			height: 24rem;
+			background: url(../images/common/icn-20-checkbox-off.svg) no-repeat;
+			background-size: 100%;
+			box-sizing:border-box;
+			position: relative;
+			cursor: pointer;
+		}
+		&:checked {
+			&::before {
+				content:'';
+				display: block;
+				width: 24rem;
+				height: 24rem;
+				background: url(../images/common/icn-20-checkbox-on.svg) no-repeat;
+				background-size: 100%;
+				box-sizing:border-box;
+				position: relative;
+				cursor: pointer;
+			}
+			+ label {
+				span {
+					color: #000;
+				}
+			}
+		}
+		&:disabled {
+			&::before {
+				content:'';
+				display: block;
+				width: 24rem;
+				height: 24rem;
+				background: url(../images/common/icn-20-checkbox-disabled.svg) no-repeat;
+				background-size: 100%;
+				box-sizing:border-box;
+				position: relative;
+				cursor: pointer;
 			}
 		}
 	}

@@ -869,24 +869,252 @@
 					display: flex;
 					gap: 8rem;
 					flex : 1 0 auto;
+					align-items: center;
 					.frm-inp {
 						flex: 1;
-						&.h-48 {
-							height: 48rem;
-						}
 					}
 					.frm-rdo {
 						+ .frm-rdo {
 							margin-left: 8rem;
 						}
 					}
+					.frm-sel {
+						flex: auto;
+						&.w300 {
+							width: 300rem;
+						}
+						&.w232 {
+							width: 232rem;
+						}
+					}
+					+ .inp-wrap {
+						margin-top: 8rem;
+					}
+					.red-time {
+						input {
+							font-size: 16rem;
+							text-align: right;
+							color: $color-primary;
+						}
+					}
 				}
 				.info-inp-wrap {
 					display: flex;
 					flex-direction: column;
+					flex: 1;
+					.info-txt {
+						margin-top: 8rem;
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #999;
+					}
+				}
+				
+			}
+		}
+		/* 약관동의 */
+		.agree-box {
+			padding-top: 40rem;
+			.frm-chk {
+				&.agree {
+					margin-bottom: 12rem;
+				}
+			}
+			.text-box-wrap {
+				display: block;
+				width: 100%;
+				height: 160rem;
+				border: 1px solid #EAEAEA;
+			}
+			.text-box {
+				width: calc(100% - 16rem);
+				height: 144rem;
+				padding:  24rem;
+				margin: 8rem;
+				overflow-y: auto;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #666;
+				.tit {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #333;
+					margin-bottom: 8rem;
+				}
+				&::-webkit-scrollbar {
+					width: 4rem;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: #BEBEBE; /* 스크롤바 색상 */
+					border-radius: 4rem; /* 스크롤바 둥근 테두리 */
 				}
 			}
 		}
+
+		/*버튼*/
+		.btn-wrap {
+			display: flex;
+		}
+		.join {
+			margin: 60rem auto 0;
+			width: 360rem;
+		}
+	}
+
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		width: 100%;
+		margin: 0 auto;
+	.join-form {
+		padding: 0;
+		background: transparent;
+		.req {
+			text-align: right;
+			font-size: 12rem;
+			line-height: 16rem;
+			margin-bottom: 12rem;
+			&::before {
+				content: '*';
+				color: $color-primary;
+			}
+		}
+		.field-wrap {
+			border-top: 1px solid #000;
+			.field {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: 8rem;
+				width: 100%;
+				padding: 16rem 12rem;
+				border-bottom: 1px solid #EAEAEA;
+				.labels {
+					display: flex;
+					align-items: center;
+					flex-shrink: 0;
+					width: 100%;
+					height: 20rem;
+					.txt {
+						position: relative;
+						font-size: 14rem;
+						line-height: 20rem;
+						&.require {
+							&::after {
+								content: '*';
+								color: $color-primary;
+							}
+						}
+					}
+				}
+				.inp-wrap {
+					display: flex;
+					gap: 4rem;
+					flex : 1 0 auto;
+					align-items: center;
+					.frm-inp {
+						flex: 1;
+					}
+					.frm-rdo {
+						+ .frm-rdo {
+							margin-left: 8rem;
+						}
+					}
+					.frm-sel {
+						flex: auto;
+						&.w300 {
+							width: 100%;
+						}
+						&.w232 {
+							width: 100%;
+						}
+					}
+					+ .inp-wrap {
+						margin-top: 8rem;
+					}
+					.mo-w100 {
+						padding: 10rem 5rem;
+						width: 100rem;
+					}
+					.red-time {
+						input {
+							font-size: 14rem;
+							text-align: right;
+							color: $color-primary;
+						}
+					}
+					&.email {
+						display: grid;
+						grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+						.frm-inp:nth-child(2) {
+							width: 130rem;
+						}
+						.frm-sel {
+							grid-column: 1 / 4;
+						}
+					}
+				}
+				.info-inp-wrap {
+					display: flex;
+					flex-direction: column;
+					flex: 1;
+					.info-txt {
+						margin-top: 4rem;
+						font-size: 11rem;
+						line-height: 16rem;
+						color: #999;
+					}
+				}
+				
+			}
+		}
+		/* 약관동의 */
+		.agree-box {
+			padding-top: 40rem;
+			.frm-chk {
+				&.agree {
+					margin-bottom: 12rem;
+				}
+			}
+			.text-box-wrap {
+				display: block;
+				width: 100%;
+				height: 160rem;
+				border: 1px solid #EAEAEA;
+			}
+			.text-box {
+				width: calc(100% - 16rem);
+				height: 144rem;
+				padding:  24rem;
+				margin: 8rem;
+				overflow-y: auto;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #666;
+				.tit {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #333;
+					margin-bottom: 8rem;
+				}
+				&::-webkit-scrollbar {
+					width: 4rem;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: #BEBEBE; /* 스크롤바 색상 */
+					border-radius: 4rem; /* 스크롤바 둥근 테두리 */
+				}
+			}
+		}
+
+		/*버튼*/
+		.btn-wrap {
+			display: flex;
+		}
+		.join {
+			margin: 40rem auto 0;
+			width: 100%;
+		}
+	}
 	}
 }
 
