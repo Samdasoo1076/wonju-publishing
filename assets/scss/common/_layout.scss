@@ -1556,6 +1556,12 @@ html {
 								}
 							}
 						}
+						&:focus-within,
+						&:hover {
+							.dep1-list {
+								gap: 60rem;
+							}
+						}
 					}
 					.snb-wrap {
 						.util {
@@ -1643,13 +1649,13 @@ html {
 										&::after {
 											content:'';
 											position: absolute;
-											top: 0;
+											top: 50%;
 											right: 0;
+											transform: translateY(-50%);
 											display: inline-block;
 											width: calc(100vw * (24 / 1280));
 											height: calc(100vw * (24 / 1280));
 											background: url(../../assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
-	
 											background-size: contain;
 											transition: .2s all;
 										}
@@ -2596,7 +2602,7 @@ html {
 
 	.content-body {
 		margin: auto;
-		padding: 120rem $pc-sidespacer;
+		padding: 208rem $pc-sidespacer;
 		width: 100%;
 		max-width: calc(#{$pc-sidespacer} * 2 + #{$pc-width-content});
 	}
@@ -2735,7 +2741,7 @@ html {
 		}
 
 		.content-body {
-			padding: 60rem $mobile-sidespacer 80rem;
+			padding: 132rem $mobile-sidespacer 80rem;
 			max-width: 100%;
 		}
 		.title-wrap {

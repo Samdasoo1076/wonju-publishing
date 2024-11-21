@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="원주미래산업진흥원" />
 	<meta name="description" content="원주미래산업진흥원" />
-	<title>회원가입 등록 | 원주미래산업진흥원</title>
+	<title>아이디 찾기 | 원주미래산업진흥원</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/WFI.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -35,10 +35,9 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div id="content" class="content member-form-page">
+			<div id="content" class="content login-page">
 				<!-- content-header -->
-				<div class="content-header">
-					<!-- Sub Visual -->
+				<!-- <div class="content-header">
 					<div class="visual-wrap visual-02">
 						<div class="inner">
 							<h1>소통마당</h1>
@@ -51,67 +50,54 @@
 							</div>
 						</div>
 					</div>
-					<!-- // Sub Visual -->
-					<!-- Sub Nav -->
-					<div class="snb-wrap">
-						<nav class="nav dep2-nav">
-							<ul class="dep2-list">
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">공지사항</a>
-								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">공고안내</a>
-								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">보도자료</a>
-								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link is-current" aria-current="page">경영공시</a>
-								</li>
-							</ul>
-						</nav>
-						<nav class="nav dep3-nav">
-							<ul class="dep3-list">
-								<li class="dep3-item">
-									<a href="#" class="dep3-link is-current" aria-current="page">전체</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">임직원 현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">기관운영현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">예산 및 결산현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">이사회 회의록</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">경영성과</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					<!-- // Sub Nav -->
-				</div>
+				</div> -->
 				<!-- // content-header -->
 				<!-- content-body -->
 				<div class="content-body">
 					<!-- 페이지 유형 예시 (페이지 유형에 따라 타이틀 영역의 예외처리 대응) -->
-					<div class="board-list-page">
-						<!-- 타이틀 영역 -->
-						<div class="title-wrap">
-							<h2 class="title">경영공시</h2>
-							<p class="explain">설명이 들어가는 경우</p>
+					 <!-- 타이틀 영역 -->
+					 <div class="title-wrap">
+						<h2 class="title">아이디 찾기</h2>
+						<p class="explain">휴대폰 인증을 통해 아이디를 찾을 수 있습니다. <br/>
+							회원가입 시 사용하였던 휴대폰 번호를 입력해 주세요.​</p>
+					</div>
+					<!-- // 타이틀 영역 -->
+					<div class="member-page">
+						<!-- 로그인 -->
+						<div class="login-form-wrap pad-b60 bg">
+							<div class="login-form">
+								<div class="info-inp-wrap login-filed">
+									<div class="labels">
+										<span class="txt">휴대폰 번호</span>
+									</div>
+									<div class="inp-wrap">
+										<div class="frm-inp h-48">
+											<input type="number" name="" id="" placeholder="“-”없이 숫자만 입력해주세요​" title="" class="inp">
+										</div>
+										<button type="button" class="btn-basic h-48 black">
+											<span>인증번호 받기</span>
+										</button>
+									</div>
+									<p class="error-txt">에러메시지 입니다.</p><!-- error 일경우, .error-txt 추가 -->
+								</div>
+								<div class="info-inp-wrap login-filed">
+									<div class="labels"><span class="txt">인증번호</span></div>
+									<div class="inp-wrap">
+										<div class="frm-inp h-48 red-time">
+											<input type="text" name="" id="" placeholder="" title="" value="02:59" class="inp">
+										</div>
+										<button type="button" class="btn-basic h-48 black">
+											<span>인증번호 확인</span> <!-- 인증번호 받기 후 -->
+											<!-- <span>재요청</span>  인증번호 입력 후 -->
+										</button> 
+									</div>
+								</div>
+								<button type="button" class="btn-basic h-56 primary fluid login" disabled>
+									<span>아이디 찾기</span>
+								</button>
+							</div>
 						</div>
-						<!-- // 타이틀 영역 -->
-
-						<!-- 게시판목록 영역 -->
-						<div class="board-list-wrap">
-							실질적인 컨텐츠가 들어가는 영역의 예시입니다.
-						</div>
-						<!-- // 게시판목록 영역 -->
+						<!-- //로그인 -->
 					</div>
 				</div>
 				<!-- // content-body -->

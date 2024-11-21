@@ -821,6 +821,86 @@
 }
 
 /* 회원가입 */
+.labels {
+	display: flex;
+	align-items: flex-start;
+	flex-shrink: 0;
+	width: 160rem;
+	.txt {
+		position: relative;
+		font-size: 18rem;
+		line-height: 28rem;
+		&.require {
+			&::after {
+				content: '*';
+				color: $color-primary;
+			}
+		}
+	}
+}
+.inp-wrap {
+	display: flex;
+	gap: 8rem;
+	flex : 1 0 auto;
+	align-items: center;
+	.frm-inp {
+		flex: 1; 
+	}
+	.frm-rdo {
+		+ .frm-rdo {
+			margin-left: 8rem;
+		}
+	}
+	.frm-sel {
+		flex: auto;
+		&.w300 {
+			width: 300rem;
+		}
+		&.w232 {
+			width: 232rem;
+		}
+	}
+	+ .inp-wrap {
+		margin-top: 8rem;
+	}
+	.red-time {
+		input {
+			font-size: 16rem;
+			text-align: right;
+			color: $color-primary;
+		}
+	}
+}
+.info-inp-wrap {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	.info-txt {
+		margin-top: 8rem;
+		font-size: 14rem;
+		line-height: 20rem;
+		color: #999;
+	}
+	.error-txt {
+		position: relative;
+		margin-top: 8rem;
+		padding-left: 24rem;
+		font-size: 14rem;
+		line-height: 20rem;
+		color: #F01B1B;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 20rem;
+			height: 20rem;
+			background: url(../../assets/images/common/icn-20-error-red.svg) no-repeat;
+			background-size: 100%;
+		}
+	}
+}
 .join-wrap {
 	width: 860rem;
 	margin: 0 auto;
@@ -846,72 +926,9 @@
 				width: 100%;
 				padding: 16rem;
 				border-bottom: 1px solid #EAEAEA;
-				
-				.labels {
-					display: flex;
-					align-items: center;
-					flex-shrink: 0;
-					width: 160rem;
-					height: 48rem;
-					.txt {
-						position: relative;
-						font-size: 18rem;
-						line-height: 28rem;
-						&.require {
-							&::after {
-								content: '*';
-								color: $color-primary;
-							}
-						}
-					}
-				}
-				.inp-wrap {
-					display: flex;
-					gap: 8rem;
-					flex : 1 0 auto;
-					align-items: center;
-					.frm-inp {
-						flex: 1;
-					}
-					.frm-rdo {
-						+ .frm-rdo {
-							margin-left: 8rem;
-						}
-					}
-					.frm-sel {
-						flex: auto;
-						&.w300 {
-							width: 300rem;
-						}
-						&.w232 {
-							width: 232rem;
-						}
-					}
-					+ .inp-wrap {
-						margin-top: 8rem;
-					}
-					.red-time {
-						input {
-							font-size: 16rem;
-							text-align: right;
-							color: $color-primary;
-						}
-					}
-				}
-				.info-inp-wrap {
-					display: flex;
-					flex-direction: column;
-					flex: 1;
-					.info-txt {
-						margin-top: 8rem;
-						font-size: 14rem;
-						line-height: 20rem;
-						color: #999;
-					}
-				}
-				
 			}
 		}
+		
 		/* 약관동의 */
 		.agree-box {
 			padding-top: 40rem;
@@ -960,161 +977,475 @@
 			width: 360rem;
 		}
 	}
+}
+
+// 기능별 반응형 대응
+@include media-tablet-xs {
+	.labels {
+		display: flex;
+		align-items: flex-start;
+		flex-shrink: 0;
+		width: 100%;
+		.txt {
+			position: relative;
+			font-size: 14rem;
+			line-height: 20rem;
+			&.require {
+				&::after {
+					content: '*';
+					color: $color-primary;
+				}
+			}
+		}
+	}
+	.inp-wrap {
+		display: flex;
+		gap: 4rem;
+		flex : 1 0 auto;
+		align-items: center;
+		.frm-inp {
+			flex: 1;
+		}
+		.frm-rdo {
+			+ .frm-rdo {
+				margin-left: 8rem;
+			}
+		}
+		.frm-sel {
+			flex: auto;
+			&.w300 {
+				width: 100%;
+			}
+			&.w232 {
+				width: 100%;
+			}
+		}
+		+ .inp-wrap {
+			margin-top: 8rem;
+		}
+		.mo-w100 {
+			padding: 10rem 5rem;
+			flex-shrink: 0;
+		}
+		.red-time {
+			input {
+				font-size: 14rem;
+				text-align: right;
+				color: $color-primary;
+			}
+		}
+		&.email {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+			text-align: center;
+			.frm-inp:nth-child(2) {
+				min-width: 130rem;
+			}
+			.frm-sel {
+				grid-column: 1 / 4;
+			}
+		}
+	}
+	.info-inp-wrap {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		.info-txt {
+			margin-top: 4rem;
+			font-size: 11rem;
+			line-height: 16rem;
+			color: #999;
+		}
+	}
+
+	.join-wrap {
+		width: 100%;
+		margin: 0 auto;
+		
+		.join-form {
+			padding: 0;
+			background: transparent;
+			.req {
+				text-align: right;
+				font-size: 12rem;
+				line-height: 16rem;
+				margin-bottom: 12rem;
+				&::before {
+					content: '*';
+					color: $color-primary;
+				}
+			}
+			.field-wrap {
+				border-top: 1px solid #000;
+				.field {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					gap: 8rem;
+					width: 100%;
+					padding: 16rem 12rem;
+					border-bottom: 1px solid #EAEAEA;
+					
+					
+				}
+			}
+			
+			/* 약관동의 */
+			.agree-box {
+				padding-top: 40rem;
+				.frm-chk {
+					&.agree {
+						margin-bottom: 12rem;
+					}
+				}
+				.text-box-wrap {
+					display: block;
+					width: 100%;
+					height: 160rem;
+					border: 1px solid #EAEAEA;
+				}
+				.text-box {
+					width: calc(100% - 16rem);
+					height: 144rem;
+					padding:  24rem;
+					margin: 8rem;
+					overflow-y: auto;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #666;
+					.tit {
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #333;
+						margin-bottom: 8rem;
+					}
+					&::-webkit-scrollbar {
+						width: 4rem;
+					}
+					&::-webkit-scrollbar-thumb {
+						background: #BEBEBE; /* 스크롤바 색상 */
+						border-radius: 4rem; /* 스크롤바 둥근 테두리 */
+					}
+				}
+			}
+
+			/*버튼*/
+			.btn-wrap {
+				display: flex;
+			}
+			.join {
+				margin: 40rem auto 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* 로그인 */
+.login-form-wrap {
+	position: relative;
+	width: 520rem;
+	margin: 0 auto;
+	padding: 60rem 80rem 40rem;
+	background: linear-gradient(-45deg, transparent 30rem, #fff 0);
+	&.pad-b60 {
+		padding-bottom: 60rem;
+	}
+	.login-form {
+		h2 {
+			font-size: 28rem;
+			line-height: 40rem;
+			font-weight: 700;
+			color:#000;
+			text-align: center;
+			margin-bottom: 40rem;
+			em {
+				color: $color-primary;
+			}
+		}
+		.login-post {
+			box-sizing: border-box;
+			.login-filed {
+				+.login-filed {
+					margin-top: 12rem;
+				}
+			}
+			.frm-inp {
+				width: 100%;
+				+.frm-inp { 
+					margin-top: 12rem;
+				}
+			}
+			.btn-basic.login {
+				margin-top: 20rem;
+			}
+		}
+		.login-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 24rem;
+			.item {
+				position: relative;
+				a {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #000;
+				}
+				+.item {
+					padding-left: 32rem;
+					&::before {
+						content: '';
+						position: absolute;
+						left: 16rem;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 1rem;
+						height: 12rem;
+						background: #BEBEBE;
+					}
+				}
+			}
+		}
+		.join-page {
+			margin-top: 40rem;
+			padding-top: 40rem;
+			border-top: 1px solid #EAEAEA;
+			a {
+				display: block;
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 24rem;
+					height: 24rem;
+					background: url(../../assets/images/common/icn-24-join-arrow-bk.svg) no-repeat;
+					background-size: 100%;
+				}
+				.tit {
+					font-size: 20rem;
+					line-height: 28rem;
+					font-weight: 700;
+					color: #000;
+				}
+				.txt {
+					font-size: 14rem;
+					line-height: 20rem;
+					color:#666;
+					margin-top: 12rem;
+				}
+			}
+		}
+		.labels {
+			margin-bottom: 8rem;
+		}
+		.login-filed {
+			+.login-filed {
+				margin-top: 20rem;
+			}
+			+.btn-basic.login {
+				margin-top: 40rem;
+			} 
+		}
+		.btn-basic.black {
+			min-width: 120rem;
+		}
+
+		/*아이디 찾기 결과*/
+		.id-result-wrap {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			gap: 8rem;
+			margin-bottom: 40rem;
+			p {
+				font-size: 18rem;
+				line-height: 28rem;
+			}
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			em {
+				font-size: 24rem;
+				line-height: 36rem;
+				font-weight: 700;
+				color: $color-primary;
+			}
+			.btn-copy {
+				position: relative;
+				font-size: 0;
+				width: 24rem;
+				height: 24rem;
+				margin-left: 8rem;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 24rem;
+					height: 24rem;
+					background: url(../../assets/images/common/icn-24-copy-black.svg) no-repeat;
+					background-size: 100%;
+				}
+			}
+		}
+	}
 
 	// 기능별 반응형 대응
 	@include media-tablet-xs {
 		width: 100%;
+		height: 100%;
 		margin: 0 auto;
-	.join-form {
-		padding: 0;
+		padding: 60rem 0 80rem;
 		background: transparent;
-		.req {
-			text-align: right;
-			font-size: 12rem;
-			line-height: 16rem;
-			margin-bottom: 12rem;
-			&::before {
-				content: '*';
-				color: $color-primary;
-			}
+		&.bg {
+			background: #fff;
+			padding: 24rem 12rem;
 		}
-		.field-wrap {
-			border-top: 1px solid #000;
-			.field {
-				position: relative;
-				display: flex;
-				flex-direction: column;
-				gap: 8rem;
-				width: 100%;
-				padding: 16rem 12rem;
-				border-bottom: 1px solid #EAEAEA;
-				.labels {
-					display: flex;
-					align-items: center;
-					flex-shrink: 0;
+		.login-form {
+			h2 {
+				font-size: 24rem;
+				line-height: 36rem;
+				font-weight: 700;
+				color:#000;
+				text-align: center;
+				em {
+					color: $color-primary;
+				}
+			}
+			.login-post {
+				margin-top: 32rem;
+				box-sizing: border-box;
+				.frm-inp {
 					width: 100%;
-					height: 20rem;
-					.txt {
-						position: relative;
+					+.frm-inp { 
+						margin-top: 12rem;
+					}
+				}
+				.btn-basic.login {
+					margin-top: 28rem;
+				}
+			}
+			.login-info {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-top: 32rem;
+				.item {
+					position: relative;
+					a {
 						font-size: 14rem;
 						line-height: 20rem;
-						&.require {
-							&::after {
-								content: '*';
-								color: $color-primary;
-							}
+						color: #000;
+					}
+					+.item {
+						padding-left: 32rem;
+						&::before {
+							content: '';
+							position: absolute;
+							left: 16rem;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 1rem;
+							height: 12rem;
+							background: #BEBEBE;
 						}
 					}
 				}
-				.inp-wrap {
-					display: flex;
-					gap: 4rem;
-					flex : 1 0 auto;
-					align-items: center;
-					.frm-inp {
-						flex: 1;
+			}
+			.join-page {
+				margin-top: 40rem;
+				padding-top: 0;
+				border-top: 0;
+				a {
+					display: block;
+					position: relative;
+					background: #fff;
+					padding: 24rem;
+					&::after {
+						content: '';
+						position: absolute;
+						right: 24rem;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 24rem;
+						height: 24rem;
+						background: url(../../assets/images/common/icn-24-join-arrow-bk.svg) no-repeat;
+						background-size: 100%;
 					}
-					.frm-rdo {
-						+ .frm-rdo {
-							margin-left: 8rem;
-						}
+					.tit {
+						font-size: 16rem;
+						line-height: 24rem;
+						font-weight: 700;
+						color: #000;
 					}
-					.frm-sel {
-						flex: auto;
-						&.w300 {
-							width: 100%;
-						}
-						&.w232 {
-							width: 100%;
-						}
-					}
-					+ .inp-wrap {
-						margin-top: 8rem;
-					}
-					.mo-w100 {
-						padding: 10rem 5rem;
-						width: 100rem;
-					}
-					.red-time {
-						input {
-							font-size: 14rem;
-							text-align: right;
-							color: $color-primary;
-						}
-					}
-					&.email {
-						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(50%, auto));
-						.frm-inp:nth-child(2) {
-							width: 130rem;
-						}
-						.frm-sel {
-							grid-column: 1 / 4;
-						}
-					}
-				}
-				.info-inp-wrap {
-					display: flex;
-					flex-direction: column;
-					flex: 1;
-					.info-txt {
-						margin-top: 4rem;
-						font-size: 11rem;
+					.txt {
+						font-size: 12rem;
 						line-height: 16rem;
-						color: #999;
+						color:#666;
+						margin-top: 4rem;
 					}
 				}
-				
 			}
-		}
-		/* 약관동의 */
-		.agree-box {
-			padding-top: 40rem;
-			.frm-chk {
-				&.agree {
-					margin-bottom: 12rem;
+			.login-filed {
+				+.login-filed {
+					margin-top: 16rem;
 				}
+				+.btn-basic.login {
+					margin-top: 20rem;
+				} 
 			}
-			.text-box-wrap {
-				display: block;
-				width: 100%;
-				height: 160rem;
-				border: 1px solid #EAEAEA;
-			}
-			.text-box {
-				width: calc(100% - 16rem);
-				height: 144rem;
-				padding:  24rem;
-				margin: 8rem;
-				overflow-y: auto;
-				font-size: 14rem;
-				line-height: 20rem;
-				color: #666;
-				.tit {
-					font-size: 16rem;
-					line-height: 24rem;
-					color: #333;
-					margin-bottom: 8rem;
-				}
-				&::-webkit-scrollbar {
-					width: 4rem;
-				}
-				&::-webkit-scrollbar-thumb {
-					background: #BEBEBE; /* 스크롤바 색상 */
-					border-radius: 4rem; /* 스크롤바 둥근 테두리 */
-				}
-			}
-		}
 
-		/*버튼*/
-		.btn-wrap {
-			display: flex;
+			/*아이디 찾기 결과*/
+			.id-result-wrap {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				gap: 8rem;
+				margin-top: 16rem;
+				margin-bottom: 40rem;
+				p {
+					font-size: 14rem;
+					line-height: 20rem;
+				}
+				div {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				em {
+					font-size: 20rem;
+					line-height: 28rem;
+					font-weight: 700;
+					color: $color-primary;
+				}
+				.btn-copy {
+					position: relative;
+					font-size: 0;
+					width: 24rem;
+					height: 24rem;
+					margin-left: 8rem;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 24rem;
+						height: 24rem;
+						background: url(../../assets/images/common/icn-24-copy-black.svg) no-repeat;
+						background-size: 100%;
+					}
+				}
+				+.btn-basic.h-56 {
+					margin-bottom: 20rem;
+				}
+			}
 		}
-		.join {
-			margin: 40rem auto 0;
-			width: 100%;
-		}
-	}
 	}
 }
 

@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="원주미래산업진흥원" />
 	<meta name="description" content="원주미래산업진흥원" />
-	<title>로그인 | 원주미래산업진흥원</title>
+	<title>아이디 찾기 | 원주미래산업진흥원</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/WFI.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -55,50 +55,27 @@
 				<!-- content-body -->
 				<div class="content-body">
 					<!-- 페이지 유형 예시 (페이지 유형에 따라 타이틀 영역의 예외처리 대응) -->
+					 <!-- 타이틀 영역 -->
+					 <div class="title-wrap">
+						<h2 class="title">아이디 찾기</h2>
+						<!-- <p class="explain">휴대폰 인증을 통해 아이디를 찾을 수 있습니다. <br/>
+							회원가입 시 사용하였던 휴대폰 번호를 입력해 주세요.​</p> -->
+					</div>
+					<!-- // 타이틀 영역 -->
 					<div class="member-page">
 						<!-- 로그인 -->
-						<div class="login-form-wrap">
+						<div class="login-form-wrap pad-b60 bg">
 							<div class="login-form">
-								<h2>
-									안녕하세요.<br/>
-									<em>원주미래산업진흥원</em>입니다.
-								</h2>
-								<form class="login-post" method="post" action="" id="login-form">
-									<div class="info-inp-wrap login-filed">
-										<div class="inp-wrap">
-											<div class="frm-inp h-48">
-												<input type="text" name="id" id="id" value="" placeholder="아이디를 입력해주세요" title="" class="inp" />
-											</div>
-										</div>
-										<!-- <p class="error-txt">에러메시지 입니다.</p>  error 일경우, .error-txt 추가 -->
+								<div class="id-result-wrap">
+									<p>회원님의 아이디는</p>
+									<div>
+										<em class="id-result" id="copyTxt">wonju1324</em><button class="btn-copy" onclick="copy()"><span class="blind">COPY</span></button>
 									</div>
-									<div class="info-inp-wrap login-filed">
-										<div class="inp-wrap">
-											<div class="frm-inp h-48">
-												<input type="password" name="password" id="password" value="" placeholder="비밀번호를 입력해주세요" title="" class="inp" />
-											</div>
-										</div>
-										<!-- <p class="error-txt">에러메시지 입니다.</p>  error 일경우, .error-txt 추가 -->
-									</div>
-									<button type="button" class="btn-basic h-56 primary fluid login">
-										<span>로그인</span>
-									</button>
-								</form>
-								<div class="login-info">
-									<div class="item">
-										<a href="/html/member/login_find.html">아이디 찾기</a>
-									</div>
-									<div class="item">
-										<a href="/html/member/login_find.html">비밀번호 찾기</a>
-									</div>
+									<p>입니다.</p>
 								</div>
-								<!-- 회원가입 -->
-								 <div class="join-page">
-									<a href="/html/member/member_form.html">
-										<p class="tit">회원가입</p>
-										<p class="txt">아직 WFI 회원이 아니신가요?</p>
-									</a>
-								 </div>
+								<button type="button" class="btn-basic h-56 primary fluid login">
+									<span>로그인하기</span>
+								</button>
 							</div>
 						</div>
 						<!-- //로그인 -->
