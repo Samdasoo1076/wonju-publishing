@@ -2467,6 +2467,7 @@ html {
 		background-color: #F6F6F6;
 	}
 	.content-header {
+		min-height: 88rem;
 		// sub visual
 		.visual-wrap {
 			@include out-sec;
@@ -2522,6 +2523,9 @@ html {
 			}
 			&.visual-04 {
 				background-image: url('../images/content/visual-04-pc.jpg');
+			}
+			&.visual-05 {
+				background-image: url('../images/content/visual-05-pc.jpg');
 			}
 		}
 
@@ -2602,7 +2606,7 @@ html {
 
 	.content-body {
 		margin: auto;
-		padding: 208rem $pc-sidespacer;
+		padding: 120rem $pc-sidespacer;
 		width: 100%;
 		max-width: calc(#{$pc-sidespacer} * 2 + #{$pc-width-content});
 	}
@@ -2665,6 +2669,7 @@ html {
 	// 모바일구간
 	@include media-tablet-xs {
 		.content-header {
+			min-height: 72rem;
 			.visual-wrap {
 				height: 280rem;
 
@@ -2699,6 +2704,9 @@ html {
 				}
 				&.visual-04 {
 					background-image: url('../images/content/visual-04-mo.jpg');
+				}
+				&.visual-05 {
+					background-image: url('../images/content/visual-05-mo.jpg');
 				}
 			}
 
@@ -2741,7 +2749,7 @@ html {
 		}
 
 		.content-body {
-			padding: 132rem $mobile-sidespacer 80rem;
+			padding: 60rem $mobile-sidespacer 80rem;
 			max-width: 100%;
 		}
 		.title-wrap {

@@ -3,6 +3,52 @@
 	분류그룹 : 공통 컨텐츠
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
+/* bul list */
+.bul.dot {
+	li {
+		position: relative;
+		padding-left: 20rem;
+		font-size: 16rem;
+		line-height: 24rem;
+		color: #666;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 10rem;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 100%;
+			background: #666;
+		}
+		+li {
+			margin-top: 4rem;
+		}
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		li {
+			position: relative;
+			padding-left: 6rem;
+			font-size: 12rem;
+			line-height: 16rem;
+			color: #666;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 7rem;
+				width: 2rem;
+				height: 2rem;
+				border-radius: 100%;
+				background: #666;
+			}
+			+li {
+				margin-top: 4rem;
+			}
+		}
+	}
+}
 /*-------------------------------------------------------------------
 	@@ 게시판
 -------------------------------------------------------------------*/
@@ -24,12 +70,20 @@
 				font-weight: 700;
 			}
 		}
+		.set {
+			font-size: 18rem;
+			line-height: 48rem;
+			color: #000;
+		}
 		.board-srch {
 			display: flex;
 			gap: 8rem;
 			margin-left: auto;
 			.frm-sel {
 				width: 120rem;
+				&.w160 {
+					width: 160rem;
+				}
 			}
 			.frm-inp {
 				width: 368rem;
@@ -284,6 +338,9 @@
 				font-size: 14rem;
 				line-height: 20rem;
 			}
+			.set {
+				display: none;
+			}
 			.board-srch {
 				width: 100%;
 				order: 1;
@@ -291,6 +348,9 @@
 					flex: none;
 					width: 100rem;
 					min-width: 100rem;
+					&.w160 {
+						width: 100%;
+					}
 				}
 				.frm-inp {
 					flex: 1 1 auto;
@@ -871,6 +931,15 @@
 		}
 	}
 }
+/*버튼*/
+.btn-wrap {
+	display: flex;
+}
+.center-w360 {
+	margin: 60rem auto 0;
+	width: 360rem;
+}
+
 .info-inp-wrap {
 	display: flex;
 	flex-direction: column;
@@ -1011,6 +1080,9 @@
 				margin-left: 8rem;
 			}
 		}
+		&:has(.frm-sel) {
+			flex-direction: column;
+		}
 		.frm-sel {
 			flex: auto;
 			&.w300 {
@@ -1046,6 +1118,14 @@
 			}
 		}
 	}
+	/*버튼*/
+	.btn-wrap {
+		display: flex;
+	}
+	.center-w360 {
+		margin: 40rem auto 0;
+		width: 100%;
+	}
 	.info-inp-wrap {
 		display: flex;
 		flex-direction: column;
@@ -1057,7 +1137,6 @@
 			color: #999;
 		}
 	}
-
 	.join-wrap {
 		width: 100%;
 		margin: 0 auto;
@@ -1129,14 +1208,7 @@
 				}
 			}
 
-			/*버튼*/
-			.btn-wrap {
-				display: flex;
-			}
-			.join {
-				margin: 40rem auto 0;
-				width: 100%;
-			}
+			
 		}
 	}
 }
@@ -1443,6 +1515,414 @@
 				}
 				+.btn-basic.h-56 {
 					margin-bottom: 20rem;
+				}
+			}
+		}
+	}
+}
+
+//마이페이지
+.mypage-wrap .list-cont {
+	position: relative;
+	width: 100%;
+	border-top: 1px solid #000;
+	.list-item {
+		display: flex;
+		gap: 8rem;
+		align-items: center;
+		padding: 16rem;
+		min-height: 80rem;
+		border-bottom: 1px solid #EAEAEA;
+		.labels {
+			width: 200rem;
+			font-size: 18rem;
+			line-height: 28rem;
+			color: #000;
+		}
+		.value {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p {
+				font-size: 18rem;
+				line-height: 28rem;
+				color: #000;
+				&.bold {
+					font-weight: 700;
+				}
+			}
+			.frm-rdo {
+				span {color:#000;}
+			}
+			.info-inp-wrap {
+				width: 540rem;
+				flex: none;
+			}
+			.btn-basic {
+				flex-shrink: 0;
+				width: 120rem;
+			}
+		}
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		.list-item {
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			align-items: center;
+			padding: 16rem 12rem;
+			min-height: 80rem;
+			border-bottom: 1px solid #EAEAEA;
+			.labels {
+				width: 100%;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #000;
+			}
+			.value {
+				width: 100%;
+				gap: 19rem;
+				&.align-end {
+					.btn-basic {
+						align-items: flex-end;
+					}
+				}
+				p {
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+					&.bold {
+						font-weight: 700;
+					}
+				}
+				.frm-rdo {
+					span {color:#000;}
+				}
+				.info-inp-wrap {
+					width: 100%;
+					flex: none;
+				}
+				.btn-basic {
+					
+					&.black {
+						width: 100rem;
+					}
+					width: auto;
+				}
+			}
+		}
+		
+	}
+}
+.login-form-tit-has {
+	.title {
+		font-size: 28rem;
+		line-height: 40rem;
+		font-weight: 700;
+		color: #000;
+		margin-bottom: 40rem;
+		text-align: center;
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		.title {
+			font-size: 20rem;
+			line-height: 28rem;
+			margin-bottom: 32rem;
+		}
+	}
+}
+
+/* 마이페이지-예약확인 */
+.reservation-info-box {
+	position: relative;
+	padding: 32rem 40rem;
+	background: #fff;
+	margin-bottom: 60rem;
+	.tit {
+		font-size: 20rem;
+		line-height: 28rem;
+		font-weight: 700;
+		color: #000;
+		margin-bottom: 8rem;
+	}
+	.call {
+		position: relative;
+		padding-left: 24rem;
+		margin-top: 16rem;
+		font-size: 16rem;
+		line-height: 24rem;
+		color: #000;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2rem;
+			width: 20rem;
+			height: 20rem;
+			background: url(../../assets/images/common/icn-20-call-black.svg) no-repeat;
+			background-size: 100%;
+		}
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		position: relative;
+		padding: 24rem;
+		background: #fff;
+		margin-bottom: 32rem;
+		.tit {
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 700;
+			color: #000;
+			margin-bottom: 8rem;
+		}
+		.call {
+			position: relative;
+			padding-left: 16rem;
+			margin-top: 12rem;
+			font-size: 12rem;
+			line-height: 16rem;
+			color: #000;
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 2rem;
+				width: 12rem;
+				height: 12rem;
+				background: url(../../assets/images/common/icn-20-call-black.svg) no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+
+.board-list-reserv {
+	.reserv-item {
+		position: relative;
+		display: flex;
+		padding: 24rem 0 24rem 24rem;
+		background: #fff;
+		+.reserv-item {
+			margin-top: 24rem;
+		}
+		.img-wrap {
+			width: 252rem;
+			height: 170rem;
+			margin-right: 84rem;
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.wrap {
+			display: flex;
+			justify-content: space-between;
+			width: 608rem ;
+			margin: 12rem 0;
+			margin-right: 100rem;
+			.info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				min-width: 240rem;
+				dl {
+					display: flex;
+					justify-content: space-between;
+					+dl {
+						margin-top: 8rem;
+					}
+					dt {
+						width: 80rem;
+						font-size: 18rem;
+						line-height: 28rem;
+						color: #000;
+					}
+					dd {
+						font-size: 18rem;
+						line-height: 28rem;
+						color: #666;
+						&.bold {
+							font-weight: 700;
+							color: #000;
+						}
+					}
+				}
+				.page-move {
+					position: relative;
+					display: inline-block;
+					width: fit-content;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #0D55D1;
+					padding-right: 16rem;
+					&::after {
+						content: '';
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 16rem;
+						height: 16rem;
+						background: url(../../assets/images/common/icn-16-arrow-right-blue.svg) no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
+		
+		.result {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 12rem 0;
+			padding: 0 80rem;
+			border-left: 1px solid #DFDFDF;
+			.value {
+				font-size: 16rem;
+				line-height: 24rem;
+				text-align: center;
+				margin-bottom: 10rem;
+				&.waiting {       
+					color:#000;
+				}
+				&.complete {
+					color: $color-primary;
+				}
+				&.fail {
+					color:#959595;
+				}
+			}
+			.date {
+				font-size: 16rem;
+				line-height: 24rem;
+				color: #666;
+			}
+			.btn-basic {
+				width: 160rem;
+			}
+		}
+	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		.reserv-item {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding: 24rem;
+			background: #fff;
+			+.reserv-item {
+				margin-top: 20rem;
+			}
+			.img-wrap {
+				width: 100%;
+				height: 100%;
+				margin-right: 0;
+				margin-bottom: 24rem;
+				img {
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+			.wrap {
+				display: flex;
+				justify-content:baseline;
+				flex-direction: column;
+				width: 100%;
+				margin: 0;
+				margin-right: 0;
+				margin-bottom: 24rem;
+				.info {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-content: flex-start;
+					min-width: 153rem;
+					padding-bottom: 12rem;
+					+ .info {
+						padding-top: 12rem;
+						border-top: 1px dashed #EAEAEA;
+					}
+					dl {
+						display: flex;
+						justify-content: normal;
+						+dl {
+							margin-top: 4rem;
+						}
+						dt {
+							width: 100rem;
+							font-size: 14rem;
+							line-height: 20rem;
+							color: #000;
+						}
+						dd {
+							font-size: 14rem;
+							line-height: 20rem;
+							color: #666;
+							&.bold {
+								font-weight: 700;
+								color: #000;
+							}
+						}
+					}
+					.page-move {
+						position: relative;
+						display: inline-block;
+						width: fit-content;
+						height: 20rem;
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #0D55D1;
+						padding-right: 16rem;
+						&::after {
+							content: '';
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 16rem;
+							height: 16rem;
+							background: url(../../assets/images/common/icn-16-arrow-right-blue.svg) no-repeat;
+							background-size: 100%;
+						}
+					}
+				}
+			}
+			
+			.result {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 0;
+				padding: 24rem 0 0 0;
+				border-left: 0;
+				border-top: 1px solid #DFDFDF;
+				.value {
+					font-size: 16rem;
+					line-height: 24rem;
+					text-align: center;
+					margin-bottom: 10rem;
+					&.waiting {       
+						color:#000;
+					}
+					&.complete {
+						color: $color-primary;
+					}
+					&.fail {
+						color:#959595;
+					}
+				}
+				.date {
+					text-align: center;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #666;
+				}
+				.btn-basic {
+					width: 100%;
 				}
 			}
 		}

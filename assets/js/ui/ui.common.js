@@ -236,16 +236,19 @@ if ($('.gnb-area').length) {
 var setHeader = {
 	init: function(){
 		if ($('.sub-wrapper').length) {
-			$('.gnb-area').addClass("active");
-			$('.gnb-area').on("mouseleave", function() {
-				$(this).addClass("active");
-			});
-
 			if ($('.visual-wrap').length) {
 				this.event();
 			} else {
 				setHeader.set();
 			}
+		}
+
+
+		if ($('.sub-wrapper.gnb-bg').length) {
+			$('.gnb-area').addClass("active");
+			$('.gnb-area').on("mouseleave", function() {
+				$(this).addClass("active");
+			});
 		}
 	},
 	event: function(){
