@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="원주미래산업진흥원" />
+	<meta name="description" content="원주미래산업진흥원" />
+	<title>시설안내 | 원주미래산업진흥원</title>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/WFI.css" />
+
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/libs/librurys.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
+
+	<!-- Swiper Librarys -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- fullcalendar -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+	<script src="../../assets/js/libs/index.global.js"></script>
+	<script src="../../assets/js/libs/index.global.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
+	<!-- 페이지 스크립트 영역 -->
+	<script>
+
+	</script>
+</head>
+
+<body>
+	<!-- 레이아웃 유형구분
+		메인: main-wrapper,
+		서브: sub-wrapper,
+		기타: [기타]-wrapper
+	 -->
+	<div class="wrapper sub-wrapper">
+		<!-- include_header.html -->
+		<header class="header"></header>
+		<!-- // include_header.html -->
+
+		<!-- Container -->
+		<main role="main" class="container">
+			<!-- content -->
+			<div id="content" class="content notice-list-page">
+				<!-- content-header -->
+				<div class="content-header">
+					<!-- Sub Visual -->
+					<div class="visual-wrap visual-04">
+						<div class="inner">
+							<h1>시설안내</h1>
+							<div class="location">
+								<span class="lc-home"><span class="blind">홈</span></span>
+								<span class="lc-split"><span class="blind">&gt;</span></span>
+								<span class="lc-cate"><span>시설안내</span></span>
+								<span class="lc-split"><span class="blind">&gt;</span></span> 
+								<span class="lc-current" aria-current="page">시설 예약</span>
+							</div>
+						</div>
+					</div>
+					<!-- // Sub Visual -->
+					<!-- Sub Nav -->
+					<div class="snb-wrap">
+						<nav class="nav dep2-nav">
+							<ul class="dep2-list">
+								<li class="dep2-item">
+									<a href="#" class="dep2-link is-current">시설 예약</a>
+								</li>
+								<li class="dep2-item">
+									<a href="#" class="dep2-link">예약 현황</a>
+								</li>
+								<li class="dep2-item">
+									<a href="#" class="dep2-link">시설 임대</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!-- // Sub Nav -->
+				</div>
+				<!-- // content-header -->
+				<!-- content-body -->
+				<div class="content-body">
+					<!-- 게시판목록 페이지 -->
+					<div class="board-list-page">
+						<!-- 타이틀 영역 -->
+						<div class="title-wrap">
+							<h2 class="title">시설 예약</h2> 
+							<!-- <p class="explain">최대 24개월 내역까지 조회 가능합니다.​​</p> -->
+						</div>
+						<!-- // 타이틀 영역 -->
+
+						<div class="board-list-wrap">
+
+							<div class="board-list">
+								<div class="gallery-board">
+									<div class="detail-wrap">
+										<div class="reservation-detail">
+											<div class="swiper-container" navigation="true">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide"><img src="../../assets/images/content/img-reservation-room01.jpg"></div>
+													<div class="swiper-slide"><img src="../../assets/images/content/img-reservation-room02.jpg"></div>
+													<div class="swiper-slide"><img src="../../assets/images/content/img-reservation-room03.jpg"></div>
+												</div>
+												<div class="swiper-button-prev"></div>
+												<div class="swiper-button-next"></div>
+											</div>
+										</div>
+										<div class="cont-txt">
+											<h3 class="name">컨퍼런스룸</h3>
+											<div class="dl-wrap">
+												<dl>
+													<dt>예약기간</dt>
+													<dd>상시운영 (당일 예약 불가)</dd>
+												</dl>
+												<dl>
+													<dt>취소기간</dt>
+													<dd>예약 3일 전</dd>
+												</dl>
+												<dl>
+													<dt>시설규모</dt>
+													<dd>180m2</dd>
+												</dl>
+												<dl>
+													<dt>수용인원</dt>
+													<dd>100명</dd>
+												</dl>
+											</div>
+											<div class="fee-wrap">
+												<dl class="fee">
+													<dt>이용료</dt>
+													<dd>200,000원</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+
+									<div class="detail-wrap">
+										<div class="reservation-calendar" id="calendar"></div>
+										<div class="choice-info">
+											<div class="times">
+												<p class="tit between">시간 선택
+													<span class="vat">2024년 12월 14일 (목)</span>
+												</p>
+												<div class="table-wrap">
+													<table>
+														<caption>
+															시간선택
+														</caption>
+														<colgroup>
+															<col style="width:10%" />
+															<col style="width:45%" />
+															<col style="width:22.5%" />
+															<col style="width:22.5%" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th>
+																	<div class="frm-chk">
+																		<input type="checkbox" name="" id="frm아이디" class="chk" />
+																	</div>
+																</th>
+																<th>시간</th>
+																<th>금액</th>
+																<th>예약가능여부</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td scope="row">
+																	<div class="frm-chk">
+																		<input type="checkbox" name="" id="frm아이디" class="chk" />
+																	</div>
+																</td>
+																<td>09:00 ~ 18:00 (종일)</td>
+																<td>200,000원</td>
+																<td>예약불가</td>
+															</tr>
+															<tr>
+																<td scope="row">
+																	<div class="frm-chk">
+																		<input type="checkbox" name="" id="frm아이디" class="chk" />
+																	</div>
+																</td>
+																<td>09:00 ~ 13:00 (오전 반일)</td>
+																<td>200,000원</td>
+																<td>예약불가</td>
+															</tr>
+															<tr>
+																<td scope="row">
+																	<div class="frm-chk">
+																		<input type="checkbox" name="" id="frm아이디" class="chk" />
+																	</div>
+																</td>
+																<td>14:00 ~ 18:00 (오후 반일)</td>
+																<td>200,000원</td>
+																<td>예약가능</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- // 게시판목록 페이지 -->
+				</div>
+				<!-- // content-body -->
+			</div>
+			<!-- // content -->
+		</main>
+		<!-- // Container -->
+
+		<!-- include_footer.html -->
+		<footer class="footer"></footer>
+		<!-- // include_footer.html -->
+	</div>
+</body>
+<script>
+	// 비주얼 슬라이드
+	let slidedetail = new Swiper('.reservation-detail .swiper-container', {
+		autoplay: false,
+		// {
+		// 	delay: 4000,
+		// 	disableOnInteraction: false
+		// },
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next', // 다음 슬라이드로 이동하는 버튼
+			prevEl: '.swiper-button-prev' // 이전 슬라이드로 이동하는 버튼
+		},
+		// effect: 'fade',
+		// fadeEffect: {
+		// 	crossFade: true, // 필수
+		// },
+		// observer: true,  
+		// observeParents: true,
+		// pagination: {
+		// 	el: '.swiper-visual .swiper-pagination',
+		// 	clickable: true,
+		// 	renderBullet: function(index, className) {
+		// 		return `<li class="${className}"><span>${index+1}</span></li>`;
+		// 	}
+		// },
+	});
+
+	//캘린더
+	document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+			initialView: 'dayGridMonth',
+			titleFormat: function (date) {
+                // YYYY년 MM월
+                if ( date.date.month < 9){
+                    return `${date.date.year}. ${"0"+(date.date.month + 1)}`;
+                }
+                return `${date.date.year}. ${date.date.month + 1}`;
+            },
+			columnFormat: {
+				day: 'M월d일'
+			},
+			dayCellContent: function(info) {
+				var number = document.createElement("a");
+				number.classList.add("fc-daygrid-day-number");
+				number.innerHTML = info.dayNumberText.replace("일", "").replace("日", "");
+				if (info.view.type === "dayGridMonth") {
+					return {
+						html: number.outerHTML
+					};
+				}
+			},
+			dateClick: function() {
+				alert('a day has been clicked!');
+			},
+			headerToolbar: {
+				left: 'prev',
+				center: 'title',
+				right: 'next'
+			},
+			locale: 'ko' // 한국어 설정
+		});
+        calendar.render();
+		setTimeout(() => {
+			this.calendarComponent.getApi().updateSize();
+		});
+    });
+</script>
+
+</html>

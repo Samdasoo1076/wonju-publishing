@@ -231,8 +231,7 @@
 							position: relative;
 							display: flex;
 							align-items: center;
-							justify-content: center;
-							width: 172rem;
+							padding: 0 40rem 0 48rem;
 							height: 52rem;
 							margin: 80rem 0 0 0; 
 							border-radius: 60rem;
@@ -2408,6 +2407,7 @@
 						.btn-more-view {
 							width: 172rem;
 							height: 44rem;
+							padding: 0 40rem 0 48rem;
 							margin: 40rem auto 0;
 							border-radius: 60rem;
 							.txt {
