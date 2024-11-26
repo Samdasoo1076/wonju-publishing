@@ -320,14 +320,14 @@
 							position: relative;
 							width: 100%;
 							height: 100%;
-							img {
-								position: absolute;
-								left: 50%;
-								top: 50%;
-								transform: translate(-50%, -50%);
-								width: 100%;
-							}
 						}
+					}
+					img {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
 					}
 					.swiper-button-prev {
 						position: absolute;
@@ -400,7 +400,8 @@
 								color: #000;;
 							}
 							dd {
-								color: #666;
+								color: #000;
+								font-weight: 700;
 							}
 							
 						}
@@ -410,6 +411,70 @@
 				}
 				.choice-info {
 					width: calc(100% - 604rem);
+					.choice-block {
+						+.choice-block {
+							margin-top: 40rem;
+						}
+						.tit {
+							font-size: 20rem;
+							line-height: 28rem;
+							font-weight: 700;
+							color: #000;
+							margin-bottom: 8rem;
+							+p {
+								margin-top: 20rem;
+							}
+							&.between {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+							}
+							.vat {
+								font-size: 18rem;
+								line-height: 28rem;
+								color: #666;
+								font-weight: 400;
+							}
+						}
+						.table-wrap {
+							.possible {
+								td {
+									&:last-child {
+										color: #0468EE;
+									}
+								}
+								&.on {
+									td {
+										background: #FFF8F8
+									};
+								}
+							}
+						}
+					}
+					.btn-wrap {
+						display: flex;
+						justify-content: center;
+						gap: 8rem;
+						margin-top: 40rem;
+						button {
+							width: 160rem;
+						}
+					}
+				}
+				.text-area {
+					width: 100%;
+					text-align: center;
+				}
+			}
+			.btn-wrap {
+				&.center-w200 {
+					margin: 40rem auto 0;
+					justify-content: center;
+					display: flex;
+					gap: 8rem;
+					button {
+						width: 200rem;
+					}
 				}
 			}
 		}
@@ -590,7 +655,7 @@
 						}
 					}
 				}
-				&.fc-day-other {
+				&.fc-day-past {
 					.fc-daygrid-day-frame {
 						cursor: default;
 						margin: 0;
@@ -873,6 +938,192 @@
 						}
 					}
 				}
+				.detail-wrap {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					gap: 0;
+					padding: 0;
+					background: #fff;
+					+.detail-wrap {
+						margin-top: 40rem;
+						&::after {
+							content: '';
+							position: absolute;
+							top: -44rem;
+							left: -20rem;
+							width: calc(100% + 40rem);
+							height: 8rem;
+							background: #F6F6F6;
+						}
+						&:last-child {
+							&::after {
+								content: '';
+								display: none;
+							}
+						}
+					}
+					.reservation-detail {
+						position: relative;
+						width: 100%;
+						min-height: 216rem;
+						height: 216rem;
+						overflow: hidden;
+						.swiper-container {
+							position: relative;
+							width: 100%;
+							height: 100%;
+							.swiper-slide {
+								position: relative;
+								width: 100%;
+								height: 100%;
+							}
+						}
+						.swiper-button-prev {
+							position: absolute;
+							left: 0;
+							top: 50%;
+							width: 32rem;
+							height: 60rem;
+							background: url(../../assets/images/common/icn-32-swiper-btn-prev.png) no-repeat;
+							background-size: 100%;
+							&::after {
+								content: '';
+								display: none;
+							}
+						}
+						.swiper-button-next {
+							position: absolute;
+							right: 0;
+							top: 50%;
+							width: 32rem;
+							height: 60rem;
+							background: url(../../assets/images/common/icn-32-swiper-btn-next.png) no-repeat;
+							background-size: 100%;
+							&::after {
+								content: '';
+								display: none;
+							}
+						}
+					}
+					.cont-txt {
+						position: relative;
+						width: 100%;
+						padding: 24rem;
+						margin-bottom: 40rem;
+						border: 1px solid #EAEAEA;
+						box-sizing: border-box;
+						
+						.name {
+							display: block;
+							padding-bottom: 12rem;
+							font-size: 20rem;
+							line-height: 28rem;
+							font-weight: 700;
+							color: #000;
+							border-bottom: 1px solid #000;
+						}
+						.dl-wrap {
+							position: relative;
+							padding: 16rem 0;
+							dl {
+								display: flex;
+								font-size: 14rem;
+								line-height: 20rem;
+								+dl {
+									margin-top: 4rem;
+								}
+								dt {
+									min-width: 64rem;
+									padding-right: 12rem;
+									color: #000;;
+								}
+								dd {
+									color: #666;
+								}
+								
+							}
+						}
+						.fee-wrap {
+							dl {
+								display: flex;
+								font-size: 14rem;
+								line-height: 20rem;
+								dt {
+									min-width: 64rem;
+									padding-right: 12rem;
+									color: #000;;
+								}
+							}
+							padding: 16rem 0 0 0;
+							border-top: 1px solid #EAEAEA;
+						}
+					}
+					.choice-info {
+						width: 100%;
+						.choice-block {
+							margin-top: 40rem;
+							+.choice-block {
+								margin-top: 40rem;
+							}
+							.tit {
+								font-size: 20rem;
+								line-height: 28rem;
+								font-weight: 700;
+								color: #000;
+								margin-bottom: 8rem;
+								+p {
+									margin-top: 20rem;
+								}
+								&.between {
+									display: flex;
+									justify-content: space-between;
+									align-items: center;
+								}
+								.vat {
+									font-size: 14rem;
+									line-height: 20rem;
+									color: #666;
+									font-weight: 400;
+								}
+							}
+							.table-wrap {
+								.possible {
+									td {
+										&:last-child {
+											color: #0468EE;
+										}
+									}
+									&.on {
+										td {
+											background: #FFF8F8
+										};
+									}
+								}
+							}
+						}
+						.btn-wrap {
+							display: flex;
+							justify-content: center;
+							gap: 10rem;
+							margin-top: 40rem;
+							button {
+								width: 50%;
+							}
+						}
+					}
+					.text-area {
+						width: 100%;
+						text-align: center;
+					}
+				}
+				.btn-wrap {
+					&.center-w200 {
+						button {
+							width: 50%;
+						}
+					}
+				}
 			}
 		}
 		.board-page {
@@ -996,7 +1247,7 @@
 							}
 						}
 					}
-					&.fc-day-other {
+					&.fc-day-past {
 						.fc-daygrid-day-frame {
 							cursor: default;
 							margin: 0;
@@ -1311,7 +1562,7 @@
 	.txt {
 		position: relative;
 		font-size: 18rem;
-		line-height: 28rem;
+		line-height: 46rem;
 		&.require {
 			&::after {
 				content: '*';
@@ -1398,27 +1649,7 @@
 	.join-form {
 		padding: 40rem 60rem 60rem;
 		background: linear-gradient(-45deg, transparent 30rem, #fff 0);
-		.req {
-			text-align: right;
-			font-size: 16rem;
-			line-height: 24rem;
-			margin-bottom: 12rem;
-			&::before {
-				content: '*';
-				color: $color-primary;
-			}
-		}
-		.field-wrap {
-			border-top: 1px solid #000;
-			.field {
-				position: relative;
-				display: flex;
-				gap: 8rem;
-				width: 100%;
-				padding: 16rem;
-				border-bottom: 1px solid #EAEAEA;
-			}
-		}
+		
 		
 		/* 약관동의 */
 		.agree-box {
@@ -1469,6 +1700,27 @@
 		}
 	}
 }
+.req {
+	text-align: right;
+	font-size: 16rem;
+	line-height: 24rem;
+	margin-bottom: 12rem;
+	&::before {
+		content: '*';
+		color: $color-primary;
+	}
+}
+.field-wrap {
+	border-top: 1px solid #000;
+	.field {
+		position: relative;
+		display: flex;
+		gap: 8rem;
+		width: 100%;
+		padding: 16rem;
+		border-bottom: 1px solid #EAEAEA;
+	}
+}
 
 // 기능별 반응형 대응
 @include media-tablet-xs {
@@ -1504,9 +1756,11 @@
 		}
 		&:has(.frm-sel) {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 		.frm-sel {
 			flex: auto;
+			width: 100%;
 			&.w300 {
 				width: 100%;
 			}
@@ -1566,31 +1820,6 @@
 		.join-form {
 			padding: 0;
 			background: transparent;
-			.req {
-				text-align: right;
-				font-size: 12rem;
-				line-height: 16rem;
-				margin-bottom: 12rem;
-				&::before {
-					content: '*';
-					color: $color-primary;
-				}
-			}
-			.field-wrap {
-				border-top: 1px solid #000;
-				.field {
-					position: relative;
-					display: flex;
-					flex-direction: column;
-					gap: 8rem;
-					width: 100%;
-					padding: 16rem 12rem;
-					border-bottom: 1px solid #EAEAEA;
-					
-					
-				}
-			}
-			
 			/* 약관동의 */
 			.agree-box {
 				padding-top: 40rem;
@@ -1630,6 +1859,30 @@
 				}
 			}
 
+			
+		}
+	}
+	.req {
+		text-align: right;
+		font-size: 12rem;
+		line-height: 16rem;
+		margin-bottom: 12rem;
+		&::before {
+			content: '*';
+			color: $color-primary;
+		}
+	}
+	.field-wrap {
+		border-top: 1px solid #000;
+		.field {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 8rem;
+			width: 100%;
+			padding: 16rem 12rem;
+			border-bottom: 1px solid #EAEAEA;
+			
 			
 		}
 	}
@@ -2073,6 +2326,9 @@
 					line-height: 24rem;
 					color: #000;
 					font-weight: 500;
+					.frm-chk {
+						justify-content: center;
+					}
 				}
 				&:nth-child(2) {
 					th {
@@ -2090,6 +2346,9 @@
 					color: #666;
 					border-bottom: 1px solid #EAEAEA;
 					text-align: center;
+					.frm-chk {
+						justify-content: center;
+					}
 				}
 			}
 		}
@@ -2098,6 +2357,7 @@
 		margin-top: 20rem;
 	}
 }
+
 // 기능별 반응형 대응
 @include media-tablet-xs {
 	.table-wrap {
@@ -2606,6 +2866,27 @@
 		width: 600rem;
 		border-radius: 0;
 		.cont {
+			&.center {
+				.tit {
+					text-align: center;
+				}
+				.txt {
+					text-align: center;
+				}
+				.info-txt {
+					dl {
+						justify-content: center;
+					}
+				}
+			}
+			.complete-txt {
+				margin: 12rem 0 40rem;
+				p {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #666;
+				}
+			}
 			.tit {
 				font-size: 24rem;
 				line-height: 36rem;
@@ -2651,6 +2932,24 @@
 					line-height: 24rem;
 					color: #666;
 				}
+				dl {
+					display: flex;
+					+ dl {
+						margin-top: 4rem;
+					}
+				}
+				dt {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #000;
+					width: 120rem;
+					font-weight: 700;
+				}
+				dd {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #666;
+				}
 			}
 		}
 	}
@@ -2686,6 +2985,14 @@
 			max-width: 100%;
     		max-height: 100%;
 			.cont {
+				.complete-txt {
+					margin: 12rem 0 24rem;
+					p {
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #666;
+					}
+				}
 				.tit {
 					font-size: 24rem;
 					line-height: 36rem;
@@ -2729,6 +3036,24 @@
 					p {
 						font-size: 12rem;
 						line-height: 16rem;
+						color: #666;
+					}
+					dl {
+						display: flex;
+						+ dl {
+							margin-top: 4rem;
+						}
+					}
+					dt {
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #000;
+						width: 92rem;
+						font-weight: 700;
+					}
+					dd {
+						font-size: 14rem;
+						line-height: 20rem;
 						color: #666;
 					}
 				}

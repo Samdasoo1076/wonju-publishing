@@ -2668,6 +2668,16 @@ html {
 
 	// 모바일구간
 	@include media-tablet-xs {
+		.content {
+			&.mo-bg-white {
+				.snb-wrap {
+					background: #fff;
+				}
+				.content-body {
+					background: #fff;
+				}
+			}
+		}
 		.content-header {
 			min-height: 72rem;
 			.visual-wrap {

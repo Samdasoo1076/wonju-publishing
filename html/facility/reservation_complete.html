@@ -46,7 +46,7 @@
 		<!-- Container -->
 		<main role="main" class="container">
 			<!-- content -->
-			<div id="content" class="content notice-list-page mo-bg-white">
+			<div id="content" class="content notice-list-page">
 				<!-- content-header -->
 				<div class="content-header">
 					<!-- Sub Visual -->
@@ -88,7 +88,7 @@
 					<div class="board-list-page">
 						<!-- 타이틀 영역 -->
 						<div class="title-wrap">
-							<h2 class="title">예약 현황</h2> 
+							<h2 class="title">시설 예약 확인</h2> 
 							
 						</div>
 						<!-- // 타이틀 영역 -->
@@ -98,69 +98,45 @@
 							<div class="board-list">
 								<div class="gallery-board">
 									<div class="detail-wrap">
-										<div class="reservation-calendar" id="calendar"></div>
-										<div class="choice-info">
-											<div class="choice-block">
-												<p class="tit between">2024년 12월 14일 (목)</p>
-												<div class="table-wrap">
-													<table>
-														<caption>
-															시간선택
-														</caption>
-														<colgroup>
-															<col style="width:50%" />
-															<col style="width:50%" />
-														</colgroup>
-														<thead>
-															<tr>
-																<th>시설명</th>
-																<th>예약 시간</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>컨퍼런스룸</td>
-																<td>09:00 ~ 18:00 (종일)</td>
-															</tr>
-															<tr>
-																<td>소회의실 1</td>
-																<td>09:00 ~ 18:00 (종일)</td>
-															</tr>
-															<tr>
-																<td>소회의실 2</td>
-																<td>09:00 ~ 18:00 (종일)</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<!-- 예약현황이 없을경우 -->
-												<div class="table-wrap">
-													<table>
-														<caption>
-															시간선택
-														</caption>
-														<colgroup>
-															<col style="width:50%" />
-															<col style="width:50%" />
-														</colgroup>
-														<thead>
-															<tr>
-																<th>시설명</th>
-																<th>예약 시간</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td colspan="2">예약 현황이 없습니다.​</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<!-- //예약현황이 없을경우 -->
+										<div class="reservation-detail">
+											<img src="../../assets/images/content/img-reservation-room01.jpg">
+										</div>
+										<div class="cont-txt">
+											<h3 class="name">컨퍼런스룸</h3>
+											<div class="dl-wrap">
+												<dl>
+													<dt>예약기간</dt>
+													<dd>상시운영 (당일 예약 불가)</dd>
+												</dl>
+												<dl>
+													<dt>취소기간</dt>
+													<dd>예약 3일 전</dd>
+												</dl>
+												<dl>
+													<dt>시설규모</dt>
+													<dd>180m2</dd>
+												</dl>
+												<dl>
+													<dt>수용인원</dt>
+													<dd>100명</dd>
+												</dl>
+											</div>
+											<div class="fee-wrap">
+												<dl class="fee">
+													<dt>이용료</dt>
+													<dd>200,000원</dd>
+												</dl>
 											</div>
 										</div>
 									</div>
-									
+									<div class="btn-wrap center-w200">
+										<button type="button" class="btn-basic h-56">
+											<span>뒤로가기</span>
+										</button>
+										<button type="button" class="btn-basic h-56 primary btn-popup" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+											<span>신청서 제출하기</span>
+										</button>
+									</div>
 								</div>
 							</div>
 							
@@ -215,47 +191,5 @@
 		</div>
 	</div>
 </body>
-<script>
-	//캘린더
-	document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-			initialView: 'dayGridMonth',
-			titleFormat: function (date) {
-                // YYYY년 MM월
-                if ( date.date.month < 9){
-                    return `${date.date.year}. ${"0"+(date.date.month + 1)}`;
-                }
-                return `${date.date.year}. ${date.date.month + 1}`;
-            },
-			columnFormat: {
-				day: 'M월d일'
-			},
-			dayCellContent: function(info) {
-				var number = document.createElement("a");
-				number.classList.add("fc-daygrid-day-number");
-				number.innerHTML = info.dayNumberText.replace("일", "").replace("日", "");
-				if (info.view.type === "dayGridMonth") {
-					return {
-						html: number.outerHTML
-					};
-				}
-			},
-			dateClick: function() {
-				alert('a day has been clicked!');
-			},
-			headerToolbar: {
-				left: 'prev',
-				center: 'title',
-				right: 'next'
-			},
-			locale: 'ko' // 한국어 설정
-		});
-        calendar.render();
-		setTimeout(() => {
-			this.calendarComponent.getApi().updateSize();
-		});
-    });
-</script>
 
 </html>
