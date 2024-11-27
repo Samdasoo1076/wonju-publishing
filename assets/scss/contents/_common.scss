@@ -2846,6 +2846,131 @@
 	}
 }
 
+/* 주요업무 */
+.main-tast {
+	position: relative;
+	margin-top: 120rem;
+	.buisness-item {
+		position: relative;
+		display: flex;
+		height: 520rem;
+		+.buisness-item {
+			margin-top: 160rem;
+		}
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+			.img-wrap {
+				position: relative;
+				margin-top: 60rem;
+				margin-right: 0;
+				margin-left: -60rem;
+				z-index: 2;
+				width: 684rem;
+				height: 460rem;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.img-wrap {
+			position: relative;
+			margin-top: 60rem;
+			margin-right: -60rem;
+			width: 684rem;
+			height: 460rem;
+			img {
+				width: 100%;
+			}
+		}
+		.cont-wrap {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 764rem;
+			height: 460rem;
+			padding: 0 60rem;
+			background: linear-gradient(-45deg, transparent 30rem, #fff 0);
+			.red-tit {
+				font-size: 40rem;
+				line-height: 56rem;
+				color: $color-primary;
+				font-weight: 700;
+				margin-bottom: 28rem;
+			}
+			.ul {
+				li {
+					color: #000;
+				}
+			}
+		}
+ 	}
+	// 기능별 반응형 대응
+	@include media-tablet-xs {
+		margin-top: 40rem;
+		.buisness-item {
+			position: relative;
+			display: flex;
+			justify-content:unset;
+			flex-direction: column;
+			height: auto;
+			+.buisness-item {
+				margin-top: 40rem;
+			}
+			&:nth-child(even) {
+				flex-direction: column;
+				
+				.img-wrap {
+					position: relative;
+					margin-left: 0;
+					top: 0;
+					margin-top: 0;
+					z-index: 2;
+					width: 100%;
+					height: auto;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			.img-wrap {
+				position: relative;
+				left: 0;
+				top: 0;
+				z-index: 2;
+				margin-top: 0;
+				width: 100%;
+				height: auto;
+				img {
+					width: 100%;
+				}
+			}
+			.cont-wrap {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+        		align-items: baseline;
+				width: 100%;
+				padding: 32rem 24rem;
+				height: auto;
+				background: linear-gradient(-45deg, transparent 20rem, #fff 0);
+				.red-tit {
+					font-size: 20rem;
+					line-height: 28rem;
+					color: $color-primary;
+					font-weight: 700;
+					margin-bottom: 12rem;
+				}
+				.ul {
+					li {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+}
+
 /*-------------------------------------------------------------------
 	@@ 팝업명
 -------------------------------------------------------------------*/
