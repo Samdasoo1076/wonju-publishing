@@ -157,6 +157,7 @@
 				background-color: #F6F6F6;
 				img {
 					width: 100%;
+					height: 100%;
 					&.mo {
 						display: none;
 					}
@@ -233,6 +234,7 @@
 							align-items: center;
 							padding: 0 40rem 0 48rem;
 							height: 52rem;
+							width: fit-content;
 							margin: 80rem 0 0 0; 
 							border-radius: 60rem;
 							border: 1px solid #fff;
@@ -461,8 +463,21 @@
 								width: 25%;
 								a {
 									.img-wrap {
+										position: relative;
 										width: 100%;
+										height: 224rem;
+										overflow: hidden;
 										margin-bottom: 32rem;
+										img {
+											position: absolute;
+											width: 100%;
+											top: 50%;
+											left: 50%;
+											transform: translate(-50%, -50%);
+											height: 224rem;
+											overflow: hidden;
+											object-fit: cover;
+										}
 									}
 									.subject {
 										display: -webkit-box;
@@ -1206,9 +1221,13 @@
 									a {
 										.img-wrap {
 											width: 100%;
+											height: calc(100vw * (224 / 1590));
 											margin-bottom: calc(100vw * (32 / 1590));
 											img {
 												width: 100%;
+												height: calc(100vw * (224 / 1590));
+												overflow: hidden;
+												object-fit: cover;
 											}
 										}
 										.subject {
@@ -1505,6 +1524,7 @@
 					z-index: -1;
 					img {
 						width: 100%;
+						height: 100%;
 					}
 				}
 			}
@@ -1816,9 +1836,13 @@
 									a {
 										.img-wrap {
 											width: 100%;
+											height: calc(100vw * (224 / 1280));
 											margin-bottom: calc(100vw * (32 / 1280));
 											img {
 												width: 100%;
+												height: calc(100vw * (224 / 1280));
+												overflow: hidden;
+												object-fit: cover;
 											}
 										}
 										.subject {
@@ -2081,6 +2105,7 @@
 				background: transparent;
 				.bg {
 					img {
+						height: auto;
 						display: none;
 						&.mo {
 							display: block;
@@ -2244,7 +2269,7 @@
 							transition: .2s all;
 							width: 172rem;
 							height: 44rem;
-							margin: 40rem auto 0;
+							margin: 40rem auto 60rem;
 							border-radius: 60rem;
 							.txt {
 								position: relative;
@@ -2382,9 +2407,13 @@
 									a {
 										.img-wrap {
 											width: 100%;
+											height: 216rem;
 											margin-bottom: 15rem;
 											img {
 												width: 100%;
+												height: 216rem;
+												overflow: hidden;
+												object-fit: cover;
 											}
 										}
 										.subject {
