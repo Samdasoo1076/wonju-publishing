@@ -2613,6 +2613,7 @@ html {
 			// layout
 			.nav {
 				@include out-sec;
+				overflow: hidden;
 				ul {
 					@include in-sec;
 				}
@@ -2624,11 +2625,12 @@ html {
 				border-bottom: 1px solid #EAEAEA;
 				.dep2-list {
 					display: flex;
-					flex-wrap: wrap;
+					flex-wrap: nowrap;
 					justify-content: center;
 					height: inherit;
 				}
 				.dep2-item {
+					width: auto;
 					height: inherit;
 				}
 				.dep2-link {
@@ -2866,6 +2868,11 @@ html {
 			.snb-wrap {
 				.dep2-nav {
 					height: 60rem;
+					.dep2-list:has(li:nth-child(5)) {
+						justify-content: flex-start;
+					}
+					
+					
 					.dep2-link {
 						padding: 0 12rem 1rem 12rem;
 						font-size: 14rem;

@@ -276,17 +276,49 @@ var setHeader = {
 };
 
 /* 탑버튼 */
-const btnTop = document.querySelector(".btn_top");
+// const btnTop = document.querySelector(".btn_top");
 
-btnTop.addEventListener("click", (e) => {
-	e.preventDefault(); // 기본 링크 동작 방지
+// btnTop.addEventListener("click", (e) => {
+// 	e.preventDefault(); // 기본 링크 동작 방지
 
-	// 부드럽게 상단으로 스크롤
-	window.scrollTo({
-		top: 0, // 스크롤의 최상단
-		behavior: "smooth", // 부드러운 스크롤 효과
-	});
-}); 
+// 	// 부드럽게 상단으로 스크롤
+// 	window.scrollTo({
+// 		top: 0, // 스크롤의 최상단
+// 		behavior: "smooth", // 부드러운 스크롤 효과
+// 	});
+// }); 
+
+/* snb - 모바일에서만 swiper */
+document.addEventListener('DOMContentLoaded', () => {
+var ww = $(window).width();
+var snbSwiper = undefined;
+
+	function initSwiper() {
+
+		if (ww < 768 && snbSwiper == undefined) {
+			snbSwiper = new Swiper(".snb-wrap .swiper-container", {
+			slidesPerView: 'auto',
+			//   spaceBetween: 10,
+			simulateTouch: true,
+			//   loop: true,
+			//   autoplay: {
+			//     delay: 2000,
+			//     disableOnInteraction: false,
+			//   },
+			});
+		} else if (ww >= 768 && snbSwiper != undefined) {
+			snbSwiper.destroy();
+			snbSwiper = undefined;
+		}
+	}
+	initSwiper();
+});
+
+
+// $(window).on('resize', function () {
+// 	ww = $(window).width();
+// 	initSwiper();
+// });
 
 /*-------------------------------------------------------------------
 	@ Content
@@ -315,7 +347,7 @@ function destroySlimSelects() {
 	});
 
 	//게시판 상세 페이저 글없을경우 링크제거
-	document.querySelector(".pager.disabled .link").removeAttribute('href');
+	// document.querySelector(".pager.disabled .link").removeAttribute('href');
 }
 
 

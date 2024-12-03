@@ -17,6 +17,9 @@
 	<script src="../../assets/js/ui/ui.common.js"></script>
 	<script src="../../assets/js/ui/ui.publish.js"></script><!-- 퍼블리싱 전용 (개발적용안함) -->
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 	<!-- 페이지 스크립트 영역 -->
 	<script></script>
 </head>
@@ -41,54 +44,38 @@
 					<!-- Sub Visual -->
 					<div class="visual-wrap visual-02">
 						<div class="inner">
-							<h1>소통마당</h1>
+							<h1>진흥원 소개</h1>
 							<div class="location">
 								<span class="lc-home"><span class="blind">홈</span></span>
 								<span class="lc-split"><span class="blind">&gt;</span></span>
-								<span class="lc-cate"><span>소통마당</span></span>
+								<span class="lc-cate"><span>진흥원 소개</span></span>
 								<span class="lc-split"><span class="blind">&gt;</span></span>
-								<span class="lc-current" aria-current="page">공지사항</span>
+								<span class="lc-current" aria-current="page">비전 및 미션</span>
 							</div>
 						</div>
 					</div>
 					<!-- // Sub Visual -->
 					<!-- Sub Nav -->
 					<div class="snb-wrap">
-						<nav class="nav dep2-nav">
-							<ul class="dep2-list">
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">공지사항</a>
+						<nav class="nav dep2-nav swiper-container">
+							<ul class="dep2-list swiper-wrapper">
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link">이사장 인사말</a>
 								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">공고안내</a>
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link">원장 인사말</a>
 								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link">보도자료</a>
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link is-current" aria-current="page">비전 및 미션</a>
 								</li>
-								<li class="dep2-item">
-									<a href="#" class="dep2-link is-current" aria-current="page">경영공시</a>
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link">연혁</a>
 								</li>
-							</ul>
-						</nav>
-						<nav class="nav dep3-nav">
-							<ul class="dep3-list">
-								<li class="dep3-item">
-									<a href="#" class="dep3-link is-current" aria-current="page">전체</a>
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link">조직도</a>
 								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">임직원 현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">기관운영현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">예산 및 결산현황</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">이사회 회의록</a>
-								</li>
-								<li class="dep3-item">
-									<a href="#" class="dep3-link">경영성과</a>
+								<li class="dep2-item swiper-slide">
+									<a href="#" class="dep2-link">찾아오시는 길</a>
 								</li>
 							</ul>
 						</nav>
@@ -102,14 +89,17 @@
 					<div class="board-list-page">
 						<!-- 타이틀 영역 -->
 						<div class="title-wrap">
-							<h2 class="title">경영공시</h2>
-							<p class="explain">설명이 들어가는 경우</p>
+							<h2 class="title">비전 및 미션</h2>
+							<!-- <p class="explain">설명이 들어가는 경우</p> -->
 						</div>
 						<!-- // 타이틀 영역 -->
 
 						<!-- 게시판목록 영역 -->
 						<div class="board-list-wrap">
-							실질적인 컨텐츠가 들어가는 영역의 예시입니다.
+							<div class="vision-wrap">
+								<img class="pc" src="../../assets/images/content/img-vision-pc.svg">
+								<img class="mo" src="../../assets/images/content/img-vision-mo.svg">
+							</div>
 						</div>
 						<!-- // 게시판목록 영역 -->
 					</div>

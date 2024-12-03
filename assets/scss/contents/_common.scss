@@ -3487,7 +3487,189 @@
 	}
 }
 
-
+/* 인사말 */
+.greeting-wrap {
+	position: relative;
+	display: flex;
+	.profile-img {
+		width: 508rem;
+		min-width: 508rem;
+		position: relative;
+		z-index: 2;
+		img {
+			width: 100%;
+		}
+		.mo {
+			display: none;
+		}
+	}
+	.greeting-cont {
+		position: relative;
+		width: 1036rem;
+		min-height: 692rem;
+		margin-top: 80rem;
+		margin-left: -156rem;
+		padding: 72rem 88rem 80rem 264rem;
+		background: linear-gradient(-45deg, transparent 30rem, #fff 0);
+		br.pc {
+				display: block;
+			}
+		br.mo {
+			display: none;
+		}
+		h3 {
+			font-size: 28rem;
+			line-height: 40rem;
+			font-weight: 700;
+			color: #000;
+		}
+		p {
+			font-size: 18rem;
+			line-height: 28rem;
+			color: #000;
+			word-break: keep-all;
+			white-space: pre-line;
+		}
+		.text {
+			margin: 36rem 0;
+			p {
+				+p {
+					margin-top: 12rem;
+				}
+			}
+		}
+		.sign {
+			.name {
+				margin-top: 4rem;
+				font-size: 20rem;
+				line-height: 28rem;
+				font-weight: 700;
+			}
+		}
+	}
+	//tablet 
+	@include media-tablet-xl {
+		.profile-img {
+			width: 508rem;
+			min-width: 408rem;
+			position: relative;
+			z-index: 2;
+			img {
+				width: 100%;
+			}
+			.mo {
+				display: none;
+			}
+		}
+		.greeting-cont {
+			position: relative;
+			width: 1036rem;
+			min-height: 692rem;
+			margin-top: 80rem;
+			margin-left: -156rem;
+			padding: 52rem 68rem 60rem 224rem;
+			background: linear-gradient(-45deg, transparent 30rem, #fff 0);
+			br.pc {
+				display: none;
+			}
+			br.mo {
+				display: block;
+			}
+		}
+	}
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		flex-direction: column;
+		.profile-img {
+			width: 100%;
+			min-width: 100%;
+			position: relative;
+			z-index: 2;
+			img {
+				width: 100%;
+			}
+			.mo {
+				display: block;
+			}
+			.pc {
+				display: none;
+			}
+		}
+		.greeting-cont {
+			position: relative;
+			width: 100%;
+			min-height: 100%;
+			margin-top: 16rem;
+			margin-left: 0;
+			padding: 32rem 24rem;
+			background: #fff;
+			h3 {
+				font-size: 20rem;
+				line-height: 28rem;
+				font-weight: 700;
+				color: #000;
+			}
+			p {
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #000;
+				white-space: normal;
+			}
+			.text {
+				margin: 24rem 0;
+				p {
+					+p {
+						margin-top: 12rem;
+					}
+				}
+			}
+			.sign {
+				.name {
+					margin-top: 2rem;
+					font-size: 16rem;
+					line-height: 24rem;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+/* 비전 및 미션 */
+.vision-wrap {
+	img {
+		width: 100%;
+	}
+	img.mo {
+		display: none;
+	}
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		img.pc {
+			display: none;
+		}
+		img.mo {
+			display: block;
+		}
+	}
+}
+/* 조직도 */
+.organization-wrap {
+	img {
+		width: 100%;
+	}
+	img.mo {
+		display: none;
+	}
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		img.pc {
+			display: none;
+		}
+		img.mo {
+			display: block;
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
 	@@ 팝업명
