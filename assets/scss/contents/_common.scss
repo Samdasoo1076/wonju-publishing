@@ -1572,6 +1572,7 @@
 	}
 }
 .inp-wrap {
+	position: relative;
 	display: flex;
 	gap: 8rem;
 	flex : 1 0 auto;
@@ -1597,11 +1598,13 @@
 		margin-top: 8rem;
 	}
 	.red-time {
-		input {
-			font-size: 16rem;
-			text-align: right;
-			color: $color-primary;
-		}
+		position: absolute;
+		top: 50%;
+		right: 16rem;
+		transform: translate(0, -50%);
+		font-size: 16rem;
+		text-align: right;
+		color: $color-primary;
 	}
 }
 /*버튼*/
@@ -1776,11 +1779,9 @@
 			flex-shrink: 0;
 		}
 		.red-time {
-			input {
-				font-size: 14rem;
-				text-align: right;
-				color: $color-primary;
-			}
+			font-size: 14rem;
+			text-align: right;
+			color: $color-primary;
 		}
 		&.email {
 			display: grid;
