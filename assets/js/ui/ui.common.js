@@ -275,6 +275,18 @@ var setHeader = {
 	}
 };
 
+/* 탑버튼 */
+const btnTop = document.querySelector(".btn_top");
+
+btnTop.addEventListener("click", (e) => {
+	e.preventDefault(); // 기본 링크 동작 방지
+
+	// 부드럽게 상단으로 스크롤
+	window.scrollTo({
+		top: 0, // 스크롤의 최상단
+		behavior: "smooth", // 부드러운 스크롤 효과
+	});
+}); 
 
 /*-------------------------------------------------------------------
 	@ Content

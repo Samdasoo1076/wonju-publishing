@@ -449,8 +449,8 @@ html {
 								top: 0;
 								width: 28rem;
 								height: 28rem;
-								background-size: cover;
 								background: url(../../assets/images/common/icn-util-search-red.svg);
+								background-size: cover;
 							}
 						}
 					}
@@ -1265,8 +1265,8 @@ html {
 									top: 0;
 									width: calc(100vw * (28 / 1919));
 									height: calc(100vw * (28 / 1919));
-									background-size: cover;
 									background: url(../../assets/images/common/icn-util-search-red.svg);
+									background-size: cover;
 								}
 							}
 						}
@@ -1880,8 +1880,8 @@ html {
 									top: 0;
 									width: calc(100vw * (28 / 1280));
 									height: calc(100vw * (28 / 1280));
-									background-size: cover;
 									background: url(../../assets/images/common/icn-util-search-red.svg);
+									background-size: cover;
 								}
 							}
 						}
@@ -2189,16 +2189,70 @@ html {
 							background: url(../../assets/images/common/icn-util-search-wh.svg) no-repeat 50% 50%;
 							background-size: contain;
 						}
-						&.on {
+						&.show {
 							&::after {
 								content:'';
 								position: absolute;
 								display: inline-block;
 								width: 24rem;
 								height: 24rem;
-								background: url(../../assets/images/common/icn-close-wh.svg) no-repeat 50% 50%;
+								background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 								background-size: contain;
 							}
+						}
+					}
+				}
+				.header-search {
+					display: none;
+					
+					&.show {
+						position: absolute;
+						top: 72rem;
+						left: 0;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 132rem;
+						padding: 20rem;
+						.search_wrap {
+							width: 100%;
+							height: 48rem;
+							border-radius: 600rem;
+							border: 1px solid #000;
+							background: #fff;
+							.input {
+								display: flex;
+								align-items: center;
+								height: 48rem;
+								padding: 14rem 24rem 14rem 32rem;
+								input {
+									width: 100%;
+									height: 24rem;
+									border: 0;
+									&::placeholder {
+										font-size: 16rem;
+										line-height: 24rem;
+										color: #BEBEBE;
+									}
+								}
+								.btn_search {
+									position: relative;
+									width: 24rem;
+									height: 24rem;
+									&::after {
+										content: '';
+										position: absolute;
+										left: 0;
+										top: 0;
+										width: 24rem;
+										height: 24rem;
+										background: url(../../assets/images/common/icn-util-search-red.svg);
+										background-size: cover;
+									}
+								}
+							}
+		
 						}
 					}
 				}
@@ -2243,14 +2297,14 @@ html {
 								background: url(../../assets/images/common/icn-util-search-bk.svg) no-repeat 50% 50%;
 								background-size: contain;
 							}
-							&.on {
+							&.show {
 								&::after {
 									content:'';
 									position: absolute;
 									display: inline-block;
 									width: 24rem;
 									height: 24rem;
-									background: url(../../assets/images/common/icn-close-wh.svg) no-repeat 50% 50%;
+									background: url(../../assets/images/common/icn-close-bk.svg) no-repeat 50% 50%;
 									background-size: contain;
 								}
 							}
@@ -2546,6 +2600,12 @@ html {
 			&.visual-05 {
 				background-image: url('../images/content/visual-05-pc.jpg');
 			}
+			&.visual-06 {
+				background-image: url('../images/content/visual-06-pc.jpg');
+			}
+			&.visual-07 {
+				background-image: url('../images/content/visual-07-pc.jpg');
+			}
 		}
 
 		// sub nav
@@ -2645,6 +2705,23 @@ html {
 			font-size: 18rem;
 			line-height: 28rem;
 			color: #666;
+			.search {
+				color: $color-primary;
+				font-weight: 700;
+				&::before {
+					content: " \0022 ";
+					position: relative;
+					display: inline-block;
+				}
+				&::after {
+					content: " \0022 ";
+					position: relative;
+					display: inline-block;
+				}
+			}
+			.num {
+				color: $color-primary;
+			}
 		}
 	}
 	.sub-title-wrap {
@@ -2777,6 +2854,12 @@ html {
 				}
 				&.visual-05 {
 					background-image: url('../images/content/visual-05-mo.jpg');
+				}
+				&.visual-06 {
+					background-image: url('../images/content/visual-06-mo.jpg');
+				}
+				&.visual-07 {
+					background-image: url('../images/content/visual-07-mo.jpg');
 				}
 			}
 

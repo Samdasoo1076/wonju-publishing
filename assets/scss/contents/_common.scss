@@ -2694,21 +2694,9 @@
 			}
 		}
 	}
-	/* 결과없음 */
-	.no-list {
-		padding: 148rem 0 60rem;
-		background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
-		background-size: 80rem;
-		border-bottom: 1px solid #EAEAEA;
-		text-align: center;
-		p {
-			font-size: 18rem;
-			line-height: 28rem;
-			color: #000;
-		}
-	}
-	// 기능별 반응형 대응
-	@include media-tablet-xs {
+	
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
 		.reserv-item {
 			position: relative;
 			display: flex;
@@ -2829,6 +2817,22 @@
 				}
 			}
 		}
+		
+	}
+}
+/* 결과없음 */
+.no-list {
+	padding: 148rem 0 60rem;
+	background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 60rem;
+	background-size: 80rem;
+	border-bottom: 1px solid #EAEAEA;
+	text-align: center;
+	p {
+		font-size: 18rem;
+		line-height: 28rem;
+		color: #000;
+	}
+	@include media-mobile-xl {
 		/* 결과없음 */
 		.no-list {
 			padding: 108rem 0 40rem;
@@ -2905,8 +2909,8 @@
 			}
 		}
  	}
-	// 기능별 반응형 대응
-	@include media-tablet-xs {
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
 		margin-top: 40rem;
 		.buisness-item {
 			position: relative;
@@ -2970,6 +2974,520 @@
 		}
 	}
 }
+
+/* 개인정보처리방침 */
+.text-content {
+	p {
+		font-size: 18rem;
+		line-height: 28rem;
+		color: #666;
+	}
+	.partition {
+		margin-top: 40rem;
+	}
+	.bold {
+		font-size: 20rem;
+		line-height: 28rem;
+		font-weight: 700;
+		color: #000;
+		margin-bottom: 16rem;
+	}
+	.bul {
+		margin-top: 20rem;
+		li {
+			font-size: 18rem;
+			line-height: 28rem;
+		}
+	}
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		p {
+			font-size: 14rem;
+			line-height: 20rem;
+			color: #666;
+		}
+		.partition {
+			margin-top: 40rem;
+		}
+		.bold {
+			font-size: 16rem;
+			line-height: 24rem;
+			font-weight: 700;
+			color: #000;
+			margin-bottom: 12rem;
+		}
+		.bul {
+			margin-top: 20rem;
+			li {
+				font-size: 14rem;
+				line-height: 20rem;
+			}
+		}
+	}
+}
+/* 404 error */
+.error-cont {
+	min-width: 374rem;
+	margin: 0 auto;
+	img {
+		display: block;
+		margin: 0 auto;
+		&.mo {
+			display: none;
+		}
+	}
+	h3 {
+		font-size: 32rem;
+		line-height: 40rem;
+		color: #000;
+		font-weight: 700;
+		text-align: center;
+		margin-top: 40rem;
+		margin-bottom: 12rem;
+	}
+	p {
+		font-size: 18rem;
+		line-height: 28rem;
+		text-align: center;
+		margin-bottom: 12rem;
+		color: #666;
+	}
+	.call {
+		margin-bottom: 0;
+		a {
+			display: inline-block;
+			position: relative;
+			padding-left: 28rem;
+			font-size: 18rem;
+			line-height: 28rem;
+			color: #000;
+			&::before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 2rem;
+				width: 24rem;
+				height: 24rem;
+				background: url(../../assets/images/common/icn-24-call-bk.svg) no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+	.btn-basic {
+		display: block;
+		width: 370rem;
+		margin: 40rem auto 0;
+	} 
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		min-width: 100%;
+		margin: 0 auto;
+		img {
+			display: block;
+			margin: 0 auto;
+			&.pc {
+				display: none;
+			}
+			&.mo {
+				display: block;
+			}
+		}
+		h3 {
+			font-size: 20rem;
+			line-height: 28rem;
+			color: #000;
+			font-weight: 700;
+			text-align: center;
+			margin-top: 32rem;
+			margin-bottom: 12rem;
+		}
+		p {
+			font-size: 14rem;
+			line-height: 20rem;
+			text-align: center;
+			margin-bottom: 12rem;
+			color: #666;
+		}
+		.call {
+			margin-bottom: 0;
+			a {
+				display: inline-block;
+				position: relative;
+				padding-left: 20rem;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #000;
+				&::before {
+					content: '';
+					display: inline-block;
+					position: absolute;
+					left: 0;
+					top: 2rem;
+					width: 20rem;
+					height: 20rem;
+					background: url(../../assets/images/common/icn-24-call-bk.svg) no-repeat;
+					background-size: 100%;
+				}
+			}
+		}
+		.btn-basic {
+			display: block;
+			width: 100%;
+			margin: 40rem auto 0;
+		}
+	}
+}
+
+/* 통합검색 */
+.search-wrap {
+	/* 검색창 */
+	.search_wrap {
+		width: 484rem;
+		height: 52rem;
+		margin: 60rem auto 24rem;
+		border-radius: 600rem;
+		background: #fff;
+		border: 1px solid #000;
+		.input {
+			display: flex;
+			align-items: center;
+			height: 52rem;
+			padding: 14rem 24rem 14rem 32rem;
+			input {
+				width: 100%;
+				height: 24rem;
+				border: 0;
+				&::placeholder {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #BEBEBE;
+				}
+			}
+			.btn_search {
+				position: relative;
+				width: 28rem;
+				height: 28rem;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 28rem;
+					height: 28rem;
+					background: url(../../assets/images/common/icn-util-search-red.svg);
+					background-size: cover;
+				}
+			}
+		}
+	
+	}
+	
+	/* snb */
+	.snb-wrap {
+		// layout
+		.nav {
+			ul {
+				@include in-sec;
+			}
+		}
+
+		// styles
+		.dep2-nav {
+			height: 81rem;
+			border-bottom: 1px solid #EAEAEA;
+			.dep2-list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				height: inherit;
+			}
+			.dep2-item {
+				height: inherit;
+			}
+			.dep2-link {
+				position: relative;
+				display: flex;
+				align-items: center;
+				height: inherit;
+				padding: 0 20rem 1rem 20rem;
+				font-weight: 400;
+				font-size: 20rem;
+				line-height: 28rem;
+				color: #000;
+				&.is-current {
+					font-weight: 700;
+					color: $color-primary;
+					&::after {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 20rem;
+						right: 20rem;
+						bottom: 0;
+						height: 4rem;
+						background-color: $color-primary;
+					}
+				}
+				.total {
+					position: relative;
+					padding-left: 5rem;
+					&::before {
+						content: '(';
+						display: inline-block;
+						position: relative;
+					}
+					&::after {
+						content: '건)';
+						display: inline-block;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	/* 검색리스트 */
+	.search-list {
+		position: relative;
+		li {
+			border-bottom: 1px solid #EAEAEA;
+			a {
+				display: block;
+				position: relative;
+				padding: 24rem;
+				.title {
+					font-size: 18rem;
+					line-height: 28rem;
+					font-weight: 500;
+					color: #000;
+					margin-bottom: 8rem;
+					@include ellipsis1;
+					em {
+						color: $color-primary;
+					}
+				}
+				.cont {
+					@include ellipsis2;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #666;
+					margin-bottom: 12rem;
+				}
+				.category-wrap {
+					display: flex;
+					.category {
+						display: flex;
+						align-items: center;
+						span {
+							display: inline-block;
+							font-size: 16rem;
+							line-height: 24rem;
+							color: #666;
+							+span {
+								&::before {
+									content: '>';
+									position: relative;
+									display: inline-block;
+									padding: 0 4rem;
+									font-size: 16rem;
+									line-height: 24rem;
+									color: #666;
+								}
+							}
+						}
+					}
+					.date {
+						display: inline-block;
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #666;
+						&::before {
+							content: '・';
+							position: relative;
+							display: inline-block;
+							padding: 0 4rem;
+							font-size: 16rem;
+							line-height: 24rem;
+							color: #666;
+						}
+					}
+				}
+			}
+		}
+	}
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		/* 검색창 */
+		.search_wrap {
+			width: 100%;
+			height: 48rem;
+			margin: 32rem auto 16rem;
+			border-radius: 600rem;
+			background: #fff;
+			border: 1px solid #000;
+			.input {
+				display: flex;
+				align-items: center;
+				height: 48rem;
+				padding: 14rem 24rem 14rem 32rem;
+				input {
+					width: 100%;
+					height: 24rem;
+					border: 0;
+					&::placeholder {
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #BEBEBE;
+					}
+				}
+				.btn_search {
+					position: relative;
+					width: 24rem;
+					height: 24rem;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 24rem;
+						height: 24rem;
+						background: url(../../assets/images/common/icn-util-search-red.svg);
+						background-size: cover;
+					}
+				}
+			}
+		
+		}
+		
+		/* snb */
+		.snb-wrap {
+			// layout
+			.nav {
+				ul {
+					@include in-sec;
+				}
+			}
+
+			// styles
+			.dep2-nav {
+				height: 60rem;
+				border-bottom: 1px solid #EAEAEA;
+				.dep2-list {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					height: inherit;
+				}
+				.dep2-item {
+					height: inherit;
+				}
+				.dep2-link {
+					position: relative;
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					height: inherit;
+					padding: 0 20rem 1rem 20rem;
+					font-weight: 400;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #000;
+					&.is-current {
+						font-weight: 700;
+						color: $color-primary;
+						&::after {
+							content:'';
+							display: block;
+							position: absolute;
+							left: 20rem;
+							right: 20rem;
+							bottom: 0;
+							height: 4rem;
+							background-color: $color-primary;
+						}
+					}
+					.total {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+
+		/* 검색리스트 */
+		.search-list {
+			position: relative;
+			li {
+				border-bottom: 1px solid #EAEAEA;
+				a {
+					display: block;
+					position: relative;
+					padding: 20rem 8rem;
+					.title {
+						font-size: 16rem;
+						line-height: 24rem;
+						font-weight: 500;
+						color: #000;
+						margin-bottom: 4rem;
+						@include ellipsis2;
+						white-space: normal;
+						em {
+							color: $color-primary;
+						}
+					}
+					.cont {
+						@include ellipsis2;
+						font-size: 14rem;
+						line-height: 20rem;
+						color: #666;
+						margin-bottom: 12rem;
+					}
+					.category-wrap {
+						display: flex;
+						.category {
+							display: flex;
+							align-items: center;
+							span {
+								display: inline-block;
+								font-size: 12rem;
+								line-height: 16rem;
+								color: #666;
+								+span {
+									&::before {
+										content: '>';
+										position: relative;
+										display: inline-block;
+										padding: 0 4rem;
+										font-size: 12rem;
+										line-height: 16rem;
+										color: #666;
+									}
+								}
+							}
+						}
+						.date {
+							display: inline-block;
+							font-size: 12rem;
+							line-height: 16rem;
+							color: #666;
+							&::before {
+								content: '・';
+								position: relative;
+								display: inline-block;
+								padding: 0 4rem;
+								font-size: 12rem;
+								line-height: 16rem;
+								color: #666;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
 
 /*-------------------------------------------------------------------
 	@@ 팝업명
