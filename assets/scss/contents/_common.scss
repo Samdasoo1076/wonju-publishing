@@ -3070,13 +3070,18 @@
 .error-cont {
 	min-width: 374rem;
 	margin: 0 auto;
-	img {
-		display: block;
+	.img-wrap {
+		width: 334rem;
 		margin: 0 auto;
-		&.mo {
-			display: none;
+		img {
+			display: block;
+			margin: 0 auto;
+			&.mo {
+				display: none;
+			}
 		}
 	}
+	
 	h3 {
 		font-size: 32rem;
 		line-height: 40rem;
@@ -3124,16 +3129,20 @@
 	@include media-mobile-xl {
 		min-width: 100%;
 		margin: 0 auto;
-		img {
-			display: block;
-			margin: 0 auto;
-			&.pc {
-				display: none;
-			}
-			&.mo {
+		.img-wrap {
+			width: 172rem;
+			img {
 				display: block;
+				margin: 0 auto;
+				&.pc {
+					display: none;
+				}
+				&.mo {
+					display: block;
+				}
 			}
 		}
+		
 		h3 {
 			font-size: 20rem;
 			line-height: 28rem;
