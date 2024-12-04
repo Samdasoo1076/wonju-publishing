@@ -2713,6 +2713,27 @@
 			}
 		}
 	}
+	// 태블릿
+	@include media-tablet-xs {
+		.reserv-item {
+			.img-wrap {
+				position: relative;
+				width: 252rem;
+				min-width: 178rem;
+				height: 170rem;
+				margin-right: 20rem;
+				overflow: hidden;
+			}
+			.wrap {
+				.info {
+					min-width: 200rem;
+				}
+			}
+			.result {
+				min-width: 160rem;
+			}
+		}
+	}
 	
 	// 모바일 반응형 대응
 	@include media-mobile-xl {
