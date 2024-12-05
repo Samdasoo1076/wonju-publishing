@@ -595,7 +595,7 @@ html {
 				z-index: 10;
 				width: 100%;
 				height: 328rem;
-				background: #fff; 
+				background: #fff;
 			}
 		}
 	}
@@ -767,6 +767,9 @@ html {
 					font-size: 18rem;
 					font-weight: 700;
 					color: #fff;
+					span {
+						font-weight: 400;
+					}
 				}
 				.mem-area {
 					padding: 68rem 20rem 20rem 20rem;
@@ -789,6 +792,15 @@ html {
 								border: 1px solid transparent;
 							}
 							&.join {
+								font-size: 14rem;
+								font-weight: 700;
+								line-height: 20rem;
+								background: $color-primary;
+								color: #fff;
+								border: 1px solid rgba(255, 255, 255, 0.2);
+							}
+							&.logout {
+								width: 100%;
 								font-size: 14rem;
 								font-weight: 700;
 								line-height: 20rem;
@@ -902,11 +914,11 @@ html {
 		}
 	}
 
-	//1919 이하 
+	//1919 이하
 	@include media-max-width(1919px) {
 		.header-pc-sec {
 			// @include in-sec;
-	
+
 			// Layout
 			.mem-area {
 				display: flex;
@@ -917,7 +929,7 @@ html {
 			.gnb-area {
 				padding: 0 calc(100vw * (40 / 1919));
 				height: calc(100vw * (88 / 1919));
-	
+
 				&.active, &.down {
 					background: #fff;
 					.header-logo {
@@ -1024,7 +1036,7 @@ html {
 											}
 										}
 									}
-	
+
 								}
 								.btn-user-wrap {
 									position: relative;
@@ -1040,7 +1052,7 @@ html {
 											width: calc(100vw * (24 / 1919));
 											height: calc(100vw * (24 / 1919));
 											background: url(../../assets/images/common/icn-arrow-down-sm-bk.svg) no-repeat 50% 50%;
-	
+
 											background-size: contain;
 											transition: .2s all;
 										}
@@ -1058,10 +1070,10 @@ html {
 												background-size: contain;
 											}
 										}
-	
+
 									}
 								}
-	
+
 							}
 						}
 					}
@@ -1126,7 +1138,7 @@ html {
 										width: calc(100vw * (24 / 1919));
 										height: calc(100vw * (24 / 1919));
 										background: url(../../assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
-	
+
 										background-size: contain;
 										transition: .2s all;
 									}
@@ -1173,7 +1185,7 @@ html {
 												}
 											}
 										}
-	
+
 									}
 								}
 							}
@@ -1221,7 +1233,7 @@ html {
 						}
 					}
 				}
-	
+
 				.header-search {
 					display: none;
 					position: absolute;
@@ -1270,7 +1282,7 @@ html {
 								}
 							}
 						}
-	
+
 					}
 					&.show {
 						display: flex!important;
@@ -1280,7 +1292,7 @@ html {
 					top: -88rem;
 				}
 			}
-	
+
 			// Components
 			.header-logo {
 				display: flex;
@@ -1299,7 +1311,7 @@ html {
 					}
 				}
 			}
-	
+
 			.header-nav {
 				// Nav Depth1
 				.dep1-list {
@@ -1333,7 +1345,7 @@ html {
 						gap: calc(100vw * (100 / 1919));
 					}
 				}
-	
+
 				// Nav Depth2
 				.dep2-list {
 					gap: calc(100vw * (16 / 1919));
@@ -1350,7 +1362,7 @@ html {
 							pointer-events: auto;
 						}
 					}
-	
+
 					.dep2-item {
 						.dep2-link {
 							font-size: calc(100vw * (18 / 1919));
@@ -1365,7 +1377,7 @@ html {
 						}
 					}
 				}
-	
+
 				// Nav BG
 				.header-nav-bg {
 					top: calc(100vw * (88 / 1919));
@@ -1374,7 +1386,7 @@ html {
 				}
 			}
 		}
-		
+
 		/* 전체메뉴 */
 		.area-siteMap {
 			background: url(../../assets/images/common/img-allmenu-bg.png) no-repeat;
@@ -1511,11 +1523,11 @@ html {
 		}
 	}
 
-	//1280 이하 
+	//1280 이하
 	@include media-tablet-xl {
 		.header-pc-sec {
 			// @include in-sec;
-	
+
 			// Layout
 			.mem-area {
 				display: flex;
@@ -1526,7 +1538,7 @@ html {
 			.gnb-area {
 				padding: 0 calc(100vw * (40 / 1280));
 				height: calc(100vw * (88 / 1280));
-	
+
 				&.active, &.down {
 					background: #fff;
 					.header-logo {
@@ -1639,7 +1651,7 @@ html {
 											}
 										}
 									}
-	
+
 								}
 								.btn-user-wrap {
 									position: relative;
@@ -1673,10 +1685,10 @@ html {
 												background-size: contain;
 											}
 										}
-	
+
 									}
 								}
-	
+
 							}
 						}
 					}
@@ -1741,7 +1753,7 @@ html {
 										width: calc(100vw * (24 / 1280));
 										height: calc(100vw * (24 / 1280));
 										background: url(../../assets/images/common/icn-arrow-down-sm-wh.svg) no-repeat 50% 50%;
-	
+
 										background-size: contain;
 										transition: .2s all;
 									}
@@ -1788,7 +1800,7 @@ html {
 												}
 											}
 										}
-	
+
 									}
 								}
 							}
@@ -1836,7 +1848,7 @@ html {
 						}
 					}
 				}
-	
+
 				.header-search {
 					display: none;
 					position: absolute;
@@ -1885,7 +1897,7 @@ html {
 								}
 							}
 						}
-	
+
 					}
 					&.show {
 						display: flex!important;
@@ -1895,7 +1907,7 @@ html {
 					top: -88rem;
 				}
 			}
-	
+
 			// Components
 			.header-logo {
 				display: flex;
@@ -1914,7 +1926,7 @@ html {
 					}
 				}
 			}
-	
+
 			.header-nav {
 				// Nav Depth1
 				.dep1-list {
@@ -1948,7 +1960,7 @@ html {
 						gap: calc(100vw * (100 / 1280));
 					}
 				}
-	
+
 				// Nav Depth2
 				.dep2-list {
 					gap: calc(100vw * (16 / 1280));
@@ -1965,7 +1977,7 @@ html {
 							pointer-events: auto;
 						}
 					}
-	
+
 					.dep2-item {
 						.dep2-link {
 							font-size: calc(100vw * (18 / 1280));
@@ -1980,7 +1992,7 @@ html {
 						}
 					}
 				}
-	
+
 				// Nav BG
 				.header-nav-bg {
 					top: calc(100vw * (88 / 1280));
@@ -1989,7 +2001,7 @@ html {
 				}
 			}
 		}
-		
+
 		/* 전체메뉴 */
 		.area-siteMap {
 			background: url(../../assets/images/common/img-allmenu-bg.png) no-repeat;
@@ -2204,7 +2216,7 @@ html {
 				}
 				.header-search {
 					display: none;
-					
+
 					&.show {
 						position: absolute;
 						top: 72rem;
@@ -2252,7 +2264,7 @@ html {
 									}
 								}
 							}
-		
+
 						}
 					}
 				}
@@ -2351,7 +2363,7 @@ html {
 	top: -24rem;
 	width: 48rem;
 	height: 48rem;
-	a { 
+	a {
 		display: block;
 	}
 }
@@ -2451,7 +2463,7 @@ html {
 			line-height: 20rem;
 			color: #999;
 		}
-		
+
 	}
 	@include media-tablet-xs {
 		padding-top: 48rem;
@@ -2871,8 +2883,8 @@ html {
 					.dep2-list:has(li:nth-child(5)) {
 						justify-content: flex-start;
 					}
-					
-					
+
+
 					.dep2-link {
 						padding: 0 12rem 1rem 12rem;
 						font-size: 14rem;

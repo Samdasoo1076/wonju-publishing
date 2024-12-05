@@ -28,13 +28,13 @@ $(function(){
             } else {
                 $('.topBtn').css('display', 'flex');
 
-				
+
             }
 
 			// 예약현황 크기
 			if ( nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4) {
 				$('.reservation-wrap').addClass('small');
-				
+
 			} else {
 				$('.reservation-wrap').removeClass('small');
 			};
@@ -59,3 +59,4 @@ function setFullpageEvent(id) {
 }
 setFullpageEvent('#mobileNavModal'); //모바일 전체메뉴
 setFullpageEvent('#sitemap'); // PC 사이트맵
+setFullpageEvent('#carendar'); // PC 사이트맵

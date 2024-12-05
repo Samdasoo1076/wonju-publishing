@@ -120,7 +120,7 @@ var setGnb = {
 		$gnbarea.on("mouseenter", function() {
 			$(this).addClass("active");
 		  });
-		  
+
 		$gnbarea.on("mouseleave", function() {
 			// btn-search에 show 클래스가 없을 때만 active 클래스를 제거
 			if (!$btnSearch.hasClass("show")) {
@@ -128,7 +128,7 @@ var setGnb = {
 			}
 		});
 
-		
+
 		// 마우스 기본기능
 		$dep1ItemAll.off('mouseenter.gnb').on('mouseenter.gnb', function(e){
 			var $this = $(this);
@@ -161,32 +161,32 @@ var setGnb = {
 			let didScroll;
 			let lastScrollTop = 0;
 			let delta = 5;
-		
+
 			$(window).on('scroll', function() {
 				didScroll = true;
 			})
-		
+
 			setInterval(function () {
 				if (didScroll) {
 					headerScroll();
 					didScroll = false;
 				}
 			}, 250);
-		
+
 			function headerScroll() {
 				let scrollTop = $(window).scrollTop();
-		
+
 				if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
-		
+
 				if (scrollTop > lastScrollTop && scrollTop > $('.gnb-area').outerHeight()) {
 					// Scroll Down
 					$('.gnb-area').removeClass('down').addClass('up');
-		
+
 				} else {
 					// Scroll Up
 					if (scrollTop + $(window).height() < $(document).height()) {
 						$('.gnb-area').removeClass('up').addClass('down');
-		
+
 					}
 					if (scrollTop < $('.gnb-area').outerHeight()) {
 						$('.gnb-area').removeClass('down');
@@ -198,16 +198,17 @@ var setGnb = {
 
 		/* 탑버튼 */
 		const btnTop = document.querySelector(".btn_top");
+		if (btnTop) {
+			btnTop.addEventListener("click", (e) => {
+				e.preventDefault(); // 기본 링크 동작 방지
 
-		btnTop.addEventListener("click", (e) => {
-			e.preventDefault(); // 기본 링크 동작 방지
-
-			// 부드럽게 상단으로 스크롤
-			window.scrollTo({
-				top: 0, // 스크롤의 최상단
-				behavior: "smooth", // 부드러운 스크롤 효과
+				// 부드럽게 상단으로 스크롤
+				window.scrollTo({
+					top: 0, // 스크롤의 최상단
+					behavior: "smooth", // 부드러운 스크롤 효과
+				});
 			});
-		}); 
+		}
 	},
 	show : function($dep1ItemAll, $dep1ItemActive){
 		var $siblings = $dep1ItemActive.siblings('.is-active');
@@ -345,14 +346,14 @@ function destroySlimSelects() {
 function copy() {
 	// 복사문구값 가져오기
 	var copyTxt = document.getElementById("copyTxt");
-  
+
 	// 복사문구 선택
 	copyTxt.select();
 	copyTxt.setSelectionRange(0, 99999); // Mobile 대응
-  
+
 	 // 복사
 	navigator.clipboard.writeText(copyTxt.value);
-  
+
 	// 복사완료에 대해 Alert으로 띄우기
 	alert("복사되었습니다.");
 }
