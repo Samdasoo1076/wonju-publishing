@@ -181,33 +181,33 @@ var setGnb = {
 				if (scrollTop > lastScrollTop && scrollTop > $('.gnb-area').outerHeight()) {
 					// Scroll Down
 					$('.gnb-area').removeClass('down').addClass('up');
-					$('.btn_floating').removeClass('hide').addClass('show');
-					$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-		
-					if(scrollTop > $('.footer').offset().top - $(window).innerHeight()){
-						$('.btn_floating').removeClass('show').addClass('hide');
-						$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-					}
 		
 				} else {
 					// Scroll Up
 					if (scrollTop + $(window).height() < $(document).height()) {
 						$('.gnb-area').removeClass('up').addClass('down');
 		
-						if(scrollTop < $('.footer').offset().top - $(window).innerHeight()){
-							$('.btn_floating').removeClass('hide').addClass('show');
-							$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
-						}
 					}
 					if (scrollTop < $('.gnb-area').outerHeight()) {
 						$('.gnb-area').removeClass('down');
-						$('.btn_floating').removeClass('show').addClass('hide');
-						$('.btn_floating.fixed').removeClass('hide').addClass('show'); // kyr 추가
 					}
 				}
 				lastScrollTop = scrollTop;
 			}
 		}
+
+		/* 탑버튼 */
+		const btnTop = document.querySelector(".btn_top");
+
+		btnTop.addEventListener("click", (e) => {
+			e.preventDefault(); // 기본 링크 동작 방지
+
+			// 부드럽게 상단으로 스크롤
+			window.scrollTo({
+				top: 0, // 스크롤의 최상단
+				behavior: "smooth", // 부드러운 스크롤 효과
+			});
+		}); 
 	},
 	show : function($dep1ItemAll, $dep1ItemActive){
 		var $siblings = $dep1ItemActive.siblings('.is-active');
@@ -276,18 +276,7 @@ var setHeader = {
 	}
 };
 
-/* 탑버튼 */
-// const btnTop = document.querySelector(".btn_top");
 
-// btnTop.addEventListener("click", (e) => {
-// 	e.preventDefault(); // 기본 링크 동작 방지
-
-// 	// 부드럽게 상단으로 스크롤
-// 	window.scrollTo({
-// 		top: 0, // 스크롤의 최상단
-// 		behavior: "smooth", // 부드러운 스크롤 효과
-// 	});
-// }); 
 
 /* snb - 모바일에서만 swiper */
 document.addEventListener('DOMContentLoaded', () => {
