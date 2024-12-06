@@ -22,8 +22,8 @@
 		<!-- 로고 -->
 		<div class="header-logo">
 			<a href="../main/main.html">
-				<img class="down" src="../../assets/images/common/img-logo-wh.svg" alt="WFI (재)원주미래산업진흥원 로고">
-				<img class="up" src="../../assets/images/common/img-logo-bk.svg" alt="WFI (재)원주미래산업진흥원 로고">
+				<img class="down" src="../../assets/images/common/img-logo-wh.svg" alt="WFI (재)원주미래산업진흥원" />
+				<img class="up" src="../../assets/images/common/img-logo-bk.svg" alt="WFI (재)원주미래산업진흥원" />
 				<span class="blind">WFI (재)원주미래산업진흥원</span>
 			</a>
 		</div>
@@ -128,11 +128,12 @@
 
 				</li>
 				<li>
-					<a href="#" class="btn-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<!-- 2024-12-06 헤더 검색 피시 수정 -->
+					<button type="button" class="ui-btn btn-search" aria-expanded="false">
 						<span class="blind">검색</span>
-					</a>
+					</button>
 					<!-- 검색 -->
-					<div class="header-search dropdown-menu" style="display: none;">
+					<div class="header-search">
 						<div class="search_wrap">
 							<div class="input">
 								<input id="input_search_header" type="search" name="" placeholder="검색어를 입력하세요">
@@ -170,14 +171,15 @@
 			</a>
 		</div>
 		<div class="header-btns">
-			<button type="button" class="ui-btn btn-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<!-- 2024-12-06 헤더 검색 모바일 수정 -->
+			<button type="button" class="ui-btn btn-search" aria-expanded="false">
 				<i class="icn" aria-label="검색"><span class="blind">검색</span></i>
 			</button>
 			<button type="button" class="ui-btn btn-gnb" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
 				<i class="icn" aria-label="메뉴열기"><span class="blind">메뉴열기</span></i>
 			</button>
 			<!-- 검색 -->
-			<div class="header-search dropdown-menu">
+			<div class="header-search">
 				<div class="search_wrap">
 					<div class="input">
 						<input id="input_search_header" type="search" name="" placeholder="검색어를 입력하세요">

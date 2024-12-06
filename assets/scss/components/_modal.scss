@@ -30,7 +30,7 @@ body.modal-open {
 		width: 100%;
 		height: 100%;
 		transition: transform .3s ease-out;
-		transform: translate(0, -50px);
+		transform: translate(0, 50px);
 		pointer-events: none;
 		.btn-close {
 			position: absolute;

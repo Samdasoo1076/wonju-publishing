@@ -16,9 +16,11 @@ function initUI() {
 	// Layout
 	setGnb.init();
 	setHeader.init();
+	setSearch();
 
 	// Content
 	destroySlimSelects();
+	snbSwiper();
 }
 
 $(function(){
@@ -105,6 +107,7 @@ function setScrollStatus(){
 /*-------------------------------------------------------------------
 	@ Layout
 -------------------------------------------------------------------*/
+// Set GNB
 var setGnb = {
 	init : function(){
 		this.event();
@@ -228,11 +231,8 @@ var setGnb = {
 			$dep2Wrap.stop().slideUp(200);
 			$('.header-nav-bg').stop().slideUp(200);
 		}
-
 	},
 }
-
-
 
 // 서브레이아웃 헤더
 var setHeader = {
@@ -278,32 +278,47 @@ var setHeader = {
 };
 
 
+// Set Search
+function setSearch() {
+    const $btnSearch = $('.btn-search');
+    const $headerSearch = $('.header-search');
+
+    if ($btnSearch.length) {
+        console.log($btnSearch);
+
+        // 버튼 클릭 시 드롭다운 토글
+        $btnSearch.off('click').on('click', function (e) {
+            e.preventDefault(); // 기본 동작 방지
+            const isExpanded = $(this).attr('aria-expanded') === 'true';
+            $(this).attr('aria-expanded', !isExpanded);
+            $headerSearch.toggleClass('show');
+        });
+
+        // 검색 영역 외 클릭 시 닫기
+        $(document).off('click.search').on('click.search', function (e) {
+            if (!$headerSearch.is(e.target) && !$headerSearch.has(e.target).length && !$btnSearch.is(e.target)) {
+                $headerSearch.removeClass('show');
+                $btnSearch.attr('aria-expanded', 'false');
+            }
+        });
+    }
+}
 
 /* snb - 모바일에서만 swiper */
-document.addEventListener('DOMContentLoaded', () => {
-var ww = $(window).width();
-var snbSwiper = undefined;
+function snbSwiper() {
+	if ($('.snb-wrap').length) {
+		var ww = $(window).width();
+		var snbSwiper = undefined;
 
-	function initSwiper() {
-
-		if (ww < 768 && snbSwiper == undefined) {
-			snbSwiper = new Swiper(".snb-wrap .swiper-container", {
+		snbSwiper = new Swiper(".snb-wrap .swiper-container", {
 			slidesPerView: 'auto',
-			//   spaceBetween: 10,
 			simulateTouch: true,
-			//   loop: true,
-			//   autoplay: {
-			//     delay: 2000,
-			//     disableOnInteraction: false,
-			//   },
-			});
-		} else if (ww >= 768 && snbSwiper != undefined) {
-			snbSwiper.destroy();
-			snbSwiper = undefined;
-		}
+			threshold: 3,
+			resistance: true,
+			resistanceRatio: false
+		});
 	}
-	initSwiper();
-});
+}
 
 
 // $(window).on('resize', function () {
@@ -319,6 +334,7 @@ function InputClearHandler(id) {
 	$(id).val('').focus();
 }
 
+// Select Library
 function destroySlimSelects() {
 	document.querySelectorAll('select').forEach((select) => {
 		// 부모 요소의 클래스 중 'h-'로 시작하는 클래스 검색
