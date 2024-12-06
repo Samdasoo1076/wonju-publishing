@@ -2137,6 +2137,7 @@ html {
 		.header-mobile-sec {
 			display: block;
 			.gnb-area {
+				position: relative;
 				z-index: 100;
 				padding: 0 20rem;
 				transition: all .2s;
@@ -2195,7 +2196,8 @@ html {
 				}
 				.header-search {
 					display: none;
-
+					background-color: transparent;
+					transition: all .2s;
 					&.show {
 						position: absolute;
 						top: 72rem;
@@ -2256,6 +2258,17 @@ html {
 				}
 				&.active, &.down {
 					background: #fff;
+					&::after {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						height: 1px;
+						background-color: #EAEAEA;
+					}
+
 					.header-logo {
 						a {
 							display: block;
@@ -2283,6 +2296,8 @@ html {
 								background-size: contain;
 							}
 							&.show {
+								background-color: #fff;
+								border-top: 1px solid #EAEAEA;
 								&::after {
 									content:'';
 									position: absolute;
@@ -2307,6 +2322,9 @@ html {
 								background-size: contain;
 							}
 						}
+					}
+					.header-search {
+						background-color: #fff;
 					}
 					.header-nav {
 						// Nav Depth1
