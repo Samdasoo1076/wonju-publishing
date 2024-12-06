@@ -145,7 +145,7 @@
 					<!-- // 검색 -->
 				</li>
 				<li>
-					<a href="javascript:void(0)" class="btn-gnb" data-bs-toggle="modal" data-bs-target="#sitemap">
+					<a href="javascript:void(0)" class="btn-gnb" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -196,7 +196,7 @@
 <!-- // Mobile Header -->
 
 <!-- Mobile Nav Modal -->
-<div class="modal fade mobile-nav-modal" id="mobileNavModal" tabindex="-1" role="dialog" aria-labelledby="mobileNavModalLabel" aria-hidden="true">
+<div class="modal fade mobile-nav-modal" id="mobileNavModal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-labelledby="mobileNavModalLabel" aria-hidden="true">
 	<!-- 모바일 메뉴 -->
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -325,12 +325,8 @@
 	</div>
 	<!-- // 모바일 메뉴 -->
 
-</div>
-<!-- Mobile Nav Modal -->
-
-<!-- s: 전체메뉴 -->
-<div class="area-siteMap modal" id="sitemap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<!-- 전체메뉴 -->
+	<div class="modal-dialog sitemap">
 		<div class="modal-content">
 			<h2 class="sitemap-logo">
 				<a href="#">
@@ -408,5 +404,12 @@
 			</button>
 		</div>
 	</div>
+	<!-- 전체메뉴 -->
 </div>
+<!-- Mobile Nav Modal -->
+
+<!-- s: 전체메뉴 -->
+<!-- <div class="area-siteMap modal" id="sitemap"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	
+</div> -->
 <!-- e: 전체메뉴 -->
