@@ -60,16 +60,16 @@ body.modal-open {
 	}
 }
 // 1023 이하
-@include media-tablet-xs {
-	.modal {
-		background: rgba(0, 0, 0, 0.6);
-	}
-	.modal-backdrop {
-		&.show {
-			opacity: 0;
-		}
-	}
-}
+// @include media-tablet-xs {
+// 	.modal {
+// 		background: rgba(0, 0, 0, 0.6);
+// 	}
+// 	.modal-backdrop {
+// 		&.show {
+// 			opacity: 0;
+// 		}
+// 	}
+// }
 .modal-content {
 	position: relative;
 	display: flex;

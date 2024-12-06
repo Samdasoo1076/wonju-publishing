@@ -273,3 +273,15 @@ input::-webkit-calendar-picker-indicator {
 .dv-ios select {
 	-webkit-tap-highlight-color: transparent;
 }
+
+.is-desktop {
+	::-webkit-scrollbar {
+		width: 4rem;
+		height: 4rem;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #BEBEBE; /* 스크롤바 색상 */
+		border-radius: 4rem; /* 스크롤바 둥근 테두리 */
+	}
+
+}

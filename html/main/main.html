@@ -52,9 +52,9 @@
 			<!-- content -->
 			<div class="content main-page">
 				<h1 class="blind">원주미래산업진흥원 홈</h1>
-				
+
 				<section class="main-content">
-					
+
 					<div id="fullpage" class="section_fullpage">
 						<!-- s: 01_visual -->
 						<section class="main-visual section sec_01">
@@ -110,7 +110,7 @@
 							<div class="scroll-down">
 								<span class="txt">SCROLL DOWN</span>
 							</div>
-							
+
 						</section>
 						 <!-- e: 01_visual -->
 						<!-- s: 02_인트로 -->
@@ -284,7 +284,7 @@
 							</div>
 							<!-- e: 05_보도자료 -->
 							<!-- s: 06_푸터 -->
-							
+
 							<div class="inner">
 								<footer id="footer" class="footer">
 								</footer>
@@ -293,91 +293,98 @@
 						</div>
 					</div>
 				</section>
-				<div class="reservation-wrap"  data-bs-toggle="modal"  data-bs-target="#carendar">
+
+				<!-- 2024-12-06 시설 예약현황 구조 수정
+					reservation-wrap ~ modal-body 까지 모달 구조가 수정됨.
+					modal-body 내부는 수정 없음
+				 -->
+				<div class="reservation-wrap">
 					<div class="reservation-top">
 						<p class="tit">시설 예약현황</p>
-						<button type="button" class="calendar-open" data-bs-dismiss="modal" data-bs-target="#carendar" aria-expanded="true" aria-controls="carendar">
+						<button type="button" class="calendar-open" data-bs-toggle="modal"  data-bs-target="#carendar" aria-expanded="true" aria-controls="carendar">
 							<span class="blind">열기</span>
 						</button>
 					</div>
-					<div class="reservation-cont modal fade" id="carendar" tabindex="-1" aria-labelledby="defaultModalLabel" aria-hidden="true" style="display: none;" >
+					<div class="reservation-cont modal fade" id="carendar" tabindex="-1" aria-labelledby="carendarModalLabel" aria-hidden="true" style="display: none;" >
 						<div class="modal-dialog">
-							<div class="reservation-top">
-								<p class="tit">시설 예약현황</p>
-								<button type="button" class="calendar-open" data-bs-dismiss="modal" aria-label="Close">
-									<span class="blind">닫기</span>
-								</button>
-							</div>
 							<div class="modal-content">
-								<div class="reservation-calendar" id="calendar"></div>
-								<div class="reservation-choice-wrap">
-									<div class="reservation-choice">
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio1" checked>
-											<label for="it_radio1">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
+								<div class="modal-header">
+									<p class="tit" id="carendarModalLabel">시설 예약현황</p>
+									<button type="button" class="calendar-open" data-bs-dismiss="modal" aria-label="Close">
+										<span class="blind">닫기</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="reservation-calendar" id="calendar"></div>
+									<div class="reservation-choice-wrap">
+										<div class="reservation-choice">
+											<div class="radio_area">
+												<input type="radio" name="it_radio" id="it_radio1" checked>
+												<label for="it_radio1">
+													<p class="title">3-8호</p>
+													<div class="cont">
+														<span class="txt">시설규모 : 57m2</span>
+														<span class="txt">수용인원 : 8명</span>
+													</div>
+													<p class="price">이용료 : 30,000원</p>
+												</label>
+											</div>
+											<div class="radio_area">
+												<input type="radio" name="it_radio" id="it_radio2">
+												<label for="it_radio2">
+													<p class="title">3-8호</p>
+													<div class="cont">
+														<span class="txt">시설규모 : 57m2</span>
+														<span class="txt">수용인원 : 8명</span>
+													</div>
+													<p class="price">이용료 : 30,000원</p>
+												</label>
+											</div>
+											<div class="radio_area">
+												<input type="radio" name="it_radio" id="it_radio3">
+												<label for="it_radio3">
+													<p class="title">3-8호</p>
+													<div class="cont">
+														<span class="txt">시설규모 : 57m2</span>
+														<span class="txt">수용인원 : 8명</span>
+													</div>
+													<p class="price">이용료 : 30,000원</p>
+												</label>
+											</div>
+											<div class="radio_area">
+												<input type="radio" name="it_radio" id="it_radio3">
+												<label for="it_radio3">
+													<p class="title">3-8호</p>
+													<div class="cont">
+														<span class="txt">시설규모 : 57m2</span>
+														<span class="txt">수용인원 : 8명</span>
+													</div>
+													<p class="price">이용료 : 30,000원</p>
+												</label>
+											</div>
+											<div class="radio_area">
+												<input type="radio" name="it_radio" id="it_radio3">
+												<label for="it_radio3">
+													<p class="title">3-8호</p>
+													<div class="cont">
+														<span class="txt">시설규모 : 57m2</span>
+														<span class="txt">수용인원 : 8명</span>
+													</div>
+													<p class="price">이용료 : 30,000원</p>
+												</label>
+											</div>
 										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio2">
-											<label for="it_radio2">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
+										<div class="btn-wrap">
+											<button type="button" class="btn white-bor"><span class="txt">시설 예약현황</span></button>
+											<button type="button" class="btn red"><span class="txt">시설 예약하기</span></button>
 										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio3">
-											<label for="it_radio3">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio3">
-											<label for="it_radio3">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-										<div class="radio_area">
-											<input type="radio" name="it_radio" id="it_radio3">
-											<label for="it_radio3">
-												<p class="title">3-8호</p>
-												<div class="cont">
-													<span class="txt">시설규모 : 57m2</span> 
-													<span class="txt">수용인원 : 8명</span> 
-												</div>
-												<p class="price">이용료 : 30,000원</p>
-											</label>  
-										</div>
-									</div>
-									<div class="btn-wrap">
-										<button type="button" class="btn white-bor"><span class="txt">시설 예약현황</span></button>
-										<button type="button" class="btn red"><span class="txt">시설 예약하기</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 			<!-- // content -->
 		</main>
@@ -405,7 +412,7 @@
 		fadeEffect: {
 			crossFade: true, // 필수
 		},
-		// observer: true,  
+		// observer: true,
 		// observeParents: true,
 		pagination: {
 			el: '.swiper-visual .swiper-pagination',
@@ -483,7 +490,7 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		// sec_02 섹션 가져오기
 		const sec02 = document.querySelector('.sec_02');
-		
+
 
 		// 해상도가 768px 이상일 때만 실행
 		if ($(window).width() > 767) {
@@ -493,7 +500,7 @@
 			sec02.style.backgroundSize = 'cover';
 			sec02.style.backgroundPosition = 'center';
 			sec02.style.transition = '.2s background';
-			
+
 			// 모든 team-card 항목 가져오기
 			const teamCards = document.querySelectorAll('.team-card');
 
