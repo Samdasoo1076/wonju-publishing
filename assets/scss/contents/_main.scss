@@ -245,6 +245,7 @@
 								font-size: 20rem;
 								font-weight: 700;
 								color: #fff;
+								flex-shrink: 0;
 								&::after {
 									content: '';
 									position: absolute;
@@ -515,7 +516,7 @@
 						position: relative;
 						display: flex;
 						align-items: center;
-						justify-content: center;
+						// justify-content: center;
 						width: 172rem;
 						height: 52rem;
 						margin: 20rem auto 0;
@@ -528,6 +529,7 @@
 							font-size: 20rem;
 							font-weight: 700;
 							color: #000;
+							flex-shrink: 0;
 							&::after {
 								content: '';
 								position: absolute;
@@ -809,9 +811,10 @@
 								line-height: calc(100vw * (64 / 1590));
 							}
 							.btn-more-view {
-								width: calc(100vw * (172 / 1590));
+								width: calc(100vw * (182 / 1590));
 								height: calc(100vw * (52 / 1590));
 								margin: calc(100vw * (80 / 1590)) 0 0 0;
+								padding: 0 calc(100vw * (40 / 1590)) 0 calc(100vw * (48 / 1590));
 								border-radius: calc(100vw * (60 / 1590));
 								.txt {
 									padding-right: calc(100vw * (32 / 1590));
@@ -1007,9 +1010,10 @@
 							}
 						}
 						.btn-more-view {
-							width: calc(100vw * (172 / 1590));
+							width: calc(100vw * (182 / 1590));
 							height: calc(100vw * (52 / 1590));
 							margin: calc(100vw * (20 / 1590)) auto 0;
+							padding: 0 calc(100vw * (40 / 1590)) 0 calc(100vw * (48 / 1590));
 							border-radius: calc(100vw * (60 / 1590));
 							.txt {
 								padding-right: calc(100vw * (32 / 1590));
@@ -1217,10 +1221,11 @@
 								position: relative;
 								display: flex;
 								align-items: center;
-								justify-content: center;
-								width: calc(100vw * (172 / 1280));
+								// justify-content: center;
+								width: calc(100vw * (182 / 1280));
 								height: calc(100vw * (52 / 1280));
 								margin: calc(100vw * (80 / 1280)) 0 0 0;
+								padding: 0 calc(100vw * (40 / 1280)) 0 calc(100vw * (48 / 1280));
 								border-radius: calc(100vw * (60 / 1280));
 								border: 1px solid #fff;
 								transition: .2s all;
@@ -1486,10 +1491,11 @@
 							position: relative;
 							display: flex;
 							align-items: center;
-							justify-content: center;
+							// justify-content: center;
 							width: calc(100vw * (172 / 1280));
 							height: calc(100vw * (52 / 1280));
 							margin: calc(100vw * (20 / 1280)) auto 0;
+							padding: 0 calc(100vw * (40 / 1280)) 0 calc(100vw * (48 / 1280));
 							border-radius: calc(100vw * (60 / 1280));
 							border: 1px solid #ccc;
 							transition: .2s all;
@@ -1887,6 +1893,7 @@
 							width: 172rem;
 							height: 44rem;
 							margin: 40rem auto 60rem;
+							padding: 0;
 							border-radius: 60rem;
 							.txt {
 								position: relative;
@@ -2053,7 +2060,8 @@
 						.btn-more-view {
 							width: 172rem;
 							height: 44rem;
-							padding: 0 40rem 0 48rem;
+							justify-content: center;
+							padding: 0;
 							margin: 40rem auto 0;
 							border-radius: 60rem;
 							.txt {
