@@ -2196,7 +2196,7 @@ html {
 				}
 				.header-search {
 					display: none;
-					background-color: transparent;
+					background-color: #fff;
 					transition: all .2s;
 					&.show {
 						position: absolute;
@@ -2323,9 +2323,6 @@ html {
 							}
 						}
 					}
-					.header-search {
-						background-color: #fff;
-					}
 					.header-nav {
 						// Nav Depth1
 						.dep1-list {
@@ -2341,6 +2338,9 @@ html {
 							}
 						}
 					}
+				}
+				&.up {
+					transform: translateY(-72rem);
 				}
 			}
 		}
