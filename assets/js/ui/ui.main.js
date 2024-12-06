@@ -1,7 +1,7 @@
 $(function(){
     $('#fullpage').fullpage({
         // 옵션 설정
-		// responsiveWidth: 767,
+		responsiveWidth: 767,
         licenseKey: '',
         scrolloverflowmacstyle: true,
 		normalScrollElements: '.modal',
@@ -43,6 +43,13 @@ $(function(){
 			} else {
 				$('.reservation-wrap').removeClass('small');
 			};
-        }
+        },
+		// responsiveOverflow 재설정 방지
+		afterResponsive: function (isResponsive) {
+			if ($('.modal.show').length) {
+				// 모달이 열려 있는 경우 overflow 설정을 막음
+				$('body').css('overflow', 'hidden'); // 원하는 값으로 고정
+			}
+		}
     });
 });
