@@ -531,12 +531,12 @@ html {
 					}
 				}
 			}
-			&:focus-within,
-			&:hover {
-				.dep1-list {
-					gap: 120rem;
-				}
-			}
+			// &:focus-within,
+			// &:hover {
+			// 	.dep1-list {
+			// 		gap: 120rem;
+			// 	}
+			// }
 
 			// Nav Depth2
 			.dep2-list {
@@ -1829,12 +1829,12 @@ html {
 								}
 							}
 						}
-						&:focus-within,
-						&:hover {
-							.dep1-list {
-								gap: 60rem;
-							}
-						}
+						// &:focus-within,
+						// &:hover {
+						// 	.dep1-list {
+						// 		gap: 60rem;
+						// 	}
+						// }
 					}
 					.snb-wrap {
 						.util {
@@ -2202,12 +2202,12 @@ html {
 						}
 					}
 				}
-				&:focus-within,
-				&:hover {
-					.dep1-list {
-						gap: calc(100vw * (100 / 1280));
-					}
-				}
+				// &:focus-within,
+				// &:hover {
+				// 	.dep1-list {
+				// 		gap: calc(100vw * (100 / 1280));
+				// 	}
+				// }
 
 				// Nav Depth2
 				.dep2-list {
