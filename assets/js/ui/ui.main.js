@@ -2,7 +2,7 @@ $(function(){
     $('#fullpage').fullpage({
         // 옵션 설정
 		responsiveWidth: 767,
-        licenseKey: '',
+        licenseKey: '69M18-T2I56-73XK9-PJ71I-XPBXQ',
         scrolloverflowmacstyle: true,
 		normalScrollElements: '.modal',
         'onLeave' : function (index, nextIndex, direction){

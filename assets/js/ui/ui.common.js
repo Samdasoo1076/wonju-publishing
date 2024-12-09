@@ -282,7 +282,7 @@ function setSearch() {
     const $headerSearch = $('.header-search');
 
     if ($btnSearch.length) {
-        console.log($btnSearch);
+        // console.log($btnSearch);
 
         // 버튼 클릭 시 드롭다운 토글
         $btnSearch.off('click').on('click', function (e) {
