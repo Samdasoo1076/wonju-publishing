@@ -214,8 +214,6 @@ var setGnb = {
 		}
 	},
 	show : function($dep1ItemAll, $dep1ItemActive){
-		var $siblings = $dep1ItemActive.siblings('.is-active');
-		$('.dep2-list-wrap').stop().slideDown(200);
 		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
 		$dep2Wrap.stop().slideDown(200);
 		$dep1ItemActive.addClass('is-active');
