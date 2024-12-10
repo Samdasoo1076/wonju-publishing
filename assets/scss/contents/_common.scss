@@ -3357,8 +3357,8 @@
 				border-radius: 600rem;
 				border: 1px solid #000;
 				&:focus {
-					outline-color: $color-primary;
-					outline-offset: 0;
+					outline: none;
+					border-color: $color-primary;
 				}
 				&::placeholder {
 					font-size: 16rem;

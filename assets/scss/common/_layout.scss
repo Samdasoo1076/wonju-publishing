@@ -431,8 +431,8 @@ html {
 							border: 1px solid #000;
 							border-radius: 600rem;
 							&:focus {
-								outline-color: $color-primary;
-								outline-offset: 0;
+								outline: none;
+								border-color: $color-primary;
 							}
 							&::placeholder {
 								font-size: 16rem;
@@ -2490,8 +2490,8 @@ html {
 									border: 1px solid #000;
 									background: #fff;
 									&:focus {
-										outline-color: $color-primary;
-										outline-offset: 0;
+										outline: none;
+										border-color: $color-primary;
 									}
 									&::placeholder {
 										font-size: 16rem;
