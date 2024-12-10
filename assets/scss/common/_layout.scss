@@ -430,6 +430,10 @@ html {
 							padding: 14rem 62rem 14rem 32rem;
 							border: 1px solid #000;
 							border-radius: 600rem;
+							&:focus {
+								outline-color: $color-primary;
+								outline-offset: 0;
+							}
 							&::placeholder {
 								font-size: 16rem;
 								line-height: 24rem;
@@ -2485,6 +2489,10 @@ html {
 									border-radius: 600rem;
 									border: 1px solid #000;
 									background: #fff;
+									&:focus {
+										outline-color: $color-primary;
+										outline-offset: 0;
+									}
 									&::placeholder {
 										font-size: 16rem;
 										line-height: 24rem;
