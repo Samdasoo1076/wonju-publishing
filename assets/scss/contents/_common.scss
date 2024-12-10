@@ -523,30 +523,46 @@
 			&.btn-page-prev,
 			&.btn-page-next,
 			&.btn-page-last {
-				mask-repeat: no-repeat;
-				mask-position: center center;
-				mask-size: auto;
-				background-color: #000000;
+				&::before {
+					content:'';
+					display: block;
+					width: 100%;
+					height: 100%;
+					mask-repeat: no-repeat;
+					mask-position: center center;
+					mask-size: auto;
+					background-color: #000000;
+				}
 				&:disabled {
-					background-color: #BEBEBE;
+					&::before {
+						background-color: #BEBEBE;
+					}
 				}
 			}
 			&.btn-page-first {
-				mask-image: url('../images/common/icn-24-page-first.svg');
+				&::before {
+					mask-image: url('../images/common/icn-24-page-first.svg');
+				}
 			}
 
 			&.btn-page-prev {
 				margin-right: 16rem;
-				mask-image: url('../images/common/icn-24-page-prev.svg');
+				&::before {
+					mask-image: url('../images/common/icn-24-page-prev.svg');
+				}
 			}
 
 			&.btn-page-next {
 				margin-left: 16rem;
-				mask-image: url('../images/common/icn-24-page-next.svg');
+				&::before {
+					mask-image: url('../images/common/icn-24-page-next.svg');
+				}
 			}
 
 			&.btn-page-last {
-				mask-image: url('../images/common/icn-24-page-last.svg');
+				&::before {
+					mask-image: url('../images/common/icn-24-page-last.svg');
+				}
 			}
 		}
 		.btn-more-view {
@@ -1153,19 +1169,27 @@
 				font-size: 14rem;
 				line-height: 20rem;
 				&.btn-page-first {
-					mask-image: url('../images/common/icn-16-page-first.svg');
+					&::before {
+						mask-image: url('../images/common/icn-16-page-first.svg');
+					}
 				}
 
 				&.btn-page-prev {
-					mask-image: url('../images/common/icn-16-page-prev.svg');
+					&::before {
+						mask-image: url('../images/common/icn-16-page-prev.svg');
+					}
 				}
 
 				&.btn-page-next {
-					mask-image: url('../images/common/icn-16-page-next.svg');
+					&::before {
+						mask-image: url('../images/common/icn-16-page-next.svg');
+					}
 				}
 
 				&.btn-page-last {
-					mask-image: url('../images/common/icn-16-page-last.svg');
+					&::before {
+						mask-image: url('../images/common/icn-16-page-last.svg');
+					}
 				}
 			}
 			.btn-more-view {
