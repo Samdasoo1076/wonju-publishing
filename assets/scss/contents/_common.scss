@@ -512,6 +512,10 @@
 			&:active {
 				background-color: #EAEAEA;
 			}
+			&:disabled {
+				cursor: default;
+				background-color: transparent;
+			}
 
 			&.is-current {
 				background-color: $color-primary;
@@ -534,6 +538,7 @@
 					background-color: #000000;
 				}
 				&:disabled {
+					background-color: transparent;
 					&::before {
 						background-color: #BEBEBE;
 					}
