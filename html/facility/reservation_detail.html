@@ -28,7 +28,7 @@
 	<script src="../../assets/js/libs/index.global.js"></script>
 	<script src="../../assets/js/libs/index.global.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script> -->
 	<!-- 페이지 스크립트 영역 -->
 	<script>
 
@@ -142,7 +142,17 @@
 									</div>
 
 									<div class="detail-wrap">
-										<div class="reservation-calendar" id="calendar"></div>
+										<!-- 범례 추가를 위한 그룹 -->
+										<div class="reservation-calendar-wrap">
+											<div class="reservation-calendar" id="calendar"></div>
+
+											<!-- 범례 추가 -->
+											<div class="calendar-legend">
+												<span class="legend-clicked">선택</span>
+												<span class="legend-disabled">예약불가</span>
+											</div>
+										</div>
+
 										<div class="choice-info">
 											<div class="choice-block">
 												<p class="tit between">시간 선택
@@ -364,8 +374,14 @@
 					};
 				}
 			},
-			dateClick: function() {
-				alert('a day has been clicked!');
+			dateClick: function(info) {
+				// 기존 스타일 제거
+				document.querySelectorAll('.fc-day-clicked').forEach(el => {
+					el.classList.remove('fc-day-clicked');
+				});
+
+				// 선택한 날짜에 클래스 추가
+				info.dayEl.classList.add('fc-day-clicked');
 			},
 			headerToolbar: {
 				left: 'prev',
@@ -378,6 +394,7 @@
 		setTimeout(() => {
 			this.calendarComponent.getApi().updateSize();
 		});
+
     });
 
 	//choice-block 시간선택 체크하면 활성화

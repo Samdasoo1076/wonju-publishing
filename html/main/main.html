@@ -469,8 +469,14 @@
 					};
 				}
 			},
-			dateClick: function() {
-				alert('a day has been clicked!');
+			dateClick: function(info) {
+				// 기존 스타일 제거
+				document.querySelectorAll('.fc-day-clicked').forEach(el => {
+					el.classList.remove('fc-day-clicked');
+				});
+
+				// 선택한 날짜에 클래스 추가
+				info.dayEl.classList.add('fc-day-clicked');
 			},
 			headerToolbar: {
 				left: 'prev',

@@ -297,6 +297,7 @@
 			.detail-wrap {
 				position: relative;
 				display: flex;
+				align-items: flex-start;
 				gap: 80rem;
 				padding: 60rem 88rem;
 				background: #fff;
@@ -611,7 +612,62 @@
 			}
 		}
 	}
+	.reservation-calendar-wrap {
+		flex: none;
+		width: 50%;
+		max-width: 485rem;
+		border-radius: 8rem;
+		border: 1px solid #EAEAEA;
+		.reservation-calendar {
+			width: 100%;
+			border:0;
+		}
+		.calendar-legend {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			gap: 24rem;
+			margin-top: 24rem;
+			padding: 24rem 0;
+			&::after {
+				content:'';
+				display: block;
+				position: absolute;
+				left: 24rem;
+				right: 24rem;
+				top: 0;
+				border-top: 1px solid #EAEAEA;
+			}
 
+			span {
+				display: flex;
+				align-items: center;
+				font-weight: 400;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #333;
+				&::before {
+					content:'';
+					display: block;
+					width: 12rem;
+					height: 12rem;
+					margin-right: 8rem;
+					border-radius: 2rem;
+				}
+				&.legend-clicked {
+					&::before {
+						background-color: #0468EE;
+					}
+				}
+
+				&.legend-disabled {
+					&::before {
+						background-color: #F3F3F3;
+					}
+				}
+			}
+		}
+	}
 	.reservation-calendar {
 		flex: none;
 		width: 50%;
@@ -637,6 +693,9 @@
 				}
 			}
 		}
+		.fc-view-harness {
+			// height: 406rem !important;
+		}
 		.fc-daygrid-day-top {
 			align-items: center;
 			justify-content: center;
@@ -660,10 +719,12 @@
 					color: #000;
 					font-weight: 700;
 				}
-				&.fc-day-today {
+				&.is-clicked {
 					background: transparent;
+				}
+				&.fc-day-clicked {
+					background: #F4F6F9;
 					.fc-daygrid-day-frame {
-						background: #F4F6F9;
 						border-radius: 4rem;
 					}
 					.fc-daygrid-day-top {
@@ -1230,6 +1291,18 @@
 				}
 			}
 		}
+		.reservation-calendar-wrap {
+			width: 100%;
+
+			.calendar-legend {
+				margin-top: 0;
+				padding: 12rem 0 12rem 0;
+				&::after {
+					left: 12rem;
+					right: 12rem;
+				}
+			}
+		}
 		.reservation-calendar {
 			width: 100%;
 			max-width: 100%;
@@ -1269,7 +1342,7 @@
 						color: #000;
 						font-weight: 700;
 					}
-					&.fc-day-today {
+					&.is-clicked {
 						background: transparent;
 						.fc-daygrid-day-frame {
 							background: #F4F6F9;

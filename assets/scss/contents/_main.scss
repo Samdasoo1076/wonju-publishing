@@ -2340,10 +2340,12 @@
 						color: #000;
 						font-weight: 700;
 					}
-					&.fc-day-today {
+					&.is-clicked {
 						background: transparent;
+					}
+					&.fc-day-clicked {
+						background: #F4F6F9;
 						.fc-daygrid-day-frame {
-							background: #F4F6F9;
 							border-radius: 4rem;
 						}
 						.fc-daygrid-day-top {
@@ -2572,7 +2574,7 @@
 							color: #000;
 							font-weight: 700;
 						}
-						&.fc-day-today {
+						&.is-clicked {
 							background: transparent;
 							.fc-daygrid-day-frame {
 								background: #F4F6F9;
