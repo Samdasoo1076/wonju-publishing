@@ -410,7 +410,7 @@
 									display: flex;
 									justify-content: space-between;
 									align-items: center;
-									padding: 60rem 0;
+									padding: 40rem 0;
 									transition: all .2s;
 									.group {
 										padding: 0 80rem;
@@ -516,7 +516,7 @@
 						position: relative;
 						display: flex;
 						align-items: center;
-						// justify-content: center;
+						justify-content: center;
 						width: 172rem;
 						height: 52rem;
 						margin: 20rem auto 0;
@@ -941,7 +941,7 @@
 								border-top: 1px solid #000;
 								li {
 									a {
-										padding: calc(100vw * (60 / 1590)) 0;
+										padding: calc(100vw * (40 / 1590)) 0;
 										.group {
 											padding: 0 calc(100vw * (80 / 1590));
 											font-size: calc(100vw * (20 / 1590));
@@ -1399,7 +1399,7 @@
 										display: flex;
 										justify-content: space-between;
 										align-items: center;
-										padding: calc(100vw * (60 / 1280)) 0;
+										padding: calc(100vw * (40 / 1280)) 0;
 										transition: all .2s;
 										.group {
 											padding: 0 calc(100vw * (80 / 1280));
@@ -1743,8 +1743,7 @@
 			}
 			.inner {
 				&.sec_02 {
-					background: url(../../assets/images/main/img-main-bg-sec2-mo.png) no-repeat;
-					background-size: cover;
+					background: url(../../assets/images/main/img-main-bg-sec2-mo.png) no-repeat 0 0 / cover !important;
 					padding-top: 120rem;
 					padding-left: 20rem;
 					padding-right: 20rem;

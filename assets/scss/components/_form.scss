@@ -212,11 +212,16 @@
 		&:focus {
 			box-shadow: none;
 		}
-		&.ss-open-below {
+		&.ss-open-above {
 			&:not(.ss-disabled):focus {
-				border-bottom-right-radius: 0 !important;
-				border-bottom-left-radius: 0 !important;
+				border-top-right-radius: 0 !important;
+				border-top-left-radius: 0 !important;
 			}
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+		&.ss-open-below {
 			&::after {
 				transform: rotate(180deg);
 			}
@@ -327,12 +332,12 @@
 	span {
 		font-size: 18rem;
 		line-height: 28rem;
-		color: #999;	
+		color: #999;
 		&.bold {
 			font-weight: 700;
 		}
 	}
-	
+
 	input {
 		&::before {
 			content:'';
@@ -372,7 +377,7 @@
 		span {
 			font-size: 14rem;
 			line-height: 20rem;
-			color: #999;	
+			color: #999;
 			&.bold {
 				font-weight: 700;
 			}
@@ -390,12 +395,12 @@
 	span {
 		font-size: 18rem;
 		line-height: 28rem;
-		color: #999;	
+		color: #999;
 		&.bold {
 			font-weight: 700;
 		}
 	}
-	
+
 	input {
 		&::before {
 			content:'';

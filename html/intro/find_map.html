@@ -19,6 +19,7 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=367c853cbe54d3d1b08fe4c5347e8986&libraries=services,clusterer,drawing"></script> -->
 
 	<!-- 페이지 스크립트 영역 -->
 	<script></script>
@@ -57,7 +58,7 @@
 					<!-- // Sub Visual -->
 					<!-- Sub Nav -->
 					<div class="snb-wrap">
-						<nav class="nav dep2-nav swiper-container">
+						<nav class="nav dep2-nav swiper">
 							<ul class="dep2-list swiper-wrapper">
 								<li class="dep2-item swiper-slide">
 									<a href="#" class="dep2-link">이사장 인사말</a>
@@ -85,68 +86,66 @@
 				<!-- // content-header -->
 				<!-- content-body -->
 				<div class="content-body">
-					<!-- 페이지 유형 예시 (페이지 유형에 따라 타이틀 영역의 예외처리 대응) -->
-					<div class="board-list-page">
-						<!-- 타이틀 영역 -->
-						<div class="title-wrap">
-							<h2 class="title">찾아오시는 길</h2>
-							<!-- <p class="explain">설명이 들어가는 경우</p> -->
-						</div>
-						<!-- // 타이틀 영역 -->
-
-						<!-- 게시판목록 영역 -->
-						<div class="board-list-wrap">
-							<div class="map-area">
-								<img class="pc" src="../../assets/images/content/img-map-pc.jpg">
-								<img class="mo" src="../../assets/images/content/img-map-pc.jpg">
-								<div class="address-box">
-									<div class="logo">
-										<img src="../../assets/images/common/icn-logo-bk.svg" alt="(재)원주미래산업진흥원">
-									</div>
-									<div class="address-info">
-										<dl>
-											<dt>주소</dt>
-											<dd>강원 원주시 마재2로 10 2층 (재)원주미래산업진흥원​</dd>
-										</dl>
-										<dl>
-											<dt>전화번호</dt>
-											<dd><a href="tel:033-764-3160">033-764-3160</a></dd>
-										</dl>
-									</div>
-								</div>
-							</div>
-
-							<div class="togo-wrap">
-								<div class="togo">
-									<p class="title">대중교통 이용 시</p>
-									<ul class="lists">
-										<li class="train">
-											<p class="bold">기차</p>
-											<p>원주역 하차 후 00출구에서 도보로 6분</p>
-										</li>
-										<li class="bus">
-											<p class="bold">버스</p>
-											<p>00번 버스 탑승 후 마재길 정류소 하차​​</p>
-										</li>
-									</ul>
-								</div>
-								<div class="togo">
-									<p class="title">자가용 이용 시</p>
-									<ul class="lists">
-										<li class="seoul">
-											<p class="bold">서울역 출발</p>
-											<p>원주 IC 00방면 000m</p>
-										</li>
-										<li class="wonju">
-											<p class="bold">원주시청 출발</p>
-											<p>원주 IC 00방면 000m</p>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- // 게시판목록 영역 -->
+					<!-- 타이틀 영역 -->
+					<div class="title-wrap">
+						<h2 class="title">찾아오시는 길</h2>
+						<!-- <p class="explain">설명이 들어가는 경우</p> -->
 					</div>
+					<!-- // 타이틀 영역 -->
+
+					<!-- 찾아오는길 영역 -->
+					<div class="map-wrap">
+						<div class="map-area">
+							<!-- <div class="map-box" id="map"></div> -->
+							<img class="pc" src="../../assets/images/content/img-map-pc.jpg">
+							<img class="mo" src="../../assets/images/content/img-map-pc.jpg">
+							<div class="address-box">
+								<div class="logo">
+									<img src="../../assets/images/common/icn-logo-bk.svg" alt="(재)원주미래산업진흥원">
+								</div>
+								<div class="address-info">
+									<dl>
+										<dt>주소</dt>
+										<dd>강원 원주시 마재2로 10 2층 (재)원주미래산업진흥원​</dd>
+									</dl>
+									<dl>
+										<dt>전화번호</dt>
+										<dd><a href="tel:033-764-3160">033-764-3160</a></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+						<div class="togo-wrap">
+							<div class="togo">
+								<p class="title">대중교통 이용 시</p>
+								<ul class="lists">
+									<li class="train">
+										<p class="bold">기차</p>
+										<p>원주역 하차 후 00출구에서 도보로 6분</p>
+									</li>
+									<li class="bus">
+										<p class="bold">버스</p>
+										<p>00번 버스 탑승 후 마재길 정류소 하차​​</p>
+									</li>
+								</ul>
+							</div>
+							<div class="togo">
+								<p class="title">자가용 이용 시</p>
+								<ul class="lists">
+									<li class="seoul">
+										<p class="bold">서울역 출발</p>
+										<p>원주 IC 00방면 000m</p>
+									</li>
+									<li class="wonju">
+										<p class="bold">원주시청 출발</p>
+										<p>원주 IC 00방면 000m</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // 찾아오는길 영역 -->
 				</div>
 				<!-- // content-body -->
 			</div>
@@ -158,6 +157,7 @@
 		<footer class="footer"></footer>
 		<!-- // include_footer.html -->
 	</div>
+
 </body>
 
 </html>

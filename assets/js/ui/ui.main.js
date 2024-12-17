@@ -8,7 +8,9 @@ $(function(){
         'onLeave' : function (index, nextIndex, direction){
 			var $gnbarea = $(".gnb-area");
             // theme
-			if ( nextIndex.index === 1 ){
+			if ( nextIndex.index === 0 ){
+				$('video.viewer')[0].play();
+			} else if ( nextIndex.index === 1 ){
 				if ($(window).width() < 768) {
 					$('.header-mobile-sec .gnb-area').addClass('active');
 				}
@@ -53,3 +55,23 @@ $(function(){
 		}
     });
 });
+
+// 풀페이지 활성/비활성
+function setFullpageEvent(id) {
+	$(document).on('show.bs.modal', id, function () {
+		if (typeof fullpage_api !== 'undefined') {
+			fullpage_api.setAllowScrolling(false);
+			console.log(id + " Fullpage: false");
+		}
+	}).on('hidden.bs.modal', id, function () {
+		if (typeof fullpage_api !== 'undefined') {
+			fullpage_api.setAllowScrolling(true);
+			console.log(id + " Fullpage: true");
+		}
+	});
+}
+
+// 풀페이지 활성/비활성
+setFullpageEvent('#mobileNavModal'); //모바일 전체메뉴
+setFullpageEvent('#sitemap'); // PC 사이트맵
+setFullpageEvent('#carendar'); // PC 사이트맵

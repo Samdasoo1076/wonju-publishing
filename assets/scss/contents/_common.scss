@@ -1293,6 +1293,7 @@
 		}
 		.reservation-calendar-wrap {
 			width: 100%;
+			max-width: 100%;
 
 			.calendar-legend {
 				margin-top: 0;
@@ -2618,6 +2619,9 @@
 		background: url(../../assets/images/common/icn-48-btn-accordion.svg) no-repeat;
 		background-size: 100%;
 		z-index: 2;
+		&[aria-expanded="true"] {
+			transform: rotate(180deg);
+		}
 	}
 
 	// 기능별 반응형 대응
@@ -3071,8 +3075,9 @@
 		position: relative;
 		display: flex;
 		height: 520rem;
+		box-sizing: content-box;
 		+.buisness-item {
-			margin-top: 160rem;
+			padding-top: 160rem;
 		}
 		.img-wrap {
 			position: relative;
@@ -3147,6 +3152,7 @@
 	// 모바일 반응형 대응
 	@include media-tablet-xs {
 		.buisness-item {
+			box-sizing: border-box;
 			.cont-wrap {
 				.red-tit {
 					font-size: calc(100vw * (40 / 1460));
@@ -3176,7 +3182,7 @@
 			flex-direction: column;
 			height: auto;
 			+.buisness-item {
-				margin-top: 40rem;
+				padding-top: 80rem;
 			}
 			&:nth-child(even) {
 				flex-direction: column;
@@ -3212,7 +3218,7 @@
 				justify-content: flex-start;
         		align-items: baseline;
 				width: 100%;
-				padding: 32rem 24rem;
+				padding: 32rem 24rem !important;
 				height: auto;
 				background: linear-gradient(-45deg, transparent 20rem, #fff 0);
 				.red-tit {
@@ -3945,13 +3951,17 @@
 	img.mo {
 		display: none;
 	}
+	.map-box {
+		position: relative;
+		padding-bottom: 40%;
+	}
 	.address-box {
 		display: flex;
 		gap: 20rem;
 		position: relative;
 		width: 1212rem;
 		margin: 0 auto;
-		margin-top: -94rem;
+		margin-top: 0;
 		padding: 60rem 80rem;
 		background: linear-gradient(-45deg, transparent 30rem, #fff 0);
 		> div {
@@ -4002,6 +4012,9 @@
 		}
 		img.pc {
 			display: none;
+		}
+		.map-box {
+			padding-bottom: 56%;
 		}
 		.address-box {
 			display: flex;
