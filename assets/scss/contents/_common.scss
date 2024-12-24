@@ -2374,7 +2374,7 @@
 			justify-content: space-between;
 			align-items: center;
 			gap: 20rem;
-			p {
+			p:not(.info-txt) {
 				font-size: 18rem;
 				line-height: 28rem;
 				color: #000;
@@ -2414,13 +2414,13 @@
 			}
 			.value {
 				width: 100%;
-				gap: 19rem;
+				gap: 10rem;
 				&.align-end {
 					.btn-basic {
 						align-items: flex-end;
 					}
 				}
-				p {
+				p:not(.info-txt) {
 					font-size: 14rem;
 					line-height: 20rem;
 					color: #000;
@@ -2868,6 +2868,11 @@
 			}
 		}
 	}
+
+	.no-list {
+		border-top: 1px solid #eee;
+	}
+
 	// 태블릿
 	@include media-tablet-xs {
 		.reserv-item {
@@ -3099,7 +3104,7 @@
 }
 
 /* 주요업무 */
-.main-tast {
+.main-task {
 	position: relative;
 	margin-top: 120rem;
 	.buisness-item {
@@ -4019,10 +4024,11 @@
 /* 찾아오시는 길 */
 .map-area {
 	position: relative;
+	width: 1212rem;
+	margin: 0 auto;
 	img {
 		display: block;
 		width: 100%;
-		max-width: 1212rem;
 		margin: 0 auto;
 	}
 	img.mo {
@@ -4036,8 +4042,6 @@
 		display: flex;
 		gap: 20rem;
 		position: relative;
-		width: 1212rem;
-		margin: 0 auto;
 		margin-top: 0;
 		padding: 60rem 80rem;
 		background: linear-gradient(-45deg, transparent 30rem, #fff 0);
@@ -4072,8 +4076,8 @@
 	}
 	//태블릿
 	@include media-tablet-xl {
+		width: 100%;
 		.address-box {
-			width: 100%;
 			> div {
 				img {
 					margin: 0;

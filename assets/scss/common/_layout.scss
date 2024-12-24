@@ -100,7 +100,7 @@ html {
 			align-items: center;
 			justify-content: space-between;
 			height: 88rem;
-
+			background: rgba(0, 0, 0, 0.5);
 			&.active, &.is-searched, &.is-hovered {
 				background: #fff;
 				.header-logo {
@@ -2420,6 +2420,7 @@ html {
 				align-items: center;
 				width: 100%;
 				height: 72rem;
+				background: rgba(0, 0, 0, 0.5);
 				.header-logo {
 					display: flex;
 					width: 174rem;
