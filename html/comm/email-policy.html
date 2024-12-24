@@ -9,7 +9,7 @@
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="원주미래산업진흥원" />
 	<meta name="description" content="원주미래산업진흥원" />
-	<title>이용약관 | 원주미래산업진흥원</title>
+	<title>이메일무단수집거부 | 원주미래산업진흥원</title>
 	<link rel="stylesheet" type="text/css" href="../../assets/css/WFI.css" />
 
 	<script src="../../assets/js/libs/jquery.min.js"></script>
@@ -21,7 +21,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	<!-- 페이지 스크립트 영역 -->
-	<script></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			setTimeout(function(){
+				// 모달 바로 볼 수 있도록 호출
+				var emailPolicyModal = new bootstrap.Modal(document.getElementById('emailPolicyModal'));
+				emailPolicyModal.show();
+			}, 100)
+		});
+	</script>
 </head>
 
 <body>
@@ -50,7 +58,7 @@
 								<span class="lc-split"><span class="blind">&gt;</span></span>
 								<span class="lc-cate"><span>약관 및 정책</span></span>
 								<span class="lc-split"><span class="blind">&gt;</span></span>
-								<span class="lc-current" aria-current="page">이용약관</span>
+								<span class="lc-current" aria-current="page">이메일무단수집거부</span>
 							</div>
 						</div>
 					</div>
@@ -103,13 +111,13 @@
 				<div class="content-body">
 					<!-- 타이틀 영역 -->
 					<div class="title-wrap">
-						<h2 class="title">이용약관</h2>
+						<h2 class="title">이메일무단수집거부</h2>
 					</div>
 					<!-- // 타이틀 영역 -->
 
 					<!-- 게시판목록 영역 -->
 					<div class="text-content">
-						실질적인 컨텐츠가 들어가는 영역의 예시입니다.
+						<p>모달로 확인</p>
 					</div>
 					<!-- // 게시판목록 영역 -->
 				</div>
@@ -123,6 +131,7 @@
 		<footer class="footer"></footer>
 		<!-- // include_footer.html -->
 	</div>
+
 </body>
 
 </html>

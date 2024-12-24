@@ -1,4 +1,6 @@
 $(function(){
+	$('#emailPolicyModalLink').attr('data-bs-target', '#mainEmailPolicyModal');
+
     $('#fullpage').fullpage({
         // 옵션 설정
 		responsiveWidth: 767,
@@ -10,23 +12,11 @@ $(function(){
             // theme
 			if ( nextIndex.index === 0 ){
 				$('video.viewer')[0].play();
+				$gnbarea.removeClass('active');
 			} else if ( nextIndex.index === 1 ){
-				if ($(window).width() < 768) {
-					$('.header-mobile-sec .gnb-area').addClass('active');
-				}
+				$gnbarea.removeClass('active');
 			} else if ( nextIndex.index === 2 ){
-                $('.gnb-area').addClass('active');
-				$gnbarea.on("mouseenter", function() {
-					$(this).addClass("active");
-				  });
-				$gnbarea.on("mouseleave", function() {
-					$(this).addClass("active");
-				});
-            } else {
-				// btn-search에 show 클래스가 없을 때만 active 클래스를 제거
-				if (!$(".gnb-area .btn-search").hasClass("show")) {
-					$('.gnb-area').removeClass("active");
-				}
+                $gnbarea.addClass('active');
             };
 
             // topbtn

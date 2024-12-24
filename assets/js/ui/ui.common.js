@@ -120,18 +120,6 @@ var setGnb = {
 		var _this = this;
 		var $btnSearch = $(".gnb-area .btn-search");
 
-		$gnbarea.on("mouseenter", function() {
-			$(this).addClass("active");
-		  });
-
-		$gnbarea.on("mouseleave", function() {
-			// btn-search에 show 클래스가 없을 때만 active 클래스를 제거
-			if (!$btnSearch.hasClass("show")) {
-				$(this).removeClass("active");
-			}
-		});
-
-
 		// 마우스 기본기능
 		$dep1ItemAll.off('mouseenter.gnb').on('mouseenter.gnb', function(e){
 			var $this = $(this);
@@ -142,6 +130,7 @@ var setGnb = {
 		})
 		$headerNav.off('mouseleave.gnb').on('mouseleave.gnb', function(e){
 			_this.hide($dep1ItemAll, $(this).find('.dep1-item.is-active'));
+
 			// 마우스가 지지나가면 mouseenter 실행안되게 setTime 초기화
 			clearTimeout(setTime);
 		})
@@ -226,17 +215,20 @@ var setGnb = {
 		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
 		$dep2Wrap.stop().slideDown(200);
 		$dep1ItemActive.addClass('is-active');
-
+		$(".gnb-area").addClass("is-hovered fixed");
 		$('.header-nav-bg').stop().slideDown(200);
 
 	},
 	hide : function($dep1ItemAll, $dep1ItemActive){
 		var $dep2Wrap = $dep1ItemAll.find('.dep2-list-wrap');
 		$dep1ItemActive.removeClass('is-active');
+		$(".gnb-area").removeClass("is-hovered fixed");
 		// 더 이상 활성화된 메뉴가 없으면 배경을 닫기
 		if (!$('.dep1-item.is-active').length) {
 			$dep2Wrap.stop().slideUp(200);
-			$('.header-nav-bg').stop().slideUp(200);
+			$('.header-nav-bg').stop().slideUp(200, function(){
+				$(this).removeAttr('style');
+			});
 		}
 	},
 }
@@ -244,37 +236,55 @@ var setGnb = {
 // 서브레이아웃 헤더
 var setHeader = {
 	init: function(){
-		if ($('.sub-wrapper').length) {
-			if ($('.visual-wrap').length) {
-				this.event();
-				this.check();
-			} else {
-				setHeader.set();
-			}
-		}
+		this.event();
+		this.check();
 
 		if ($('.sub-wrapper.gnb-bg').length) {
 			$('.gnb-area').addClass("active");
-			$('.gnb-area').on("mouseleave", function() {
-				$(this).addClass("active");
-			});
 		}
 	},
 	event: function(){
 		var _this = this;
 		$(window).on('scroll', function () {
-			_this.check;
+			_this.check();
+		});
+
+		var resizeEndTime = null;
+		$(window).off('resize.header').on('resize.header', function () {
+			// 스크롤 종료 처리
+			clearTimeout(resizeEndTime);
+			resizeEndTime = setTimeout(function() {
+				console.log('resize');
+				_this.check();
+			}, 100);
 		});
 	},
 	check: function(){
-		var visualWrapHeight = $('.visual-wrap').height();
-		if ($(window).scrollTop() > visualWrapHeight) {
-			// 72px 이상 스크롤했을 때 실행
-			setHeader.set();
-		} else {
-			// 72px 이하로 다시 돌아왔을 때 실행
-			setHeader.reset();
+		if ($('.sub-wrapper').length) {
+			if ($('.visual-wrap').length) {
+				var subVisualWrapHeight = $('.visual-wrap').height() - 72;
+				// console.log('visualWrapHeight', $(window).scrollTop(), subVisualWrapHeight);
+				if ($(window).scrollTop() > subVisualWrapHeight) {
+					// 72px 이상 스크롤했을 때 실행
+					setHeader.set();
+				} else {
+					// 72px 이하로 다시 돌아왔을 때 실행
+					setHeader.reset();
+				}
+			} else {
+				setHeader.set();
+			}
 		}
+		if ($('.main-wrapper').length) {
+			var mainVisualSecpHeight = $('.main-visual').height() - 72;
+			// console.log('visualWrapHeight', $(window).scrollTop(), mainVisualSecpHeight);
+			if ($(window).scrollTop() > mainVisualSecpHeight) {
+				setHeader.set();
+			} else {
+				setHeader.reset();
+			}
+		}
+
 	},
 	set: function(){
 		$('.gnb-area').addClass('active');
@@ -296,16 +306,18 @@ function setSearch() {
         // 버튼 클릭 시 드롭다운 토글
         $btnSearch.off('click').on('click', function (e) {
             e.preventDefault(); // 기본 동작 방지
-            const isExpanded = $(this).attr('aria-expanded') === 'true';
-            $(this).attr('aria-expanded', !isExpanded);
+            const isExpanded = $btnSearch.attr('aria-expanded') === 'true';
+            $btnSearch.attr('aria-expanded', !isExpanded).toggleClass('show');
             $headerSearch.toggleClass('show');
+			$('.gnb-area').toggleClass('is-searched fixed');
         });
 
         // 검색 영역 외 클릭 시 닫기
         $(document).off('click.search').on('click.search', function (e) {
             if (!$headerSearch.is(e.target) && !$headerSearch.has(e.target).length && !$btnSearch.is(e.target)) {
                 $headerSearch.removeClass('show');
-                $btnSearch.attr('aria-expanded', 'false');
+                $btnSearch.attr('aria-expanded', 'false').removeClass('show');
+				$('.gnb-area').removeClass('is-searched fixed');
             }
         });
     }

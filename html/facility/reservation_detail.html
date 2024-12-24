@@ -375,12 +375,12 @@
 			},
 			dateClick: function(info) {
 				// 기존 스타일 제거
-				document.querySelectorAll('.fc-day-clicked').forEach(el => {
-					el.classList.remove('fc-day-clicked');
+				document.querySelectorAll('.is-clicked').forEach(el => {
+					el.classList.remove('is-clicked');
 				});
 
 				// 선택한 날짜에 클래스 추가
-				info.dayEl.classList.add('fc-day-clicked');
+				info.dayEl.classList.add('is-clicked');
 			},
 			headerToolbar: {
 				left: 'prev',
