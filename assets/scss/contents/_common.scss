@@ -3104,16 +3104,16 @@
 }
 
 /* 주요업무 */
-.main-task {
+.main-task-wrap {
 	position: relative;
 	margin-top: 120rem;
 	.buisness-item {
 		position: relative;
 		display: flex;
 		height: 520rem;
-		box-sizing: content-box;
+		box-sizing: border-box;
 		+.buisness-item {
-			padding-top: 160rem;
+			padding-top: 100rem;
 		}
 		.img-wrap {
 			position: relative;
@@ -3132,21 +3132,26 @@
 			align-items: center;
 			width: 764rem;
 			height: 460rem;
-			padding: 0 60rem 0 80rem;
+			padding: 0 60rem 0 120rem;
 			background: linear-gradient(-45deg, transparent 30rem, #fff 0);
 			.red-tit {
 				word-break: keep-all;
-				font-size: 40rem;
-				line-height: 56rem;
+				font-size: 48rem;
+				line-height: 60rem;
 				color: $color-primary;
 				font-weight: 700;
 				margin-bottom: 28rem;
+				white-space: nowrap;
 			}
 			.bul.dot {
 				li {
 					color: #000;
-					font-size: 20rem;
-					line-height: 28rem;
+					font-size: 28rem;
+					line-height: 40rem;
+					padding-left: 16rem;
+					&::before {
+						top: 16rem;
+					}
 					& + li {
 						margin-top: 12rem;
 					}
@@ -3166,7 +3171,7 @@
 				}
 			}
 			.cont-wrap {
-				padding: 0 80rem 0 60rem;
+				padding: 0 120rem 0 60rem;
 			}
 		}
  	}
@@ -3178,33 +3183,54 @@
 			.img-wrap {
 				width: calc(100vw * (684 / 1460));
 				height: calc(100vw * (460 / 1460));
+				margin-top: calc(100vw * (60 / 1460));
+				margin-right: calc(100vw * (-60 / 1460));
 			}
 			.cont-wrap {
 				width: calc(100vw * (764 / 1460));
 				height: calc(100vw * (460 / 1460));
+				padding: 0 calc(100vw * (60 / 1460)) 0 calc(100vw * (120 / 1460));
+				.red-tit {
+					font-size: calc(100vw * (48 / 1460));
+					line-height: calc(100vw * (60 / 1460));;
+					margin-bottom: calc(100vw * (28 / 1460));
+				}
+				.bul.dot {
+					li {
+						color: #000;
+						font-size: calc(100vw * (28 / 1460));
+						line-height: calc(100vw * (40 / 1460));
+						&::before {
+							top: calc(100vw * (16 / 1460));
+
+						}
+						& + li {
+							margin-top: calc(100vw * (8 / 1460));
+						}
+					}
+				}
+			}
+			+ .buisness-item {
+				height: calc(100vw * (620 / 1460));
+				padding-top: calc(100vw * (100 / 1460));
+			}
+			&:nth-child(even) {
+				.img-wrap {
+					margin-top: calc(100vw * (60 / 1460));
+					margin-left: calc(100vw * (-60 / 1460));
+				}
+				.cont-wrap {
+					padding: 0 calc(100vw * (120 / 1460)) 0 calc(100vw * (60 / 1460));
+				}
 			}
 		}
 	}
 	// 모바일 반응형 대응
 	@include media-tablet-xs {
 		.buisness-item {
-			box-sizing: border-box;
-			.cont-wrap {
-				.red-tit {
-					font-size: calc(100vw * (40 / 1460));
-					line-height: calc(100vw * (56 / 1460));;
-					margin-bottom: calc(100vw * (28 / 1460));;
-				}
-				.bul.dot {
-					li {
-						color: #000;
-						font-size: 16rem;
-						line-height: 24rem;
-						& + li {
-							margin-top: 8rem;
-						}
-					}
-				}
+			height: calc(100vw * (520 / 1460));
+			+ .buisness-item {
+				height: calc(100vw * (620 / 1460));
 			}
 		}
 	}
@@ -3216,8 +3242,10 @@
 			display: flex;
 			justify-content:unset;
 			flex-direction: column;
+			box-sizing: border-box;
 			height: auto;
 			+.buisness-item {
+				height: auto;
 				padding-top: 80rem;
 			}
 			&:nth-child(even) {
@@ -3235,6 +3263,9 @@
 						width: 100%;
 					}
 				}
+				.cont-wrap {
+					padding: calc(100vw * (24 / 360)) calc(100vw * (48 / 360)) !important;
+				}
 			}
 			.img-wrap {
 				position: relative;
@@ -3246,6 +3277,7 @@
 				height: auto;
 				img {
 					width: 100%;
+					// max-height:300rem;
 				}
 			}
 			.cont-wrap {
@@ -3254,23 +3286,26 @@
 				justify-content: flex-start;
         		align-items: baseline;
 				width: 100%;
-				padding: 32rem 24rem !important;
+				padding: calc(100vw * (48 / 360)) calc(100vw * (24 / 360)) !important;
 				height: auto;
-				background: linear-gradient(-45deg, transparent 20rem, #fff 0);
+				background: linear-gradient(-45deg, transparent calc(100vw * (20 / 360)), #fff 0);
 				.red-tit {
-					font-size: 20rem;
-					line-height: 28rem;
+					font-size: calc(100vw * (20 / 360));
+					line-height: 1.5;
 					color: $color-primary;
 					font-weight: 700;
-					margin-bottom: 12rem;
+					margin-bottom: calc(100vw * (16 / 360));
 				}
 				.bul.dot {
 					li {
 						color: #000;
-						font-size: 14rem;
-						line-height: 22rem;
+						font-size: calc(100vw * (15 / 360));
+						line-height: 1.5;
+						&::before {
+							top: calc(100vw * (10 / 360));
+						}
 						& + li {
-							margin-top: 4rem;
+							margin-top: calc(100vw * (4 / 360));
 						}
 					}
 				}
@@ -3985,7 +4020,7 @@
 		}
 	}
 }
-/* 비전 및 미션 */
+/* 비션 및 비전 */
 .vision-wrap {
 	img {
 		width: 100%;
