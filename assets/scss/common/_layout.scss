@@ -3029,6 +3029,23 @@ html {
 	.view-title-wrap {
 		margin-bottom: 40rem;
 		text-align: center;
+		.label-feedback {
+			display: inline-block;
+			margin-bottom: 12rem;
+			font-size: 16rem;
+			line-height: 24rem;
+			padding: 3rem 8rem;
+			border-radius: 4rem;
+			font-weight: 600;
+			&.wait {
+				border:1px solid #666;
+				color: #666;
+			}
+			&.comp {
+				border:1px solid $color-primary;
+				color: $color-primary;
+			}
+		}
 		.title {
 			font-weight: 700;
 			font-size: 40rem;
@@ -3225,6 +3242,14 @@ html {
 		.view-title-wrap {
 			margin-bottom: 24rem;
 			text-align: center;
+			.label-feedback {
+				margin-bottom: 8rem;
+				font-size: 12rem;
+				line-height: 18rem;
+				padding: 2rem 6rem;
+				border-radius: 2rem;
+				font-weight: 600;
+			}
 			.title {
 				font-weight: 700;
 				font-size: 24rem;

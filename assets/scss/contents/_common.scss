@@ -197,6 +197,24 @@
 					@include ellipsis1;
 				}
 			}
+			.tbl-feedback {
+				p.label-feedback {
+					display: inline-block;
+					font-size: 16rem;
+					line-height: 24rem;
+					padding: 3rem 8rem;
+					border-radius: 4rem;
+					font-weight: 600;
+					&.wait {
+						border:1px solid #666;
+						color: #666;
+					}
+					&.comp {
+						border:1px solid $color-primary;
+						color: $color-primary;
+					}
+				}
+			}
 			/* 결과없음 */
 			.no-list {
 				padding: 148rem 0 60rem;
@@ -615,6 +633,20 @@
 				}
 			}
 		}
+
+		// 페이징과 버튼이 결합되는 경우
+		&-wrap {
+			position: relative;
+			.board-btn {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				.btn-basic {
+					width: 160rem;
+				}
+			}
+		}
 	}
 	.reservation-calendar-wrap {
 		flex: none;
@@ -825,6 +857,7 @@
 				tr {
 					display: flex;
 					flex-wrap: wrap;
+					align-items: center;
 					padding: 20rem 8rem;
 					border-bottom: 1px solid #EAEAEA;
 				}
@@ -928,6 +961,7 @@
 					& + td {
 						margin-right: 9rem;
 						padding-right: 11rem; // 점이 위치할 공만만큼 더 주기
+						vertical-align: middle;
 					}
 					&::after,
 					& + td::after {
@@ -966,6 +1000,15 @@
 					}
 				}
 
+				.tbl-feedback {
+					p.label-feedback {
+						font-size: 12rem;
+						line-height: 18rem;
+						padding: 2rem 6rem;
+						border-radius: 2rem;
+						font-weight: 600;
+					}
+				}
 				.no-list {
 					padding: 108rem 0 40rem;
 					background: url(../../assets/images/common/icn-80-nolist.svg) no-repeat 50% 40rem;
@@ -1392,6 +1435,26 @@
 	}
 
 	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		.board-page {
+			// 페이징과 버튼이 결합되는 경우
+			&-wrap {
+				position: relative;
+				.board-btn {
+					position: static;
+					right: 0;
+					top: 0;
+					transform: translateY(0);
+					width: 100%;
+					text-align: center;
+					margin-top: 24rem;
+					.btn-basic {
+						width: 120rem;
+					}
+				}
+			}
+		}
+	}
 	@include media-mobile-xs {
 		.board-list .gallery-board .gallery-board-list {
 			grid-template-columns: 1fr;
@@ -1443,6 +1506,42 @@
 					font-size: 18rem;
 					line-height: 28rem;
 					color: #333;
+				}
+			}
+			.feedback-area {
+				// border-top: 2px solid #000;
+				border-bottom: 1px solid #000;
+				.feedback-title {
+					padding: 40rem 24rem 20rem;
+					.title {
+						font-weight: 700;
+						font-size: 24rem;
+					}
+					.info {
+						display: flex;
+						margin-top: 12rem;
+						color: #666;
+						.date {
+							display: inline-flex;
+							align-items: center;
+							margin-right: 10rem;
+							&::after {
+								content:'';
+								display: inline-block;
+								width: 1px;
+								height: 10rem;
+								margin-left: 10rem;
+								background-color: #ddd;
+							}
+						}
+					}
+				}
+				.feedback-cont {
+					padding: 20rem 24rem 40rem;
+					font-size: 18rem;
+					line-height: 28rem;
+					color: #333;
+					// border-top: 1px solid #EAEAEA;
 				}
 			}
 			.btn-list {
@@ -1682,6 +1781,61 @@
 	}
 }
 
+/* 게시판 등록 */
+.write-wrap {
+	.write-form {
+		/* 약관동의 */
+		.agree-box {
+			padding-top: 40rem;
+			.frm-chk {
+				&.agree {
+					margin-bottom: 12rem;
+				}
+			}
+			.text-box-wrap {
+				display: block;
+				width: 100%;
+				height: 160rem;
+				border: 1px solid #EAEAEA;
+			}
+			.text-box {
+				width: calc(100% - 16rem);
+				height: 144rem;
+				padding:  24rem;
+				margin: 8rem;
+				overflow-y: auto;
+				font-size: 14rem;
+				line-height: 20rem;
+				color: #666;
+				.tit {
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #333;
+					margin-bottom: 8rem;
+				}
+				&::-webkit-scrollbar {
+					width: 4rem;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: #BEBEBE; /* 스크롤바 색상 */
+					border-radius: 4rem; /* 스크롤바 둥근 테두리 */
+				}
+			}
+		}
+
+		/*버튼*/
+		.btn-wrap {
+			display: flex;
+			justify-content: center;
+			margin-top: 50rem;
+			gap: 10rem;
+			.btn-basic {
+				width: 160rem;
+			}
+		}
+	}
+}
+
 /* 회원가입 */
 .labels {
 	display: flex;
@@ -1696,6 +1850,7 @@
 			&::after {
 				content: '*';
 				color: $color-primary;
+				margin-left: 2rem;
 			}
 		}
 	}
@@ -1743,6 +1898,9 @@
 		.frm-inp ~ .frm-inp {
 			width: 180rem;
 		}
+	}
+	&.classType {
+		max-width: 580rem;
 	}
 }
 /*버튼*/
@@ -1852,6 +2010,7 @@
 	&::before {
 		content: '*';
 		color: $color-primary;
+		margin-right: 2rem;
 	}
 }
 .field-wrap {
@@ -1928,6 +2087,13 @@
 			align-items: center;
 			flex-direction: row !important;
 		}
+		&.classType {
+			flex-direction: row;
+			max-width: 100%;
+			.frm-sel {
+				flex:1 1 auto;
+			}
+		}
 	}
 	/*버튼*/
 	.btn-wrap {
@@ -1972,7 +2138,56 @@
 				.text-box {
 					width: calc(100% - 16rem);
 					height: 144rem;
-					padding:  24rem;
+					padding:  16rem;
+					margin: 8rem;
+					overflow-y: auto;
+					font-size: 14rem;
+					line-height: 20rem;
+					color: #666;
+					.tit {
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #333;
+						margin-bottom: 8rem;
+					}
+					&::-webkit-scrollbar {
+						width: 4rem;
+					}
+					&::-webkit-scrollbar-thumb {
+						background: #BEBEBE; /* 스크롤바 색상 */
+						border-radius: 4rem; /* 스크롤바 둥근 테두리 */
+					}
+				}
+			}
+
+
+		}
+	}
+	.write-wrap {
+		width: 100%;
+		margin: 0 auto;
+
+		.write-form {
+			padding: 0;
+			background: transparent;
+			/* 약관동의 */
+			.agree-box {
+				padding-top: 40rem;
+				.frm-chk {
+					&.agree {
+						margin-bottom: 12rem;
+					}
+				}
+				.text-box-wrap {
+					display: block;
+					width: 100%;
+					height: 160rem;
+					border: 1px solid #EAEAEA;
+				}
+				.text-box {
+					width: calc(100% - 16rem);
+					height: 144rem;
+					padding:  16rem;
 					margin: 8rem;
 					overflow-y: auto;
 					font-size: 14rem;
@@ -2038,6 +2253,18 @@
 				width: calc(55% - 12rem);
 				margin-left: auto;
 			}
+		}
+		&.classType {
+			max-width: 100%;
+		}
+	}
+}
+
+@include media-mobile-xs {
+	.inp-wrap {
+		&.classType {
+			flex-direction: column;
+			max-width: 100%;
 		}
 	}
 }
@@ -4020,7 +4247,7 @@
 		}
 	}
 }
-/* 비션 및 비전 */
+/* 미션 및 비전 */
 .vision-wrap {
 	img {
 		width: 100%;

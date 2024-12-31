@@ -40,6 +40,7 @@
 // 공통 사이즈
 @mixin frm-h-56 {
 	.sel,
+	.textarea,
 	.inp {
 		padding: 15rem 19rem;
 		border-radius: 8rem;
@@ -49,6 +50,7 @@
 }
 @mixin frm-h-48 {
 	.sel,
+	.textarea,
 	.inp {
 		padding: 11rem 15rem;
 		border-radius: 4rem;
@@ -58,6 +60,7 @@
 }
 @mixin frm-h-40 {
 	.sel,
+	.textarea,
 	.inp {
 		padding: 9rem 15rem;
 		border-radius: 4rem;
@@ -158,6 +161,33 @@
 	}
 }
 
+.frm-textarea {
+	width: 100%;
+	textarea {
+		@include frm-style;
+	}
+
+	&.h-56 {
+		@include inp-h-56;
+		height: auto;
+	}
+
+	&.h-48 {
+		@include inp-h-48;
+		height: auto;
+	}
+	@include media-mobile-xl {
+		&.h-56 {
+			@include inp-h-48;
+			height: auto;
+		}
+
+		&.h-48 {
+			@include inp-h-40;
+			height: auto;
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
 	@@ Select
