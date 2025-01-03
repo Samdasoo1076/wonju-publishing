@@ -1693,6 +1693,28 @@
 						color: #333;
 					}
 				}
+				.feedback-area {
+					.feedback-title {
+						padding: 40rem 24rem 20rem;
+						.title {
+							font-size: 20rem;
+						}
+						.info {
+							margin-top: 10rem;
+							.date {
+								margin-right: 8rem;
+								&::after {
+									margin-left: 8rem;
+								}
+							}
+						}
+					}
+					.feedback-cont {
+						font-size: 14rem;
+						line-height: 22rem;
+					}
+				}
+
 				.btn-list {
 					width: 120rem;
 					height: 40rem;
