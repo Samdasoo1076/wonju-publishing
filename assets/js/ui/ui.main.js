@@ -29,7 +29,7 @@ $(function(){
             }
 
 			// 예약현황 크기
-			if ( nextIndex.index === 1 || nextIndex.index === 2 || nextIndex.index === 3 || nextIndex.index === 4 || nextIndex.index === 5) {
+			if ( nextIndex.index === 1 || nextIndex.index === 2) {
 				$('.reservation-wrap').addClass('small');
 
 			} else {
