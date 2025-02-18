@@ -516,14 +516,14 @@ html {
 				position: relative;
 				z-index: 110;
 				display: flex;
-				gap: 60rem;
+				padding-left: 40rem;
 				// transition: all .2s;
 				.dep1-item {
 					position: relative;
 					.dep1-link {
 						display: block;
 						line-height: 88rem;
-						padding: 0 20rem;
+						margin-right: 80rem;
 						font-size: 20rem;
 						color: #fff;
 						font-weight: 700;
@@ -535,7 +535,13 @@ html {
 							color: $color-primary;
 						}
 					}
+					&:last-child {
+						.dep1-link {
+							margin-right: 40rem;
+						}
+					}
 				}
+
 			}
 			// &:focus-within,
 			// &:hover {
@@ -550,7 +556,8 @@ html {
 				flex-direction: column;
 				justify-content: center;
 				gap: 16rem;
-				align-items: center;
+				padding-right: 20rem;
+				// padding: 0 30rem;
 				&-wrap {
 					display: none;
 					position: absolute;
@@ -569,15 +576,37 @@ html {
 					.dep2-link {
 						display: block;
 						font-size: 18rem;
-						font-weight: 400;
+						font-weight: 500;
 						color: #000;
 						line-height: 28rem;
-						border-bottom: 2px solid transparent;
+						white-space: nowrap;
 						// transition: all .2s;
 						&:hover {
 							color: $color-primary;
 							font-weight: 700;
-							border-bottom: 2px solid $color-primary;
+							text-decoration: underline;
+							text-underline-position: under;
+						}
+					}
+				}
+			}
+			.dep3-list {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 8rem;
+				margin-top: 8rem;
+				.dep3-item {
+					.dep3-link {
+						display: block;
+						font-size: 16rem;
+						font-weight: 400;
+						color: #666666;
+						line-height: 24rem;
+						white-space: nowrap;
+						&:hover,
+						&:focus {
+							color: $color-primary;
 						}
 					}
 				}
@@ -592,7 +621,7 @@ html {
 				border-top: 1px solid #DFDFDF;
 				z-index: 100;
 				width: 100%;
-				height: 328rem;
+				height: 500rem;
 				background: #fff;
 			}
 		}
@@ -1170,8 +1199,24 @@ html {
 									}
 									.dep2-link {
 										display: block;
+										font-weight: 500;
 										font-size: 16rem;
 										line-height: 24rem;
+										color: #000;
+									}
+									.dep3-list {
+										margin-top: 10rem;
+									}
+									.dep3-item {
+										+ .dep3-item {
+											margin-top: 10rem;
+										}
+									}
+									.dep3-link {
+										display: block;
+										font-weight: 400;
+										font-size: 14rem;
+										line-height: 20rem;
 										color: #666;
 									}
 								}
@@ -2192,14 +2237,14 @@ html {
 					position: relative;
 					z-index: 110;
 					display: flex;
-					gap: calc(100vw * (50 / 1280));
+					padding-left: calc(100vw * (40 / 1280));
 					// transition: all .2s;
 					.dep1-item {
 						position: relative;
 						.dep1-link {
 							display: block;
 							line-height: calc(100vw * (88 / 1280));
-							padding: 0 calc(100vw * (20 / 1280));
+							margin-right: 0 calc(100vw * (80 / 1280));
 							font-size: calc(100vw * (20 / 1280));
 							color: #fff;
 							font-weight: 700;
@@ -2211,12 +2256,18 @@ html {
 								color: $color-primary;
 							}
 						}
+						&:last-child {
+							.dep1-link {
+								margin-right: calc(100vw * (40 / 1280));
+							}
+						}
 					}
 				}
 
 				// Nav Depth2
 				.dep2-list {
 					gap: calc(100vw * (16 / 1280));
+					padding-right: calc(100vw * (20	 / 1280));
 					&-wrap {
 						display: none;
 						position: absolute;
@@ -2235,13 +2286,22 @@ html {
 						.dep2-link {
 							font-size: calc(100vw * (18 / 1280));
 							line-height: calc(100vw * (28 / 1280));
-							border-bottom: 2px solid transparent;
 							// transition: all .2s;
 							&:hover {
 								color: $color-primary;
 								font-weight: 700;
-								border-bottom: 2px solid $color-primary;
 							}
+						}
+					}
+				}
+
+				.dep3-list {
+					gap: calc(100vw * (8 / 1280));
+					margin-top: calc(100vw * (8 / 1280));
+					.dep3-item {
+						.dep3-link {
+							font-size: calc(100vw * (16 / 1280));
+							line-height: calc(100vw * (24 / 1280));
 						}
 					}
 				}
@@ -2249,7 +2309,7 @@ html {
 				// Nav BG
 				.header-nav-bg {
 					top: calc(100vw * (88 / 1280));
-					height: calc(100vw * (328 / 1280));
+					height: calc(100vw * (500 / 1280));
 					box-shadow: 0 calc(100vw * (3 / 1280)) calc(100vw * (3 / 1280)) rgba(0,0,0,0.1);
 				}
 			}

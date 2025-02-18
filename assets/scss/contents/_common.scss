@@ -3355,7 +3355,7 @@
 /* 주요업무 */
 .main-task-wrap {
 	position: relative;
-	margin-top: 120rem;
+	margin-top: 60rem;
 	.buisness-item {
 		position: relative;
 		display: flex;
@@ -3363,6 +3363,7 @@
 		box-sizing: border-box;
 		+.buisness-item {
 			padding-top: 100rem;
+			height: 620rem;
 		}
 		.img-wrap {
 			position: relative;
