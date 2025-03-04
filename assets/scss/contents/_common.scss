@@ -2718,6 +2718,32 @@
 	}
 }
 
+/* table-bg-wrap */
+.table-cont-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	&.mo {
+		display: none;
+	}
+	.table-cont-sec {
+		width: 100%;
+		padding: 60rem;
+		background-color: #fff;
+	}
+	@include media-tablet-xs {
+		&.pc {
+			display: none;
+		}
+		&.mo {
+			display: flex;
+		}
+		gap: 12rem;
+		.table-cont-sec {
+			padding: 24rem;
+		}
+	}
+}
+
 /* table-wrap */
 .table-wrap {
 	position: relative;
@@ -2747,7 +2773,21 @@
 		}
 		tbody {
 			tr{
+				th {
+					padding: 15rem;
+					height: 64rem;
+					font-size: 16rem;
+					line-height: 24rem;
+					color: #000;
+					font-weight: 500;
+					background: #F9F9F9;
+					word-break: keep-all;
+					.frm-chk {
+						justify-content: center;
+					}
+				}
 				td {
+					padding: 15rem;
 					height: 64rem;
 					font-size: 16rem;
 					line-height: 24rem;
@@ -2788,6 +2828,13 @@
 			}
 			tbody {
 				tr{
+					th {
+						height: 48rem;
+						font-size: 12rem;
+						line-height: 16rem;
+						border-bottom: 1px solid #EAEAEA;
+						text-align: center;
+					}
 					td {
 						height: 48rem;
 						font-size: 12rem;
@@ -2801,6 +2848,36 @@
 		}
 		.bul {
 			margin-top: 12rem;
+		}
+
+		&.table-responsive-wrap {
+			table {
+				colgroup {
+					display: none;
+				}
+				thead {
+					display: none;
+				}
+				tbody {
+					display: block;
+					tr {
+						display: block;
+						td {
+							display: flex;
+							&::before {
+								content:attr(data-th);
+								display: flex;
+								height: 48rem;
+								font-size: 12rem;
+								line-height: 16rem;
+								color: #666;
+								border-bottom: 1px solid #EAEAEA;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -3352,7 +3429,7 @@
 	}
 }
 
-/* 주요업무 */
+/* 비전 및 미션 - 주요업무 */
 .main-task-wrap {
 	position: relative;
 	margin-top: 60rem;
@@ -3557,6 +3634,165 @@
 						& + li {
 							margin-top: calc(100vw * (4 / 360));
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 주요업무 */
+.main-business-wrap {
+	.mo {
+		display: none;
+	}
+
+	.img-wrap {
+		display: flex;
+	}
+	.buisness-item {
+		margin-top: 80rem;
+	}
+	.cont-wrap {
+		.title {
+			margin-top: 40rem;
+			font-weight: 700;
+			font-size: 32rem;
+			line-height: 48rem;
+			word-break: keep-all;
+			color: #000;
+		}
+		.cont {
+			margin-top: 30rem;
+			+ .cont {
+				margin-top: 60rem;
+			}
+			.tit {
+				margin-bottom: 20rem;
+				font-weight: 700;
+				font-size: 24rem;
+				line-height: 30rem;
+				color: #000;
+			}
+			.bul li {
+				font-weight: 400;
+				font-size: 20rem;
+				line-height: 28rem;
+				color: #000;
+				&::before {
+					top: 12rem;
+				}
+				+ li {
+					margin-top: 12rem;
+				}
+			}
+			.step {
+				display: flex;
+				gap: 8rem;
+
+				li {
+					flex:1 1 auto;
+					width: 100%;
+					border-top: 8rem solid transparent;
+					padding-top: 8rem;
+					.num {
+						font-weight: 400;
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #000;
+					}
+					.txt {
+						margin-top: 20rem;
+						font-weight: 700;
+						font-size: 20rem;
+						line-height: 28rem;
+						color: #000;
+						word-break: keep-all;
+					}
+				}
+
+				&.steps-4 {
+					li {
+						&:nth-child(1) {
+							border-color: rgba(186, 20, 26, 0.4);
+						}
+						&:nth-child(2) {
+							border-color: rgba(186, 20, 26, 0.6);
+						}
+						&:nth-child(3) {
+							border-color: rgba(186, 20, 26, 0.8);
+						}
+						&:nth-child(4) {
+							border-color: rgba(186, 20, 26, 1.0);
+						}
+					}
+				}
+				&.steps-5 {
+					li {
+						&:nth-child(1) {
+							border-color: rgba(186, 20, 26, 0.2);
+						}
+						&:nth-child(2) {
+							border-color: rgba(186, 20, 26, 0.4);
+						}
+						&:nth-child(3) {
+							border-color: rgba(186, 20, 26, 0.6);
+						}
+						&:nth-child(4) {
+							border-color: rgba(186, 20, 26, 0.8);
+						}
+						&:nth-child(5) {
+							border-color: rgba(186, 20, 26, 1.0);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// 모바일 반응형 대응
+	@include media-mobile-xl {
+		.pc {
+			display: none;
+		}
+		.mo {
+			display: block;
+		}
+
+		.cont-wrap {
+			.title {
+				margin-top: 20rem;
+				font-size: 24rem;
+				line-height: 36rem;
+			}
+			.cont {
+				margin-top: 20rem;
+				+ .cont {
+					margin-top: 24rem;
+				}
+
+				.tit {
+					margin-bottom: 12rem;
+					font-size: 16rem;
+					line-height: 24rem;
+				}
+
+				.bul li {
+					font-size: 14rem;
+					line-height: 20rem;
+					&::before {
+						top: 8rem;
+					}
+				}
+				.step li {
+					.num {
+						font-size: 12rem;
+						line-height: 16rem;
+					}
+					.txt {
+						margin-top: 12rem;
+						font-size: 12rem;
+						line-height: 16rem;
 					}
 				}
 			}
