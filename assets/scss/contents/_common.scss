@@ -3661,6 +3661,9 @@
 			line-height: 48rem;
 			word-break: keep-all;
 			color: #000;
+			span {
+				display: inline-block;
+			}
 		}
 		.cont {
 			margin-top: 30rem;
