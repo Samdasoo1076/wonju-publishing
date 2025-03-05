@@ -2407,6 +2407,30 @@
 								}
 							}
 						}
+						&.blue {
+							.fc-daygrid-day-top > a {
+								color:#0367EE;
+								&::after {
+									background: #0367ee;
+								}
+							}
+						}
+						&.red {
+							.fc-daygrid-day-top > a {
+								color:#ed0202;
+								&::after {
+									background: #ed0202;
+								}
+							}
+						}
+						&.purple {
+							.fc-daygrid-day-top > a {
+								color:#9803ee;
+								&::after {
+									background: #9803ee;
+								}
+							}
+						}
 					}
 					&.fc-day-past {
 						.fc-daygrid-day-frame {
