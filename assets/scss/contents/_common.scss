@@ -781,6 +781,7 @@
 						}
 					}
 					&.blue {
+						background: #F4F6F9;
 						.fc-daygrid-day-top > a {
 							color:#0367EE;
 							&::after {
@@ -789,6 +790,7 @@
 						}
 					}
 					&.red {
+						background: #f9f4f4;
 						.fc-daygrid-day-top > a {
 							color:#ed0202;
 							&::after {
@@ -797,6 +799,7 @@
 						}
 					}
 					&.purple {
+						background: #f7f4f9;
 						.fc-daygrid-day-top > a {
 							color:#9803ee;
 							&::after {
