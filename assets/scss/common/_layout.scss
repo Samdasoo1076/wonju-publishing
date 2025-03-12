@@ -3232,10 +3232,8 @@ html {
 			.snb-wrap {
 				.dep2-nav {
 					height: 60rem;
-					.dep2-list:has(li:nth-child(5)) {
-						justify-content: flex-start;
+					.dep2-list {
 					}
-
 
 					.dep2-link {
 						padding: 0 12rem 1rem 12rem;
@@ -3257,10 +3255,6 @@ html {
 					.dep3-item {
 						height: auto;
 						text-align: left;
-
-						@include media-mobile-xs {
-							width: calc(50% - 12rem);
-						}
 					}
 					.dep3-link {
 						height: auto;
@@ -3269,6 +3263,25 @@ html {
 						line-height: 20rem;
 					}
 				}
+				@include media-mobile-xs {
+					.dep2-nav {
+						.dep2-list {
+							justify-content: flex-start;
+						}
+					}
+					.dep3-nav {
+						padding-left: 32rem;
+						padding-right: 32rem;
+						.dep3-list {
+							justify-content: flex-start;
+							gap: 16rem 24rem;
+						}
+						.dep3-item {
+							width: calc(50% - 18rem);
+						}
+					}
+				}
+
 			}
 		}
 
