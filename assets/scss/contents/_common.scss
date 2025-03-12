@@ -4548,6 +4548,101 @@
 	img.mo {
 		display: none;
 	}
+
+	.sec {
+		+ .sec {
+			margin-top: 80rem;
+		}
+		.sec-header {
+			margin-bottom: 40rem;
+			.sec-title {
+				font-weight: 700;
+				font-size: 32rem;
+				line-height: 44rem;
+				color: #000;
+			}
+		}
+	}
+	// 미션 및 비전 섹션
+	.vision-sec {
+		padding-bottom: 80rem;
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	// 추진목표 섹션
+	.task-sec {
+		.task-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 24rem;
+		}
+		.task-card {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			.task-img {
+				flex: none;
+				position: relative;
+				width: 100%;
+				aspect-ratio: 388/280;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.task-cont {
+				flex: 1 1 auto;
+				width: 100%;
+				padding: 32rem;
+				background-color: #F9F9F9;
+				.task-tit {
+					margin-bottom: 12rem;
+					font-weight: 700;
+					font-size: 24rem;
+					line-height: 36rem;
+					color: #BA141A;
+					word-break: keep-all;
+				}
+				.bul.dot li {
+					font-size: 18rem;
+					line-height: 28rem;
+					color: #000;
+					word-break: keep-all;
+					&::before {
+						top: 11rem;
+					}
+				}
+			}
+		}
+	}
+
+	// 태블릿 반응형 대응
+	@include media-tablet-xs {
+		.task-sec {
+			.task-list {
+				gap: 20rem;
+			}
+			.task-card {
+				.task-cont {
+					padding: 24rem;
+					.task-tit {
+						margin-bottom: 8rem;
+						font-size: 18rem;
+						line-height: 28rem;
+					}
+					.bul.dot li {
+						font-size: 14rem;
+						line-height: 20rem;
+						&::before {
+							top: 8rem;
+						}
+					}
+				}
+			}
+
+		}
+	}
 	// 모바일 반응형 대응
 	@include media-mobile-xl {
 		img.pc {
@@ -4556,8 +4651,20 @@
 		img.mo {
 			display: block;
 		}
+		.task-sec {
+			.task-list {
+				grid-template-columns: 1fr;
+			}
+			.task-card {
+				.task-img {
+					max-height: 196rem;
+				}
+			}
+		}
 	}
 }
+
+
 /* 조직도 */
 .organization-wrap {
 	img {
@@ -4631,6 +4738,158 @@
 				overflow: auto;
 				.tbl {
 					width: 720rem;
+				}
+			}
+		}
+	}
+}
+
+/* CI소개 */
+.ci-intro-wrap {
+	.ci-intro-sec {
+		.sec-header {
+			margin-bottom: 60rem;
+			text-align: center;
+			.sec-title {
+				font-weight: 700;
+				font-size: 28rem;
+				line-height: 32rem;
+				color: #000;
+			}
+			.sec-explain {
+				max-width: 840rem;
+				margin: auto;
+				margin-top: 24rem;
+				font-weight: 400;
+				font-size: 18rem;
+				line-height: 28rem;
+				word-break: keep-all;
+				color: #666;
+			}
+		}
+		.sec-body {
+			.ci-list {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 24rem;
+				.ci-item {
+					&:nth-child(1) {
+						.ci-box-img {
+							min-width: 36%;
+							max-width: 36%;
+						}
+					}
+					&:nth-child(2) {
+						.ci-box-img {
+							min-width: 70%;
+							max-width: 73%;
+						}
+					}
+					&:nth-child(3) {
+						.ci-box-img {
+							min-width: 51.546%;
+							max-width: 66.176%;
+						}
+					}
+				}
+				.ci-box {
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					aspect-ratio: 388/340;
+					border: 1px solid #eaeaea;
+					border-radius: 20rem;
+					.ci-box-img {
+						img {
+							width: 100%;
+						}
+					}
+					.ci-box-type {
+						position: absolute;
+						left: 0;
+						bottom: 20rem;
+						display: block;
+						width: 100%;
+						padding: 0 20rem;
+						font-weight: 700;
+						font-size: 16rem;
+						line-height: 24rem;
+						color: #999;
+						text-align: center;
+					}
+				}
+			}
+			.ci-download {
+				margin-top: 60rem;
+				text-align: center;
+				.btn-basic {
+					width: 160rem;
+				}
+			}
+		}
+	}
+	@include media-tablet-xs {
+		.ci-intro-sec {
+			.sec-body {
+				.ci-list {
+					gap: 16rem;
+				}
+			}
+		}
+	}
+	@include media-mobile-xl {
+		.ci-intro-sec {
+			.sec-header {
+				margin-bottom: 28rem;
+				text-align: center;
+				.sec-title {
+					font-size: 20rem;
+					line-height: 28rem;
+				}
+				.sec-explain {
+					margin-top: 16rem;
+					font-size: 14rem;
+					line-height: 20rem;
+				}
+			}
+
+			.sec-body {
+				.ci-list {
+					grid-template-columns: 1fr;
+					gap: 12rem;
+					.ci-item {
+						&:nth-child(1) {
+							.ci-box-img {
+								min-width: 94rem;
+								max-width: 94rem;
+							}
+						}
+						&:nth-child(2) {
+							.ci-box-img {
+								min-width: 200rem;
+								max-width: 200rem;
+							}
+						}
+						&:nth-child(3) {
+							.ci-box-img {
+								min-width: 180rem;
+								max-width: 180rem;
+							}
+						}
+					}
+
+					.ci-box {
+						height: 200rem;
+						.ci-box-type {
+							font-size: 14rem;
+							line-height: 20rem;
+						}
+					}
+				}
+				.ci-download {
+					display: none;
 				}
 			}
 		}

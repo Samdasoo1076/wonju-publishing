@@ -3028,6 +3028,16 @@ html {
 		width: 100%;
 		max-width: calc(#{$pc-sidespacer} * 2 + #{$pc-width-content});
 	}
+	.content-box {
+		padding: 80rem 88rem;
+		background-color: #fff;
+		@include media-tablet-xs {
+			padding: 40rem 48rem;
+		}
+		@include media-mobile-xl {
+			padding: 32rem 24rem;
+		}
+	}
 
 	.title-wrap {
 		margin-bottom: 60rem;
@@ -3263,7 +3273,7 @@ html {
 		}
 
 		.content-body {
-			padding: 60rem $mobile-sidespacer 80rem;
+			padding: 60rem $mobile-sidespacer 60rem;
 			max-width: 100%;
 		}
 		.title-wrap {
