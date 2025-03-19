@@ -27,6 +27,6 @@
     "eslint.codeActionsOnSave.rules": null,
 	"editor.renderWhitespace": "all",
 	"prettier.printWidth": 150,
-	"liveServer.settings.port": 5503,
+	"liveServer.settings.port": 5504,
 	"editor.hover.enabled": false
 }
