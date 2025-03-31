@@ -4984,6 +4984,31 @@
 					}
 				}
 			}
+			.ci-summary {
+				margin-top: 40rem;
+				.ci-title {
+					margin-bottom: 10rem;
+					font-size: 20rem;
+					font-weight: 500;
+					color: #000;
+				}
+				.ci-gray {
+					color: #666;
+				}
+				.ci-black {
+					color: #000;
+				}
+				.ci-red {
+					color: $color-primary;
+				}
+				@include media-mobile-xl {
+					margin-top: 24rem;
+					.ci-title {
+						margin-bottom: 8rem;
+						font-size: 16rem;
+					}
+				}
+			}
 			.ci-download {
 				margin-top: 60rem;
 				text-align: center;
