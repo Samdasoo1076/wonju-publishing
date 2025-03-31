@@ -3014,6 +3014,7 @@ html {
 					font-size: 20rem;
 					line-height: 28rem;
 					color: #333;
+					text-align: center;
 					&.is-current {
 						font-weight: 700;
 						color: $color-primary;
@@ -3279,6 +3280,9 @@ html {
 						}
 						.dep3-item {
 							width: calc(50% - 18rem);
+						}
+						.dep3-link {
+							text-align: left;
 						}
 					}
 				}
