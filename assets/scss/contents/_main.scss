@@ -2752,5 +2752,51 @@
 			}
 		}
 	}
+}
 
+/* 홍보배너 */
+.ad-modal {
+	.modal-content {
+		width: 320rem;
+		overflow: hidden;
+		border-radius: 16rem;
+	}
+	.modal-footer {
+		display: flex;
+		gap: 1rem;
+		background-color: #EAEAEA;
+		.btn {
+			width: 50%;
+			height: 52rem;
+			text-align: center;
+			background-color: #F4F6F9;
+			font-weight: 500;
+		}
+	}
+	.swiper-ad {
+		width: 320rem;
+		height: 400rem;
+		.swiper-slide,
+		.swiper-slide a,
+		.swiper-slide img {
+			display: block;
+			width: 320rem;
+			height: inherit;
+		}
+		.swiper-pagination {
+			display: flex;
+			justify-content: center;
+			gap: 8rem;
+			bottom: 16rem !important;
+		}
+		.swiper-pagination-bullet {
+			border-radius: 8rem;
+			margin: 0 !important;
+			transition: all 0.2s ease;
+		}
+		.swiper-pagination-bullet-active {
+			width: 16rem;
+			background-color: $color-primary;
+		}
+	}
 }
