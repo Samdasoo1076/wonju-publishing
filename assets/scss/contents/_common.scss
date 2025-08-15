@@ -3953,27 +3953,13 @@
 	}
 
 	.floor-guide {
-		display: flex;
-		gap: 20rem;
-		padding: 32rem;
-		background-color: #f8f8f8;
-		.bul-area {
-			flex: none;
-			min-width: 240rem;
-			width: 25%;
-			.bul p {
-				font-size: 16rem;
-				line-height: 24rem;
-				color: #666;
-			}
+		border:1px solid #000;
+		+.floor-guide {
+			margin-top: 20rem;
 		}
-		.img-area {
-			flex: 1 1 auto;
-			width: 75%;
-			img {
-				width: auto;
-				max-width: 100%;
-			}
+		img {
+			vertical-align: top;
+			max-width: 100%;
 		}
 	}
 
@@ -4004,15 +3990,6 @@
 			flex-wrap: wrap;
 			.btn-basic {
 				width: 100%;
-			}
-		}
-	}
-
-	@include media-mobile-xl {
-		.floor-guide {
-			padding: 20rem;
-			.bul-area {
-				display: none;
 			}
 		}
 	}
